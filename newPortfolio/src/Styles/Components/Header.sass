@@ -1,0 +1,33 @@
+@use '../variables'
+
+.allHeader
+  // border: 1.5px solid white
+  display: flex
+  height: auto
+  justify-content: space-evenly
+  padding: 1rem
+  width: 100%
+
+  #menuBurgger
+    align-items: center
+    // border: 2px solid green
+    display: flex
+    font-weight: 900
+    height: auto
+    justify-content: center
+    width: 6vh
+
+    .menuIcon
+      color: variables.$text-color-icon
+
+  .h1DivHeader
+    // border: 1px dotted yellow
+    width: 80%
+
+    .h1Header
+      background: variables.$gradient
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      font-family: variables.$font-secondary
+      font-size: 8vh
+      letter-spacing: 0.8rem
