@@ -1,0 +1,32 @@
+@use '../variables'
+
+.divImgNoteb
+  // border: 1px solid white
+  display: flex
+  justify-content: center
+  height: auto
+  padding-top: 5rem
+  padding-bottom: 5rem
+  width: 100%
+
+  .pImgNote
+    // border: 1px solid yellow
+    color: variables.$text-color-secondary
+    padding: 2rem
+    width: 60%
+
+    .title
+      padding-bottom: 1rem
+      color: variables.$text-color
+
+    .pNote
+      text-indent: 6vh
+      text-align: justify
+
+      cite
+        font-size: 2.3rem
+
+  .imgNote
+    border-radius: variables.$full-border-radius
+    height: 30vh
+    width: auto

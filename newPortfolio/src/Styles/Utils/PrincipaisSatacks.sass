@@ -1,0 +1,100 @@
+@use '../variables'
+
+.divStacksPrinc
+  height: auto
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  padding-top: 5rem
+  width: 100%
+
+  .h1PStacks
+    color: variables.$text-color-third
+    font-family: variables.$font-secondary
+    font-size: 1.8rem
+    height: auto
+    margin-top: 1.3rem
+    margin-bottom: 1rem
+    order: 0
+    padding-bottom: 0.3rem
+    text-align: center
+
+  .tableBody1
+    align-content: center
+    align-items: center
+
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    height: auto
+    padding: 1rem
+    width: 90%
+    order: 1
+
+    .tBody1
+      align-content: center
+      align-items: center
+      display: flex
+      height: auto
+      justify-content: space-around
+      textColor: #091E42
+      margin-bottom: 0.8rem
+      width: 100%
+
+      .tr_tBody1 
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-evenly
+        gap: 0.15rem
+        height: auto
+        width: 90%
+
+        .td_tBody1
+          background: variables.$text-color
+          display: flex
+          border-radius: variables.$card-border-radius
+          height: auto
+          justify-content: center
+          margin-top: 0.5rem
+          margin-bottom: 0.5rem
+          width: 10.8vh
+
+          a
+            text-align: center
+            font-size: 1.6vh
+            margin-bottom: 0.4rem
+            text-decoration: none
+            opacity: 0.5
+
+          a:hover
+            background: variables.$text-color
+            border-radius: variables.$card-border-radius
+            height: 105%
+            opacity: 1
+
+          .img_tBody
+            align-content: center
+            align-items: center
+            align-self: center
+            background: transparent
+            border-radius: 3px
+            height: 7vh
+            max-width: 70% auto
+            margin: 0.5rem
+            // opacity: 0.7
+
+          .img_tBody:hover
+            background: transparent
+            max-width: 105%
+            opacity: 1
+
+  .divH3
+    font-size: 1.1rem
+    font-family: variables.$font-secondary
+    height: auto
+    order: 3
+    padding: 0.1rem
+    text-align: center
+    width: 100%

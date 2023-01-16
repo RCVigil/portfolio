@@ -3,31 +3,40 @@
 .allHeader
   // border: 1.5px solid white
   display: flex
+  height: 10rem
+  flex-direction: row
+  flex-wrap: wrap
   height: auto
-  justify-content: space-evenly
-  padding: 1rem
   width: 100%
 
   #menuBurgger
-    align-items: center
     // border: 2px solid green
-    display: flex
-    font-weight: 900
+    // display: flex
     height: auto
-    justify-content: center
-    width: 6vh
+    // justify-content: center
+    width: 10%
 
     .menuIcon
-      color: variables.$text-color-icon
+      // border: 1px solid blue
+      color: variables.$text-color
+      font-weight: 900
+      font-size: 1px
+      width: 2rem
 
   .h1DivHeader
+    align-items: flex-start
     // border: 1px dotted yellow
-    width: 80%
+    display: flex
+    flex-direction: row
+    height: auto
+    justify-content: center
+    width: 90%
 
     .h1Header
-      background: variables.$gradient
+      background: variables.$gradient-2
       -webkit-background-clip: text
       -webkit-text-fill-color: transparent
       font-family: variables.$font-secondary
-      font-size: 8vh
+      font-weight: 600
+      font-size: 7.5vh
       letter-spacing: 0.8rem

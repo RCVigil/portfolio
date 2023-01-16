@@ -1,0 +1,43 @@
+@use '../variables'
+
+.divAsideLeft
+  align-items: center
+  // border: 1px solid green
+  display: flex
+  flex-direction: column
+  height: 90%
+  justify-content: center
+  // margin: 5rem 0
+  position: fixed
+  width: auto
+
+  .imgAsideLeft
+    // border: 1px solid yellow
+    align-self: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    // gap: 5rem
+    height: 100%
+    width: auto
+
+    .iAsideLeft
+      // border: 1px solid white
+      color: variables.$text-color-third
+      // font-size: 15px
+      height: 100%
+      width: 100%
+
+      .imageSVGAsideLeft
+        // font-size: 8px
+        cursor: pointer
+        height: 3vh
+        width: 3vh
+        margin: 2rem 0 2rem -2rem
+        opacity: 0.5
+
+      .imageSVGAsideLeft:hover
+        color: variables.$text-color-third
+        height: 5vh
+        width: 5vh
+        opacity: 1

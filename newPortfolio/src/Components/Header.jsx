@@ -4,9 +4,9 @@ import MenuIcon from "../Utils/MenuIcon";
 
 function Header() {
   return (
-    <header className="allHeader">
+    <header className="container d-flex justify-content-between row allHeader">
       <MenuIcon />
-      <div className="h1DivHeader">
+      <div className="col-8 h1DivHeader">
         <h1 className="h1Header">CUERVO DEV</h1>
       </div>
     </header>
