@@ -17,18 +17,17 @@
     margin-top: 1.3rem
     margin-bottom: 1rem
     order: 0
-    padding-bottom: 0.3rem
+    padding-bottom: 10rem
     text-align: center
 
   .tableBody1
     align-content: center
     align-items: center
-
     display: flex
     flex-direction: row
     flex-wrap: wrap
     height: auto
-    padding: 1rem
+    padding-bottom: 5rem
     width: 90%
     order: 1
 
@@ -42,24 +41,39 @@
       margin-bottom: 0.8rem
       width: 100%
 
-      .tr_tBody1 
+      .tr_tBody1
         display: flex
         flex-direction: row
         flex-wrap: wrap
         justify-content: space-evenly
-        gap: 0.15rem
+        gap: 5rem
         height: auto
         width: 90%
 
         .td_tBody1
-          background: variables.$text-color
+          background: transparent
+          // border: 1.5px solid #111
           display: flex
-          border-radius: variables.$card-border-radius
-          height: auto
+          // border-radius: variables.$card-border-radius
+          // height: auto
           justify-content: center
+          text-transform: uppercase
           margin-top: 0.5rem
           margin-bottom: 0.5rem
           width: 10.8vh
+          transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear
+          background-size: contain
+          background-position: -250px center
+          background-repeat: no-repeat
+          // box-shadow: 0 1px 3px rgba(23, 0, 126, 0.507), 0 1px 2px rgba(0, 12, 68, 0.644)
+
+          .td:active
+            transform: scale(1)
+            // background-position: 500px
+            box-shadow: 0 1px 3px rgba(23, 0, 126, 0.507), 0 1px 2px rgba(0, 12, 68, 0.644)
+            transition: 500ms vertical
+            transition-delay: 200ms
+            transition-duration: 300ms
 
           a
             text-align: center
@@ -69,10 +83,19 @@
             opacity: 0.5
 
           a:hover
-            background: variables.$text-color
+            background: #3b3b3bc7
             border-radius: variables.$card-border-radius
-            height: 105%
+            height: 110%
+            width: 110%
             opacity: 1
+            transform: scale(1.1)
+            background-position: -60px
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+
+          a:active
+            transform: scale(1)
+            background-position: 500px
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
 
           .img_tBody
             align-content: center
