@@ -5,6 +5,8 @@ import SobrePort from './sobrePort';
 import Footer from './Footer';
 import Notebook from '../Utils/Notebook';
 import PrincipaisSatcks from '../Utils/PrincipaisSatcks';
+import ProjetosGithub from '../Pages/ProjetosGithub';
+
 
 const Index = () => {
   return (
@@ -13,6 +15,7 @@ const Index = () => {
       <div className="body-site">
         <Notebook/>
         <SobrePort/>
+        <ProjetosGithub/>
         <PrincipaisSatcks/>
       </div>
       <Footer/>

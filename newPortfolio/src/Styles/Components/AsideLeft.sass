@@ -9,35 +9,40 @@
   justify-content: center
   // margin: 5rem 0
   position: fixed
-  width: auto
+  width: 7vw
 
   .imgAsideLeft
     // border: 1px solid yellow
     align-self: center
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: space-between
     // gap: 5rem
-    height: 100%
-    width: auto
+    height: 85%
+    width: 100%
 
     .iAsideLeft
       // border: 1px solid white
       color: variables.$text-color-third
-      // font-size: 15px
       height: 100%
       width: 100%
 
       .imageSVGAsideLeft
-        // font-size: 8px
+        border: 1px dashed white
         cursor: pointer
-        height: 3vh
-        width: 3vh
+        height: 4vh
+        width: 4vh
         margin: 2rem 0 2rem -2rem
         opacity: 0.5
+        transition: all 0.31s ease-in-out
 
       .imageSVGAsideLeft:hover
+        border: 0.1vw solid #f6ff00ba
+        border-radius: 50px
         color: variables.$text-color-third
-        height: 5vh
-        width: 5vh
+        cursor: pointer
+        height: 6vh
         opacity: 1
+        padding: 9px
+        transform: scale(1.5, 1.5)
+        width: 6vh

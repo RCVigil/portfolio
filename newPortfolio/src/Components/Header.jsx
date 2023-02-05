@@ -8,7 +8,7 @@ function Header() {
     <header className="container d-flex justify-content-between row allHeader">
       <MenuIcon />
       <div className="col-8 h1DivHeader">
-        <img className="imgPegasus" src={pegasusIcon} alt="logo Pégasus" srcset="" />
+        <img className="imgPegasus" src={pegasusIcon} alt="logo Pégasus" />
         <h1 className="h1Header">CUERVO DEV</h1>
       </div>
     </header>
