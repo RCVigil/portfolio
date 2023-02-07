@@ -55,17 +55,17 @@ const ProjetosGithub = () => {
   };
 
   return (
-    <main className="divProjetoG d-flex justify-content-center container h-auto col-11 bd-highlight">
+    <main className="divProjetoG">
       <div className="tituloProjetos">
         <h1 className="">Principais Projetos</h1>
       </div>
       <div className="divMainProjetos">
         {
-          <div className="d-flex divProjectGit col-4">
+          <div className="d-flex col-4">
             {!loading ? (
               <Loading />
             ) : (
-              <div className="d-flex flex-column align-items-center border border-info rounded p-2 m-1">
+              <div className="divUserGit d-flex flex-column align-items-center p-2 mx-5">
                 <h1 className="h1Name text-lg-right lh-sm font-italic text-capitalize text-decoration-none text-monospace mt-4">
                   {userGitHub.name}
                 </h1>
@@ -137,21 +137,21 @@ const ProjetosGithub = () => {
                   if (proj.stargazers_count === 1) {
                     return (
                       <div
-                        className="divProjectMap border rounded mx-2"
+                        className="divProjectMap"
                         key={proj.id}
                       >
                         <div className="divCards">
-                          <h1 className="h1Name card-title text-primary text-capitalize">
+                          <h1 className="h1Name text-capitalize">
                             {proj.name}
                           </h1>
 
-                          <div className="card-body">
+                          <div className="cardDescription">
                             {/* <h1>
                         {proj.description}
                         </h1> */}
 
                             <div className="divCriadoP">
-                              <p className="card-text card-subtitle">
+                              <p className="">
                                 {`Criado em :`}
                               </p>
 
@@ -160,7 +160,9 @@ const ProjetosGithub = () => {
                               </p>
                             </div>
 
-                            <hr />
+                            <hr
+                              className="hrLineProj"
+                            />
 
                             <div>
                               <p className="card-text">
@@ -177,7 +179,11 @@ const ProjetosGithub = () => {
                               </p>
 
                               <button className="btn btn-outline-primary">
-                                <a href={`${proj.svn_url}`}>Clique aqui!</a>
+                                <a
+                                  href={`${proj.svn_url}`}
+                                  target="_blank">
+                                    Clique aqui!
+                                </a>
                               </button>
                             </div>
                           </div>
