@@ -1,5 +1,5 @@
 import React from 'react';
-import note from '../images/notebook.jpg'
+// import note from '../images/notebook.jpg'
 import '../Styles/Utils/Notebook.sass';
 
 const Notebook = () => {
@@ -15,11 +15,11 @@ const Notebook = () => {
           Aqui te mostrarei toda minha carreira! Desenvolvendo meus projetos com amor e carinho, sempre tendo como <cite title="Source Title">meta a evolução!</cite>
         </p>
       </div>
-      <img
+      {/* <img
         className='object-fit-xxl imgNote'
         src={note}
         alt="imagem de notebook"
-      />
+      /> */}
     </section>
   );
 }

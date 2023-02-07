@@ -1,16 +1,46 @@
 @use '../variables'
 
+
 .divProjetoG
+  align-content: center
   border: 3px solid white
-  color: variables.$font-secondary
+  color: variables.$text-color-secondary
+  display: flex
+  flex-direction: column
   height: 50px auto
-  width: 20%
+  justify-content: center
 
-  .divProjectMap
-    border: 1px solid yellow
-    color: variables.$font-primary
-    width: 60%
-    height: auto
+  .divMainProjetos
+    border: 2px dashed gray
+    display: flex
+    flex-direction: row
 
-  .pBioGitUser
-    text-align: justify
+    .divProjectMap
+      display: flex
+      border: 3px solid variables.$text-color-third
+      color: variables.$text-color-secondary
+      flex-direction: row
+      flex-wrap: wrap
+      height: 25em
+      width: 11em
+
+      .divCards
+        border: 3px solid green
+        height: 100%
+        width: 10em
+        text-align: center
+
+        .pBioGitUser
+          text-align: justify
+
+        .h1Name
+          size: 2em
+          color: variables.$text-color-secondary
+          font-size: 1.5em
+
+      a
+        transition: 0.5s
+        text-decoration: none
+
+    .imgUser
+      border-radius: 2em

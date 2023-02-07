@@ -4,7 +4,7 @@ import "../Styles/Components/footer.sass";
 
 const Footer = () => {
   return (
-    <footer className="footerAll">
+    <footer className="footerAll container-fluid m-4">
       <div className="container-fluid">
         <p>
           Copyright&nbsp;

@@ -4,7 +4,7 @@ import "../Styles/Components/AsideLeft.sass";
 
 const AsideLeft = () => {
   return (
-    <div className="divAsideLeft">
+    <div className="divAsideLeft col-1 p-0">
       <ul className="list-social -share -fixed imgAsideLeft">
         <li className="item">
           <a

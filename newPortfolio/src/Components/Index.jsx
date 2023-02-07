@@ -6,11 +6,14 @@ import Footer from './Footer';
 import Notebook from '../Utils/Notebook';
 import PrincipaisSatcks from '../Utils/PrincipaisSatcks';
 import ProjetosGithub from '../Pages/ProjetosGithub';
-
+import NoteApple from '../images/noteApple.jpg'
 
 const Index = () => {
   return (
-    <div className='container-fluid sumIndex'>
+    <div
+    // style={{background: `url(${NoteApple})`}}
+      className='container-fluid col-11 sumIndex'
+    >
       <Header/>
       <div className="body-site">
         <Notebook/>
