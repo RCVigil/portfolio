@@ -130,10 +130,10 @@ const ProjetosGithub = () => {
                 </p>
                 <button className="btn btn-outline-info">
                   <a
-                    href='https://github.com/RCVigil?tab=repositories'
-                    target='_blank'
+                    href="https://github.com/RCVigil?tab=repositories"
+                    target="_blank"
                   >
-                      Repositório{" "}
+                    Repositório{" "}
                     <i className="bi bi-pc-display-horizontal">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -178,6 +178,18 @@ const ProjetosGithub = () => {
                               <p className="criadoP card-text card-subtitle">
                                 {moment(proj.created_at).format("MM / YYYY")}
                               </p>
+                              {!proj.homepage ? '' : <button
+                                type="button"
+                                className="LinkProject btn btn-link"
+                              >
+                                <a
+                                  className=""
+                                  href={`${proj.homepage}`}
+                                  target="_blank"
+                                >
+                                  {proj.name}
+                                </a>
+                              </button>}
                             </div>
                           </div>
 
