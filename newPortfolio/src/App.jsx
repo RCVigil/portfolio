@@ -1,6 +1,7 @@
 import './App.css';
 import AsideLeft from './Components/Aside-Left';
 import Index from './Components/Index';
+import RoutersApp from './routers';
 import './Styles/Components/app.sass';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div className="indexApp container">
         <Index />
       </div>
+      <RoutersApp/>
     </div>
   );
 }

@@ -53,15 +53,15 @@ const ProjetosFullGit = () => {
               projectsGitHub.map((proj, index) => {
                 if (proj.private === false) {
                   return (
-                    <div className="container-fluid border border-4 rounded m-4 p-5 border-primary" key={proj.id}>
+                    <div
+                      className="container-fluid border border-4 rounded m-4 p-5 border-primary"
+                      key={proj.id}
+                    >
                       <div className="divCards">
                         <div className="cardHeader d-flex text-center flex-column ">
                           <h1 className="h1Name text-center text-wrap text-capitalize fs-4 fw-bolder fst-italic font-monospace text-decoration-none">
                             {proj.name}
                           </h1>
-                          {/* <h1>
-                            {proj.description}
-                            </h1> */}
 
                           <div className="divCriadoP">
                             <p className="">{`Criado em :`}</p>
@@ -100,10 +100,20 @@ const ProjetosFullGit = () => {
                         <hr className="text-primary" />
 
                         <div>
-                          <p className="card-text">
-                            A linguagem predominante é:
-                          </p>
-                          <h5 className="card-text">{`${proj.language}`}</h5>
+                          {!proj.language ? (
+                            ""
+                          ) : (
+                            <>
+                              <p className="card-text">
+                                A linguagem predominante é:
+                              </p>
+                              <h5 className="card-text">{`${proj.language}`}</h5>
+                            </>
+                          )}
+
+                          <br />
+
+                          <p>{proj.description}</p>
 
                           <br />
 
