@@ -128,7 +128,7 @@ const ProjetosGithub = () => {
                 <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
                   Quer conhecer todos meus projetos?
                 </p>
-                <button className="btn btn-outline-info">
+                <button className="btnReposit btn btn-outline-info">
                   <a
                     href="https://github.com/RCVigil?tab=repositories"
                     target="_blank"
