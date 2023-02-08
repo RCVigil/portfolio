@@ -10,12 +10,16 @@
   gap: 20px
   height: 50px auto
   justify-content: center
+
+  h2
+    background: variables.$gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
   .divUserGit
     display: flex
     height: auto
     width: 13em
-
-  .divUserGit
     border: 0.2em solid variables.$text-color-third
     border-radius: variables.$card-border-radius
 
@@ -26,15 +30,16 @@
     flex-direction: row
     width: 100%
 
-  .divProjectGit
-    align-items: center
-    // border: 2px dotted gold
-    display: flex
-    flex-direction: row
-    justify-content: space-around
-    flex-wrap: wrap
-    gap: 50px
-    width: 100%
+    .divProjectGit
+      align-items: center
+      // border: 2px dotted gold
+      display: flex
+      flex-direction: row
+      flex-grow: 1
+      flex-wrap: wrap
+      justify-content: space-evenly
+      gap: 50px
+      width: 100%
 
     .divProjectMap
       display: flex
@@ -45,22 +50,25 @@
       flex-wrap: wrap
       height: 25em
       opacity: 1
-      width: 11em
+      width: 16em
 
       .divCards
         // border: 3px solid green
         display: flex
         flex-direction: column
-        height: 100%
         justify-content: center
-        width: 100%
+        width: 20em
         text-align: center
+
+        .cardHeader
+          // border: 1px solid white
+          height: 8em
 
         .pBioGitUser
           text-align: justify
 
         .h1Name
-          // size: 2em
+          size: 2em
           color: variables.$text-color-secondary
           font-size: 1.7em
 
@@ -72,6 +80,7 @@
 
       a
         transition: 0.5s
+        color: variables.$text-color
         text-decoration: none
 
     .imgUser

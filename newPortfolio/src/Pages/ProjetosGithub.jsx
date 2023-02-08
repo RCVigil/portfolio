@@ -55,17 +55,20 @@ const ProjetosGithub = () => {
   };
 
   return (
-    <main className="divProjetoG">
-      <div className="tituloProjetos">
-        <h1 className="">Principais Projetos</h1>
+    <main className="divProjetoG container-fluid d-flex flex-column">
+      <div className="tituloProjetos d-flex justify-content-center p-4">
+        <h2 className="text-center text-wrap text-capitalize fs-1 fw-bolder fst-italic font-monospace text-decoration-none">
+          Principais Projetos
+        </h2>
       </div>
-      <div className="divMainProjetos">
+
+      <div className="divMainProjetos d-flex flex-row w-full">
         {
-          <div className="d-flex col-4">
+          <div className="d-flex col-3">
             {!loading ? (
               <Loading />
             ) : (
-              <div className="divUserGit d-flex flex-column align-items-center p-2 mx-5">
+              <div className="divUserGit d-flex flex-column align-items-center p-2">
                 <h1 className="h1Name text-lg-right lh-sm font-italic text-capitalize text-decoration-none text-monospace mt-4">
                   {userGitHub.name}
                 </h1>
@@ -99,29 +102,52 @@ const ProjetosGithub = () => {
 
                 <hr />
 
-                <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
+                <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
                   {`Estou no GitHub desde`}
-                </h1>
+                </p>
 
-                <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-4">
+                <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-5">
                   {experiency()}
                 </h1>
 
                 <hr />
 
-                <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
+                <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
                   {userGitHub.location}
-                </h1>
+                </p>
 
                 <hr />
 
-                <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
+                <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
                   {`O último updated foi em:`}
-                </h1>
+                </p>
 
-                <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-4 mb-5">
+                <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-5 mb-5">
                   {`${moment(userGitHub.updated_at).format("DD / MM / YYYY")}`}
                 </h1>
+                <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
+                  Quer conhecer todos meus projetos?
+                </p>
+                <button className="btn btn-outline-info">
+                  <a
+                    href='https://github.com/RCVigil?tab=repositories'
+                    target='_blank'
+                  >
+                      Repositório{" "}
+                    <i className="bi bi-pc-display-horizontal">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className="bi bi-pc-display-horizontal"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z" />
+                      </svg>
+                    </i>
+                  </a>
+                </button>
               </div>
             )}
           </div>
@@ -136,40 +162,32 @@ const ProjetosGithub = () => {
                 if (proj.private === false) {
                   if (proj.stargazers_count === 1) {
                     return (
-                      <div
-                        className="divProjectMap"
-                        key={proj.id}
-                      >
+                      <div className="divProjectMap" key={proj.id}>
                         <div className="divCards">
-                          <h1 className="h1Name text-capitalize">
-                            {proj.name}
-                          </h1>
-
-                          <div className="cardDescription">
+                          <div className="cardHeader d-flex text-center flex-column">
+                            <h1 className="h1Name text-center text-wrap text-capitalize fs-4 fw-bolder fst-italic font-monospace text-decoration-none">
+                              {proj.name}
+                            </h1>
                             {/* <h1>
-                        {proj.description}
-                        </h1> */}
+                            {proj.description}
+                            </h1> */}
 
                             <div className="divCriadoP">
-                              <p className="">
-                                {`Criado em :`}
-                              </p>
+                              <p className="">{`Criado em :`}</p>
 
                               <p className="criadoP card-text card-subtitle">
                                 {moment(proj.created_at).format("MM / YYYY")}
                               </p>
                             </div>
+                          </div>
 
-                            <hr
-                              className="hrLineProj"
-                            />
+                          <hr className="hrLineProj" />
 
-                            <div>
-                              <p className="card-text">
-                                A linguagem predominante é:
-                              </p>
-                              <h5 className="card-text">{`${proj.language}`}</h5>
-                            </div>
+                          <div>
+                            <p className="card-text">
+                              A linguagem predominante é:
+                            </p>
+                            <h5 className="card-text">{`${proj.language}`}</h5>
 
                             <br />
 
@@ -179,10 +197,8 @@ const ProjetosGithub = () => {
                               </p>
 
                               <button className="btn btn-outline-primary">
-                                <a
-                                  href={`${proj.svn_url}`}
-                                  target="_blank">
-                                    Clique aqui!
+                                <a href={`${proj.svn_url}`} target="_blank">
+                                  Clique aqui!
                                 </a>
                               </button>
                             </div>
