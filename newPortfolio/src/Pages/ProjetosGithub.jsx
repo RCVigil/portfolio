@@ -162,9 +162,9 @@ const ProjetosGithub = () => {
                 if (proj.private === false) {
                   if (proj.stargazers_count === 1) {
                     return (
-                      <div className="divProjectMap" key={proj.id}>
+                      <div className="divProjectMap " key={proj.id}>
                         <div className="divCards">
-                          <div className="cardHeader d-flex text-center flex-column">
+                          <div className="cardHeader d-flex text-center flex-column ">
                             <h1 className="h1Name text-center text-wrap text-capitalize fs-4 fw-bolder fst-italic font-monospace text-decoration-none">
                               {proj.name}
                             </h1>
@@ -178,18 +178,33 @@ const ProjetosGithub = () => {
                               <p className="criadoP card-text card-subtitle">
                                 {moment(proj.created_at).format("MM / YYYY")}
                               </p>
-                              {!proj.homepage ? '' : <button
-                                type="button"
-                                className="LinkProject btn btn-link"
-                              >
-                                <a
-                                  className=""
-                                  href={`${proj.homepage}`}
-                                  target="_blank"
+                              {!proj.homepage ? (
+                                ""
+                              ) : (
+                                <button
+                                  className="LinkProject btn btn-outline-primary rounded-pill"
                                 >
-                                  {proj.name}
-                                </a>
-                              </button>}
+                                  <a
+                                    className=""
+                                    href={`${proj.homepage}`}
+                                    target="_blank"
+                                  >
+                                    <i className="bi bi-play-btn mx-1">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="19"
+                                        height="19"
+                                        fill="currentColor"
+                                        className="bi bi-play-btn"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                      </svg>
+                                    </i>
+                                  </a>
+                                </button>
+                              )}
                             </div>
                           </div>
 
