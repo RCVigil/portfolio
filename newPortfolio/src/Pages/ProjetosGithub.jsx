@@ -1,8 +1,8 @@
-import axios from "axios";
 import moment from "moment";
 import React, { useState, useEffect } from "react";
 import "../Styles/Components/ProjetosGit.sass";
 import Loading from "./Loading";
+import ProjetosFullGit from "./ProjetosFullGit";
 
 const ProjetosGithub = () => {
   const [userGitHub, setUserGitHub] = useState([]);
@@ -240,6 +240,7 @@ const ProjetosGithub = () => {
           </div>
         }
       </div>
+      <ProjetosFullGit/>
     </main>
   );
 };
