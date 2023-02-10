@@ -63,7 +63,9 @@ const ProjetosGithub = () => {
         </h2>
       </div>
 
-      <div className="divMainProjetos d-flex col-11 flex-row w-full">
+      <div 
+        className="divMainProjetos d-flex col-11 flex-row w-full"
+      >
         {
           <div className="d-flex col-3">
             {!loading ? (
