@@ -1,0 +1,68 @@
+@use '../variables'
+
+h2
+  background: variables.$gradient
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+.divMainProjetos
+  // border: 2px dashed gray
+  display: flex
+  flex-direction: row
+  width: 100%
+
+  .divProjectGit
+    align-items: center
+    // border: 2px dotted gold
+    display: flex
+    flex-direction: row
+    flex-grow: 1
+    flex-wrap: wrap
+    justify-content: space-evenly
+    gap: 50px
+    width: 100%
+
+    .divCards
+      // border: 3px solid green
+      display: flex
+      flex-direction: column
+      justify-content: center
+      width: auto
+      text-align: center
+
+    // .divCards:hover
+    //   background: #3b3b3bc7
+    //   border: 0.2em solid variables.$text-color-third
+    //   border-radius: variables.$card-border-radius
+    //   height: 110%
+    //   width: 110%
+    //   opacity: 1
+    //   transform: scale(1.05)
+    //   background-position: -60px
+    //   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(29, 17, 17, 0.23)
+
+    .cardHeader
+      // border: 1px solid white
+      height: 8em
+
+    .h1Name
+      size: 2em
+      color: variables.$text-color-secondary
+      font-size: 1.7em
+
+    .hrLineProj
+      border: 0.1em solid variables.$text-color-third
+      opacity: 1
+      // border-radius: 0 0 50px 50px
+      // width: 90%
+
+    a
+      transition: 0.3s
+      color: variables.$text-color
+      text-decoration: none
+
+    .imgUser
+      border-radius: 2em
+
+    .btnReposit:hover
+      transform: scale(1.2, 1.2)

@@ -12,14 +12,12 @@ function RoutersApp() {
         <Route
           exact path="/"
           element={<Index />}
-          >
-        </Route>
+        />
 
         <Route
           exact path="/projetosFull"
           element={<ProjetosFullGit />}
-        >
-        </Route>
+        />
 
         <Route
           path="/404"

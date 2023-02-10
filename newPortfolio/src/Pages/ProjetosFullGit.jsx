@@ -1,6 +1,9 @@
-import moment from "moment";
 import React, { useState, useEffect } from "react";
+
+import moment from "moment";
+
 import "../Styles/Components/ProjetosFullGit.sass";
+
 import Loading from "./Loading";
 
 const ProjetosFullGit = () => {
@@ -46,7 +49,7 @@ const ProjetosFullGit = () => {
       <div className="divMainProjetos d-flex flex-row w-full">
         {!loading && <Loading />}
         {
-          <div className="divProjectGit">
+          <div className="divProjectGit d-flex align-content-around flex-column">
             {!projectsGitHub ? (
               <Loading />
             ) : (
@@ -64,7 +67,11 @@ const ProjetosFullGit = () => {
                           </h1>
 
                           <div className="divCriadoP">
-                            <p className="">{`Criado em :`}</p>
+                            <p
+                              className="card-text"
+                            >
+                              Criado em :
+                            </p>
 
                             <p className="criadoP card-text card-subtitle">
                               {moment(proj.created_at).format("MM / YYYY")}
