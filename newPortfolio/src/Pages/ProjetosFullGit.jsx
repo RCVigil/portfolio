@@ -48,7 +48,7 @@ const ProjetosFullGit = () => {
       <div className="asideLeft">
         <AsideLeft />
       </div>
-      <div className="tituloProjetos d-flex justify-content-center p-4 ">
+      <div className="tituloProjetos d-flex justify-content-center pt-4 ">
         <h2 className="text-center text-wrap text-capitalize fs-1 fw-bolder fst-italic font-monospace text-decoration-none">
           Todos Projetos
         </h2>
@@ -66,7 +66,7 @@ const ProjetosFullGit = () => {
                   return (
                     <div className="divRender d-flex col-11" key={proj.id}>
                       <div className="d-flex flex-column col-3 ">
-                        <h1 className="mb-5">Stacks usadas no Projeto</h1>
+                        <h1 className="mb-5 mt-5 fs-2">Stacks usadas neste Projeto.</h1>
                         <div className="divStacks d-flex flex-column align-items-center justify-content-center">
                           {proj.topics.map((topic, index) => {
                             return (
@@ -82,19 +82,19 @@ const ProjetosFullGit = () => {
                           })}
                         </div>
                       </div>
-                      <div className="container-fluid col-8 border border-4 rounded m-4 p-5 border-primary">
+                      <div className="container-fluid col-8 border border-4 rounded mt-4 pt-5 border-primary">
                         <div className="divCards">
                           <div className="cardHeader d-flex text-center flex-column ">
-                            <h1 className="h1Name text-center text-wrap text-capitalize fs-4 fw-bolder fst-italic font-monospace text-decoration-none">
+                            <h1 className="h1Name text-center text-wrap text-capitalize fs-1 fw-bolder fst-italic font-monospace text-decoration-none">
                               {proj.name}
                             </h1>
 
-                            <div className="divCriadoP">
-                              <p className="card-text text-secondary">
+                            <div className="divCriadoP d-flex justify-content-center mt-4">
+                              <p className="card-text text-info">
                                 Criado em :
                               </p>
 
-                              <p className="criadoP card-text card-subtitle text-light">
+                              <p className="criadoP ms-3 card-text card-subtitle text-light">
                                 {moment(proj.created_at).format("MM / YYYY")}
                               </p>
                             </div>
@@ -106,12 +106,12 @@ const ProjetosFullGit = () => {
                             {!proj.language ? (
                               ""
                             ) : (
-                              <>
-                                <p className="card-text text-secondary">
+                              <div className="d-flex justify-content-center m-2">
+                                <p className="card-text text-info">
                                   A linguagem predominante é:
                                 </p>
-                                <h5 className="card-text text-light">{`${proj.language}`}</h5>
-                              </>
+                                <h5 className="card-text text-light ms-3">{`${proj.language}`}</h5>
+                              </div>
                             )}
 
                             <br />
@@ -120,7 +120,7 @@ const ProjetosFullGit = () => {
 
                             <br />
 
-                            <div>
+                            <div className="mt-3">
                               <p className="card-footer text-light">
                                 {`Quer conhecer mais sobre este projeto?`}
                               </p>
