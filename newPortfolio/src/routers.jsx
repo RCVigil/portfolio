@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 // import { MemoryRouter } from "react-router";
 import Index from "./Components/Index";
 import ProjetosFullGit from "./Pages/ProjetosFullGit";
@@ -14,16 +14,22 @@ function RoutersApp() {
           element={<Index />}
           >
         </Route>
+
         <Route
           exact path="/projetosFull"
           element={<ProjetosFullGit />}
-          >
-          </Route>
+        >
+        </Route>
+
+        <Route
+          path="/404"
+          element={<Error404 />}
+        />
+
         <Route 
           path="*"
-          element={<Error404 />}
-          >
-        </Route>
+          element={<Navigate to='/404'/>}
+        />
       </Routes>
   );
 }
