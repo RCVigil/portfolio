@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import baby from "../images/baby-fam-di-no-24.gif";
 
@@ -34,4 +34,4 @@ const Error404 = () => {
   );
 };
 
-export default Error404;
+export default memo(Error404);
