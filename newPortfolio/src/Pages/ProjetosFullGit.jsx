@@ -8,6 +8,8 @@ import Loading from "./Loading";
 
 import goHome from "../images/goHome.svg";
 import { Link } from "react-router-dom";
+import Header from "../Components/Header";
+import AsideLeft from "../Components/Aside-Left";
 
 const ProjetosFullGit = () => {
   const [projectsGitHub, setProjectsGitHub] = useState([]);
@@ -26,7 +28,6 @@ const ProjetosFullGit = () => {
       })
         .then((resp) => resp.json())
         .then((data) => {
-          console.log(data);
           setProjectsGitHub(data);
           setLoading(true);
         })
@@ -43,6 +44,10 @@ const ProjetosFullGit = () => {
 
   return (
     <div>
+      <Header />
+      <div className="asideLeft">
+        <AsideLeft />
+      </div>
       <div className="tituloProjetos d-flex justify-content-center p-4 ">
         <h2 className="text-center text-wrap text-capitalize fs-1 fw-bolder fst-italic font-monospace text-decoration-none">
           Todos Projetos
@@ -56,35 +61,28 @@ const ProjetosFullGit = () => {
             {!projectsGitHub ? (
               <Loading />
             ) : (
-              projectsGitHub.map((proj, index) => {
+              projectsGitHub.map((proj) => {
                 if (proj.private === false) {
                   return (
                     <div className="divRender d-flex col-11" key={proj.id}>
                       <div className="d-flex flex-column col-3 ">
-                        <h1 className="mb-5">
-                          Stacks usadas no Projeto
-                        </h1>
+                        <h1 className="mb-5">Stacks usadas no Projeto</h1>
                         <div className="divStacks d-flex flex-column align-items-center justify-content-center">
-                          {
-                            (proj.topics).map((topic, index) => {
-                              return (
+                          {proj.topics.map((topic, index) => {
+                            return (
                               <ul
+                              key={index}
                                 className="list-group col-9"
-                                key={topic.index}
                               >
-                                <li
-                                  className="list-group-item fs-5 text-primary mt-1 list-group-item-info"
-                                >
+                                <li className="list-group-item fs-5 text-primary mt-1 list-group-item-info">
                                   {topic}
                                 </li>
-                              </ul>)
-                            })
-                          }
+                              </ul>
+                            );
+                          })}
                         </div>
                       </div>
-                      <div
-                        className="container-fluid col-8 border border-4 rounded m-4 p-5 border-primary"
-                      >
+                      <div className="container-fluid col-8 border border-4 rounded m-4 p-5 border-primary">
                         <div className="divCards">
                           <div className="cardHeader d-flex text-center flex-column ">
                             <h1 className="h1Name text-center text-wrap text-capitalize fs-4 fw-bolder fst-italic font-monospace text-decoration-none">
