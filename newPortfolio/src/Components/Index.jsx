@@ -15,12 +15,12 @@ const Index = () => {
       className='container-fluid col-11 sumIndex'
     >
       <Header/>
-      <div className="body-site">
+      <main className="body-site">
         <Notebook/>
         <SobrePort/>
         <ProjetosGithub/>
         <PrincipaisSatcks/>
-      </div>
+      </main>
       <Footer/>
     </div>
   );

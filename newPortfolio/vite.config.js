@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   esbuild: { jsxFragment: 'Fragment' },
   plugins: [react()],
+  css: {
+    sass: {
+      additionalData: `@import 'src/Styles/variables.sass*';`
+    },
+  }
 })
