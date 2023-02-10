@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-// import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import "../Styles/Components/ProjetosGit.sass";
 import moment from "moment";
 import Loading from "./Loading";
-import { Link } from "react-router-dom";
-// import ProjetosFullGit from "./ProjetosFullGit";
 
 const ProjetosGithub = () => {
   const [userGitHub, setUserGitHub] = useState([]);
@@ -57,14 +56,14 @@ const ProjetosGithub = () => {
   };
 
   return (
-    <main className="divProjetoG container-fluid d-flex flex-column">
+    <main className="divProjetoG container-fluid col-11 d-flex flex-column">
       <div className="tituloProjetos d-flex justify-content-center p-4">
         <h2 className="text-center text-wrap text-capitalize fs-1 fw-bolder fst-italic font-monospace text-decoration-none">
           Principais Projetos
         </h2>
       </div>
 
-      <div className="divMainProjetos d-flex flex-row w-full">
+      <div className="divMainProjetos d-flex col-11 flex-row w-full">
         {
           <div className="d-flex col-3">
             {!loading ? (
@@ -171,8 +170,8 @@ const ProjetosGithub = () => {
                 if (proj.private === false) {
                   if (proj.stargazers_count === 1) {
                     return (
-                      <div className="divProjectMap " key={proj.id}>
-                        <div className="divCards">
+                      <div className="divProjectMap" key={proj.id}>
+                        <div className="divCards ">
                           <div className="cardHeader d-flex text-center flex-column ">
                             <h1 className="h1Name text-center text-wrap text-capitalize fs-4 fw-bolder fst-italic font-monospace text-decoration-none">
                               {proj.name}

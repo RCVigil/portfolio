@@ -1,20 +1,25 @@
 import React from 'react';
-import Header from './Header';
+
 import '../Styles/Components/index.sass'
-import SobrePort from './sobrePort';
-import Footer from './Footer';
+
+import Header from './Header';
+import AsideLeft from './Aside-Left'
 import Notebook from '../Utils/Notebook';
+import SobrePort from './sobrePort';
 import PrincipaisSatcks from '../Utils/PrincipaisSatcks';
 import ProjetosGithub from '../Pages/ProjetosGithub';
-import NoteApple from '../images/noteApple.jpg'
+import Footer from './Footer';
+// import NoteApple from '../images/noteApple.jpg'
 
 const Index = () => {
   return (
     <div
-    // style={{background: `url(${NoteApple})`}}
       className='container-fluid col-11 sumIndex'
     >
       <Header/>
+      <div className="asideLeft">
+        <AsideLeft />
+      </div>
       <main className="body-site">
         <Notebook/>
         <SobrePort/>

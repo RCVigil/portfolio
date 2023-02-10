@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "tabnine.tabnine-vscode",
-    "hansuxdev.bootstrap5-snippets"
+    "hansuxdev.bootstrap5-snippets",
+    "steoates.autoimport"
   ]
 }

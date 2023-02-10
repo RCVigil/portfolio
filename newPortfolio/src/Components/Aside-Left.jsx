@@ -4,9 +4,9 @@ import "../Styles/Components/AsideLeft.sass";
 
 const AsideLeft = () => {
   return (
-    <div className="divAsideLeft col-1 p-0">
+    <div className="divAsideLeft col-1 ms-1">
       <ul className="list-social -share -fixed imgAsideLeft">
-        <li className="item">
+        <li className="item list-group-item">
           <a
             className="btn-share"
             target="_blank"
@@ -29,7 +29,7 @@ const AsideLeft = () => {
           </a>
         </li>
 
-        <li className="item">
+        <li className="item list-group-item">
           <a
             className="btn-share"
             target="_blank"
@@ -52,7 +52,7 @@ const AsideLeft = () => {
           </a>
         </li>
 
-        <li className="item">
+        <li className="item list-group-item">
           <a
             className="btn-share"
             target="_blank"
@@ -75,7 +75,7 @@ const AsideLeft = () => {
           </a>
         </li>
 
-        <li className="item">
+        <li className="item list-group-item">
           <a
             className="btn-share"
             target="_blank"
@@ -99,7 +99,7 @@ const AsideLeft = () => {
           </a>
         </li>
 
-        <li className="item">
+        <li className="item list-group-item">
           <a className="btn-share" target="_blank" href="https://t.me/RodrigoCVigil" rel="noreferrer">
             {/* imagem do email */}
             <i className="bi bi-telegram iAsideLeft rounded-5">

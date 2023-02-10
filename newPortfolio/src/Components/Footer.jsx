@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footerAll ph-4">
       <div className="container">
-        <p className="">
+        <p>
           Copyright&nbsp;
           <i className="bi bi-c-circle">
             <svg
