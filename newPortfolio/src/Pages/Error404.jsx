@@ -12,7 +12,7 @@ const Error404 = () => {
           alt="foto do baby da familia dinossauros dizendo não com a cabeça"
         />
       </div>
-      <h1>Error 404</h1>
+      <h1>Not Found 404</h1>
       <Link 
         className="btn btn-warning"
         to='/'

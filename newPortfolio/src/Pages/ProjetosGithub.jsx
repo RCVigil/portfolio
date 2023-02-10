@@ -56,7 +56,7 @@ const ProjetosGithub = () => {
   };
 
   return (
-    <main className="divProjetoG container-fluid col-11 d-flex flex-column">
+    <main className="divProjetoG container-fluid d-flex col-11 flex-wrap flex-column">
       <div className="tituloProjetos d-flex justify-content-center p-4">
         <h2 className="text-center text-wrap text-capitalize fs-1 fw-bolder fst-italic font-monospace text-decoration-none">
           Principais Projetos
