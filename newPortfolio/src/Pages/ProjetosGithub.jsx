@@ -47,7 +47,7 @@ const ProjetosGithub = () => {
         .catch((error) => {
           setErrorMsg(error);
         });
-    }, 300);
+    }, 3000);
   }, []);
 
   const experiency = () => {
@@ -173,7 +173,7 @@ const ProjetosGithub = () => {
             {!projectsGitHub ? (
               <Loading />
             ) : (
-              projectsGitHub.map((proj, index) => {
+              projectsGitHub.map((proj) => {
                 if (proj.private === false) {
                   if (proj.stargazers_count === 1) {
                     return (
