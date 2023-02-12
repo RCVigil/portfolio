@@ -29,5 +29,5 @@ export default Menu = () => {
         %button.btn.btn-primary.btn-lg{'{'}"data-target" =&gt; "#modalNavigation", "data-toggle" =&gt; "modal", :type =&gt; "button"{'}'}
         Open Navigation
       </div>
-    )
+    );
 }
