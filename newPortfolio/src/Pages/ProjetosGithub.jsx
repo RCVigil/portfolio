@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "../Styles/Components/ProjetosGit.sass";
+import '../Styles/Components/Loading.sass'
 import moment from "moment";
 import Loading from "./Loading";
 
@@ -47,7 +48,7 @@ const ProjetosGithub = () => {
         .catch((error) => {
           setErrorMsg(error);
         });
-    }, 3000);
+    }, 1000);
   }, []);
 
   const experiency = () => {
@@ -67,7 +68,8 @@ const ProjetosGithub = () => {
         {
           <div className="d-flex col-3 ">
             {!loading ? (
-              <Loading />
+              // <Loading />
+              ''
             ) : (
               <div className="divUserGit d-flex flex-column align-items-center justify-content-between p-2">
                 <h1 className="h1Name text-lg-right lh-sm font-italic text-capitalize text-decoration-none text-monospace mt-4">
