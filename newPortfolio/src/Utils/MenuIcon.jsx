@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "../Styles/Menu.css";
 
@@ -16,23 +17,37 @@ const MenuIcon = () => {
         className={active ? "icon iconActive" : "icon"}
         onClick={toggleMenu}
       >
-        <div className="hamburguer hamburguerIcon">
-        </div>
+        <div className="hamburguer hamburguerIcon"></div>
       </div>
-      <div
-        className={active ? "menu menuOpen" : "menu menuClose"}
-      >
+      <div className={active ? "menu menuOpen" : "menu menuClose"}>
         {console.log(active)}
         <div className="list">
-          <ul
-            className="listItems"
-            aria-hidden="true"
-          >
-            <li className="liItemsMenu">Home</li>
-            <li className="liItemsMenu">Sobre</li>
-            <li className="liItemsMenu">Principais Projetos</li>
-            <li className="liItemsMenu">Principais Stacks</li>
-            <li className="liItemsMenu">Todos Projetos</li>
+          <ul className="listItems" aria-hidden="true">
+            <li className="liItemsMenu">
+              <Link className="linkItemsMenu" to="/">
+                Home
+              </Link>
+            </li>
+            {/* <li className="liItemsMenu">
+              <Link className="linkItemsMenu" to="/">
+                Sobre
+              </Link>
+            </li>
+            <li className="liItemsMenu">
+              <Link className="linkItemsMenu" to="/">
+                Principais Projetos
+              </Link>
+            </li>
+            <li className="liItemsMenu">
+              <Link className="linkItemsMenu" to="/">
+                Principais Stacks
+              </Link>
+            </li> */}
+            <li className="liItemsMenu">
+              <Link className="linkItemsMenu" to="/projetosFull">
+                Todos Projetos
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

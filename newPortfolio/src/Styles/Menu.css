@@ -85,6 +85,16 @@
   box-shadow: 0 2px 5px transparent;
 }
 
+.linkItemsMenu {
+  color: #fff;
+  text-decoration: none;
+}
+
+.linkItemsMenu:hover {
+  color: #f15424;
+  text-decoration: none;
+}
+
 .icon.iconActive .hamburguer:after {
   top: 0;
   background: linear-gradient(90deg, rgb(255, 255, 255, 1) 0%, rgba(255,242,9,1) 100%);
