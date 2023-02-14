@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: row;
   left: 1%;
-  padding: 65px 0 0; 
+  padding: 2vw 0 0; 
   color: #fff;
   font-size: 1.2rem;
   font-weight: 500;
@@ -111,7 +111,7 @@
 
 .menu.menuOpen {
   width: 95%;
-  height: 20vh;
+  height: 13vh;
   background: #301b3194;
   box-shadow: 10px 0 69px 0 rgba(0, 0, 0, 0.59);
 }
