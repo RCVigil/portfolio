@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Serif', serif;
+}
+
+.icon {
+  position: absolute;
+  z-index: 4;
+  left: 1%;
+  width: fit-content;
+  height: 44px;
+  cursor: pointer;
+}
+
+.hamburguer {
+  top: 50%;
+  margin-left: 5rem;
+  width: 30px;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
+  box-shadow: 0 2px 5px rgba(83, 80, 180, 0.7);
+      transition: 0.5s;
+}
+
+.hamburguer:before {
+  top: -12px;
+  content: '';
+  margin-left: 5rem;
+  left: 1%;
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
+  box-shadow: 0 2px 5px rgba(83, 80, 180, 0.7);
+  transition: 0.5s;
+}
+
+.hamburguer:after {
+  top: 12px;
+  margin-left: 5rem;
+  content: '';
+  left: 1%;
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
+  box-shadow: 0 2px 5px rgba(83, 80, 180, 0.7);
+  transition: 0.5s;
+}
+
+.list {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  left: 1%;
+  padding: 65px 0 0; 
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.list .listItems {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 5px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.list .listItems li {
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.list .listItems li:hover {
+  font-weight: 800;
+}
+
+.icon.iconActive .hamburguer {
+  background: transparent;
+  box-shadow: 0 2px 5px transparent;
+}
+
+.icon.iconActive .hamburguer:after {
+  top: 0;
+  background: linear-gradient(90deg, rgb(255, 255, 255, 1) 0%, rgba(255,242,9,1) 100%);
+  transform: rotate(225deg);
+  box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.529);
+}
+
+.icon.iconActive .hamburguer:before {
+  top: 0;
+  background: linear-gradient(90deg, rgb(255, 255, 255, 1) 0%, rgba(255,242,9,1) 100%);
+  transform: rotate(135deg);
+  box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.743);
+}
+
+.menu.menuOpen {
+  width: 95%;
+  height: 20vh;
+  background: #301b3194;
+  box-shadow: 10px 0 69px 0 rgba(0, 0, 0, 0.59);
+}
+
+.menu.menuClose {
+  display: none;
+  width: 0;
+}

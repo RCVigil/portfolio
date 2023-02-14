@@ -2,6 +2,9 @@
   "recommendations": [
     "tabnine.tabnine-vscode",
     "hansuxdev.bootstrap5-snippets",
-    "steoates.autoimport"
+    "steoates.autoimport",
+    "hwencc.html-tag-wrapper",
+    "formulahendry.auto-complete-tag",
+    "vincaslt.highlight-matching-tag"
   ]
 }
