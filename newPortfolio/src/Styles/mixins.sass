@@ -1,0 +1,31 @@
+@import '../Styles/variables'
+
+/* Screens */
+
+// $mobile-breakpoint: 480px
+
+// $tablet-breakpoint: 768px
+
+// $desktop-breakpoint: 1024px
+
+// $smart-tv: 1440px
+
+@mixin mobile
+  @media (max-width: $mobile-breakpoint) 
+    @content
+
+@mixin tablet
+  @media (min-width: ($mobile-breakpoint + 1)) and (max-width: $tablet-breakpoint) 
+    @content
+
+@mixin desktop
+  @media (min-width: ($tablet-breakpoint + 1)) and (max-width: $desktop-breakpoint) 
+    @content
+
+@mixin largeDesktop
+  @media (min-width: ($desktop-breakpoint + 1)) and (max-width: $smart-tv) 
+    @content
+
+@mixin largeScreen
+  @media (min-width: ($smart-tv + 1))
+    @content

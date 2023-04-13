@@ -1,9 +1,17 @@
 @use '../variables'
+@import '../mixins'
 
 .sumIndex
-  // border:5px double blue
   color: variables.$text-color-secondary
   width: 100%
+  @include mobile
+    border:5px double blue
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    margin: 0
+    padding: 0
+    width: 120%
 
   .body-site
     display: flex

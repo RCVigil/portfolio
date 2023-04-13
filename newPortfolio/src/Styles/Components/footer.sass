@@ -1,14 +1,31 @@
 @use '../variables'
+@import '../mixins'
 
 .footerAll
   // border: 3px dashed white
   align-items: center
+  align-content: center
   background-color: variables.$bg-color-secondary
-  display: flex
   color: variables.$text-color
-  height: 10%
+  display: flex
+  flex-direction: column
+  height: 20%
   justify-content: flex-end
-  width: 100%
+  margin-left: 4rem
+  width: 90%
+  @include mobile
+    border: 1px solid orange
+    height: 30%
 
-  p
-    padding: 1em
+  .divFooter
+    @include mobile
+      margin-top: 2rem
+      // font-size: 10rem
+
+    .span1Footer
+      @include mobile
+
+    .pFooter
+      @include mobile
+        padding-top: 1rem
+        padding-bottom: 0.7rem
