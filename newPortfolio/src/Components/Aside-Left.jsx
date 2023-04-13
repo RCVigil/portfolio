@@ -3,7 +3,7 @@ import React from "react";
 import "../Styles/Components/AsideLeft.sass";
 
 const AsideLeft = () => {
-  const isMobile = window.innerWidth > 768;
+  const isMobile = window.innerWidth < 768;
   return (
     <div className="divAsideLeft">
       <ul className="imgAsideLeft">
