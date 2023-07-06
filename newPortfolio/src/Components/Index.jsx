@@ -14,7 +14,7 @@ import Footer from './Footer';
 const Index = () => {
   return (
     <div
-      className='container-fluid col-11 sumIndex'
+      className='sumIndex'
     >
       <Header/>
       <div className="asideLeft">

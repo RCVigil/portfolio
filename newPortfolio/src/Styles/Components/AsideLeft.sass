@@ -7,57 +7,88 @@
   flex-direction: column
   position: fixed
   top: 5rem
-  @include mobile
-    border: 1px solid white
+  @include small-screen
+    // border: 1px solid white
     align-content: center
     align-items: center
-    display: flex
-    position: relative
+    position: sticky
     flex-direction: row
-    flex-wrap: wrap
-    top: 0
     width: 100%
 
   .imgAsideLeft
-    // border: 1px solid yellow
     align-self: center
     display: flex
     flex-direction: column
     justify-content: space-between
-    @include mobile
+    @include small-screen
+      border: 1px solid yellow
       flex-direction: row
-      justify-content: space-around
-      // gap: 3.3rem
+      justify-content: space-between
+      gap: 0.3rem
       margin: 0.1rem
       width: 100%
 
+    .imgAsideLeft ul
+    @include small-screen
+      border: 1px solid red
+      padding: 0
+
     .item
       list-style-type: none
+      @include small-screen
+        align-content: center
+        align-items: center
+        display: flex
+        justify-content: center
 
       .divLi1
-        @include mobile
-        // border: 1px solid red
+        @include small-screen
+        background-color: yellow
         align-content: center
         align-items: center
         display: flex
         flex-direction: column
-        // gap: 2rem
+        justify-content: center
+        width: 4rem
+
+      .divLi2
+        @include small-screen
+        // background-color: yellow
+        align-content: center
+        align-items: center
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+      .divLi3
+        @include small-screen
+        // background-color: yellow
+        align-content: center
+        align-items: center
+        display: flex
+        flex-direction: column
         justify-content: center
 
       .iAsideLeft
-        // border: 1px solid white
         color: variables.$text-color-third
         height: 100%
         width: 100%
-        @include mobile
+        @include small-screen
       
 
-        .pAsideLeftRedes
-          @include mobile
-          margin-bottom: -1rem
+        .pAsideTopRedes
+          @include small-screen
+          text-decoration: none
+          margin-bottom: -1.5rem
           margin-left: -2.5rem
-          height: 0.7rem
+          height: auto
 
+        .pAsideBottomRedes
+          @include small-screen
+          text-decoration: none
+          margin-top: -1.5rem
+          margin-left: -2.5rem
+          height: auto
 
         .imageSVGAsideLeft
           // border: 1px dashed white
@@ -67,12 +98,13 @@
           margin: 2rem 0 2rem -2rem
           opacity: 0.5
           transition: all 0.31s ease-in-out
-          @include mobile
+          @include small-screen
             opacity: 1
             display: flex
             justify-content: center
             align-content: center
             align-items: center
+            transition: none
 
         .imageSVGAsideLeft:hover
           border: 0.1vw solid #f6ff00ba
@@ -84,3 +116,7 @@
           padding: 9px
           transform: scale(1.5, 1.5)
           width: 6vh
+          @include small-screen
+            border: 0
+            border-radius: 0
+            transform: scale(0, 0)

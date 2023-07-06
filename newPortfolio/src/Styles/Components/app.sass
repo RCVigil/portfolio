@@ -1,24 +1,12 @@
 @use '../variables'
 @import '../mixins'
 
-/* Screens */
-
-// $mobile-breakpoint: 480px
-
-// $tablet-breakpoint: 768px
-
-// $desktop-breakpoint: 1024px
-
-// $smart-tv: 1440px
-
 #portfolio
-  // border: 3px dashed purple
   display: flex
   height: 100vh
   justify-content: space-between
-  @include mobile
+  @include small-screen
     background-color: #c3c3c332
-    // border: 1px solid yellow
     flex-direction: column
     height: 100%
     justify-content: center

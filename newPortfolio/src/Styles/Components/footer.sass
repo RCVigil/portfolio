@@ -1,7 +1,7 @@
 @use '../variables'
 @import '../mixins'
 
-.footerAll
+#footerAll
   // border: 3px dashed white
   align-items: center
   align-content: center
@@ -11,21 +11,21 @@
   flex-direction: column
   height: 20%
   justify-content: flex-end
-  margin-left: 4rem
-  width: 90%
-  @include mobile
+  // margin-left: 4rem
+  width: 100% !important
+  @include small-screen
     border: 1px solid orange
     height: 30%
 
   .divFooter
-    @include mobile
+    @include small-screen
       margin-top: 2rem
       // font-size: 10rem
 
     .span1Footer
-      @include mobile
+      @include small-screen
 
     .pFooter
-      @include mobile
+      @include small-screen
         padding-top: 1rem
         padding-bottom: 0.7rem

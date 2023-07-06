@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../Styles/Menu.css";
+import "../Styles/Components/menuHamburguer.sass"
 
 const MenuIcon = () => {
   const [active, setActive] = useState(false);
@@ -24,7 +25,7 @@ const MenuIcon = () => {
         <div className="list">
           <ul className="listItems" aria-hidden="true">
             <li className="liItemsMenu">
-              <Link className="linkItemsMenu" to="/">
+              <Link id="linkItemsMenu" to="/">
                 Home
               </Link>
             </li>
@@ -44,7 +45,7 @@ const MenuIcon = () => {
               </Link>
             </li> */}
             <li className="liItemsMenu">
-              <Link className="linkItemsMenu" to="/projetosFull">
+              <Link id="linkItemsMenu" to="/projetosFull">
                 Todos Projetos
               </Link>
             </li>

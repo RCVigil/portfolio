@@ -9,19 +9,26 @@ $color-red: #ff0059
 $font-primary: 'Noto Sans Display', sans-serif
 $font-secondary: 'Roboto Serif', serif
 $full-border-radius: 50px
-$gradient: linear-gradient(90deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%)
+$apple :#6BC43C  // rgb (107, 196, 60)
+$monza: #D8000C  // rgb (216,0,12)
+$gradient: linear-gradient(90deg, rgba(250 82 82 / 1) 0%, rgba(221 36 118 / 1) 100%)
 $gradient-2: linear-gradient(90deg, rgb(255, 255, 255, 1) 0%, rgba(255,242,9,1) 100%)
 $text-color: #fff
 $text-color-secondary: #a6a6a6
 $text-color-third: #00caff
 $image-note1: url('../images/noteApple.jpg')
 
-/* Screens */
 
-$mobile-breakpoint: 480px
+// Screens
+$mobile-breakpoint: 425px   // @include small-screen {}
 
-$tablet-breakpoint: 768px
+$tablet-breakpoint: 768px   // @include medium-screen {}
 
-$desktop-breakpoint: 1024px
+$tablet10P-breakpoint: 830px   // @include large-tablet-screen {}
 
-$smart-tv: 1440px
+$desktop-breakpoint: 1024px   // @include large-screen {}
+
+$screen-Large: 1440px   // @include extra-large-screen {}
+
+$screen-Extra-Large: 1919px   // @include full-large-screen {}
+

@@ -4,15 +4,6 @@
   font-family: 'Roboto Serif', serif;
 }
 
-.icon {
-  position: absolute;
-  z-index: 4;
-  left: 1%;
-  width: fit-content;
-  height: 44px;
-  cursor: pointer;
-}
-
 .hamburguer {
   top: 50%;
   margin-left: 5rem;
@@ -20,7 +11,7 @@
   height: 6px;
   background: linear-gradient(90deg, rgba(250,82,82,1) 0%, rgba(221,36,118,1) 100%);
   box-shadow: 0 2px 5px rgba(83, 80, 180, 0.7);
-      transition: 0.5s;
+  transition: 0.5s;
 }
 
 .hamburguer:before {
@@ -85,12 +76,12 @@
   box-shadow: 0 2px 5px transparent;
 }
 
-.linkItemsMenu {
+#linkItemsMenu {
   color: #fff;
   text-decoration: none;
 }
 
-.linkItemsMenu:hover {
+#linkItemsMenu:hover {
   color: #f15424;
   text-decoration: none;
 }
@@ -110,13 +101,28 @@
 }
 
 .menu.menuOpen {
-  width: 95%;
-  height: 13vh;
   background: #301b3194;
   box-shadow: 10px 0 69px 0 rgba(0, 0, 0, 0.59);
+  height: 15vh;
+  margin-top: 0;
+  width: 100%;
 }
 
 .menu.menuClose {
   display: none;
   width: 0;
+}
+
+/* Para dispositivos com largura de tela menor ou igual a 600px */
+@media (max-width: 425px) {
+  .list {
+    align-self: center;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  #linkItemsMenu:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }

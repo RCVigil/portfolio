@@ -1,25 +1,39 @@
 @use '../variables'
+@import '../mixins'
 
 .allHeader
-  // border: 1.5px solid white
   display: flex
   height: 10rem
-  flex-direction: row
   flex-wrap: wrap
   height: auto
   width: 100%
+  @include small-screen
+    border: 1.5px solid white
+    align-content: center
+    align-items: center
+    flex-direction: column
+    // margin-top: 1rem
+
+  .menuIconInHeader
+    height: 3rem
+    width: 100%
 
   .h1DivHeader
     align-items: center
-    // border: 1px dotted yellow
     display: flex
     flex-direction: row
     height: auto
     justify-content: center
     width: 90%
+    @include small-screen
+      flex-direction: column
+      margin: 2rem 0 0 0
+      width: 100%
 
   .imgPegasus
     width: 16rem
+    @include small-screen
+      width: 13rem
 
   .h1Header
     background: variables.$gradient
@@ -30,3 +44,5 @@
     font-size: 7.5vh
     letter-spacing: 0.8rem
     opacity: 1
+    @include small-screen
+      font-size: 3.5vh

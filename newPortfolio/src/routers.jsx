@@ -8,7 +8,6 @@ import Error404 from "./Pages/Error404";
 function RoutersApp() {
   return (
       <Routes>
-        {/* <Redirect exact from="/" to="./Components/Index" /> */}
         <Route
           exact path="/"
           element={<Index />}

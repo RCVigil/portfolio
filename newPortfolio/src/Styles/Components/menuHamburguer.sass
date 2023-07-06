@@ -1,0 +1,36 @@
+@use '../variables'
+@import '../mixins'
+
+.menuIconInHeader
+  @include small-screen
+  padding-top: 1rem
+
+  #menuBurgger
+    display: flex
+    justify-content: center
+    margin: 0 -0.5rem
+
+  .icon
+    position: absolute
+    z-index: 4
+    left: 1%
+    width: fit-content
+    height: 2.75rem
+    cursor: pointer
+    @include small-screen
+      height: 1.5rem
+      top: 8%
+
+  .list
+    height: 2rem
+    width: 100%
+
+    .listItems
+      height: 100%
+      width: 100% !important
+
+      .liItemsMenu
+        height: 100%
+
+        #linkItemsMenu
+          height: 100%

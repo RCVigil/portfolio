@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     !isMobile ?
     (
-    <footer className="footerAll">
+    <footer id="footerAll">
       <div className="divFooter">
         <span className="span1Footer">
           Copyright&nbsp;
