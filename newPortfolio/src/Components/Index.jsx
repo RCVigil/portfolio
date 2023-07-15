@@ -5,7 +5,6 @@ import '../Styles/Components/index.sass'
 import Header from './Header';
 import AsideLeft from './Aside-Left'
 import Notebook from '../Utils/Notebook';
-import SobrePort from './sobrePort';
 import PrincipaisSatcks from '../Utils/PrincipaisSatcks';
 import ProjetosGithub from '../Pages/ProjetosGithub';
 import Footer from './Footer';
@@ -21,8 +20,9 @@ const Index = () => {
         <AsideLeft />
       </div>
       <main className="body-site">
-        <Notebook/>
-        <SobrePort/>
+        <div className="firstNotebook-index">
+          <Notebook/>
+        </div>
         <ProjetosGithub/>
         <PrincipaisSatcks/>
       </main>

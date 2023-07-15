@@ -1,41 +1,72 @@
+/* CSS Reset */
+
+/* Box sizing border-box em todos os elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Removendo margens e preenchimentos padrões */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Removendo estilos de lista padrões */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Definindo fonte padrão para o corpo */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Removendo decoração de link padrão */
+a {
+  text-decoration: none;
+}
+
+/* Removendo estilos de tabela padrões */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Removendo estilo padrão para imagens */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Removendo estilos de formulário padrões */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Adicione regras adicionais conforme necessário */
+
+/* Estilos personalizados para o seu projeto */
 #root {
-  max-width: 1280px;
+  max-width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  padding: 0;
 }
