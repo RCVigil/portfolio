@@ -100,7 +100,7 @@
   box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.743);
 }
 
-.menu.menuOpen {
+.menu {
   background: #301b3194;
   box-shadow: 10px 0 69px 0 rgba(0, 0, 0, 0.59);
   height: 15vh;
@@ -125,4 +125,9 @@
     color: #fff;
     text-decoration: none;
   }
+}
+
+@font-face {
+  font-family: 'coneria-Script';
+  src: url('../Fonts/Demo_ConeriaScript.ttf'), url('../Fonts/Demo_ConeriaScript_Slanted.ttf') format('truetype');
 }

@@ -5,6 +5,9 @@
     "steoates.autoimport",
     "hwencc.html-tag-wrapper",
     "formulahendry.auto-complete-tag",
-    "vincaslt.highlight-matching-tag"
+    "vincaslt.highlight-matching-tag",
+    "esbenp.prettier-vscode",
+    "dotatong.wt-prettier-vscode",
+    "formulahendry.auto-close-tag"
   ]
 }

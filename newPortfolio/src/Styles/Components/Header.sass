@@ -7,16 +7,19 @@
   flex-wrap: wrap
   height: auto
   width: 100%
-  @include small-screen
-    border: 1.5px solid white
-    align-content: center
-    align-items: center
-    flex-direction: column
-    // margin-top: 1rem
 
   .menuIconInHeader
     height: 3rem
     width: 100%
+
+  .h1DivHeaderDelayed
+    align-items: center
+    display: flex
+    flex-direction: row
+    height: auto
+    justify-content: center
+    width: 90%
+    transition-delay: 5000ms
 
   .h1DivHeader
     align-items: center
@@ -25,16 +28,17 @@
     height: auto
     justify-content: center
     width: 90%
-    @include small-screen
-      flex-direction: column
-      margin: 2rem 0 0 0
-      width: 100%
+
+  .menuOpenActive
+    margin: 5rem
+    transition-duration: 1s
+
+  .menuCloseActive
+    transition-duration: 1s
 
   .imgPegasus
     width: 16rem
     pointer-events: none
-    @include small-screen
-      width: 13rem
 
   .h1Header
     background: variables.$gradient
@@ -45,5 +49,3 @@
     font-size: 7.5vh
     letter-spacing: 0.8rem
     opacity: 1
-    @include small-screen
-      font-size: 3.5vh

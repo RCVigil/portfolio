@@ -2,48 +2,34 @@
 @import '../mixins'
 
 .divAsideLeft
+  align-content: center
+  align-items: center
   // border: 1px solid green
   display: flex
   flex-direction: column
+  height: 35vh
+  justify-content: space-evenly
   position: fixed
-  top: 5rem
-  @include small-screen
-    // border: 1px solid white
-    align-content: center
-    align-items: center
-    position: sticky
-    flex-direction: row
-    width: 100%
+  top: 20rem
+  left: 2rem
+  width: 5vw
 
   .imgAsideLeft
     align-self: center
     display: flex
     flex-direction: column
-    justify-content: space-between
-    @include small-screen
-      border: 1px solid yellow
-      flex-direction: row
-      justify-content: space-between
-      gap: 0.3rem
-      margin: 0.1rem
-      width: 100%
-
-    .imgAsideLeft ul
-    @include small-screen
-      border: 1px solid red
-      padding: 0
+    justify-content: center
 
     .item
+      align-content: center
+      align-items: center
       list-style-type: none
-      @include small-screen
-        align-content: center
-        align-items: center
-        display: flex
-        justify-content: center
+      display: flex
+      justify-content: center
 
       .divLi1
         @include small-screen
-        background-color: yellow
+        // background-color: yellow
         align-content: center
         align-items: center
         display: flex
@@ -74,19 +60,11 @@
         height: 100%
         width: 100%
         @include small-screen
-      
 
         .pAsideTopRedes
           @include small-screen
           text-decoration: none
           margin-bottom: -1.5rem
-          margin-left: -2.5rem
-          height: auto
-
-        .pAsideBottomRedes
-          @include small-screen
-          text-decoration: none
-          margin-top: -1.5rem
           margin-left: -2.5rem
           height: auto
 
@@ -98,13 +76,6 @@
           margin: 2rem 0 2rem -2rem
           opacity: 0.5
           transition: all 0.31s ease-in-out
-          @include small-screen
-            opacity: 1
-            display: flex
-            justify-content: center
-            align-content: center
-            align-items: center
-            transition: none
 
         .imageSVGAsideLeft:hover
           border: 0.1vw solid #f6ff00ba
