@@ -4,14 +4,6 @@
 .sumIndex
   color: variables.$text-color-secondary
   width: 100%
-  @include small-screen
-    border:5px double blue
-    display: flex
-    flex-direction: column
-    flex-wrap: wrap
-    margin: 0
-    padding: 0
-    width: 100% !important
 
   .body-site
     display: flex
@@ -19,8 +11,6 @@
     height: auto
     justify-content: center
     width: 100%
-    @include small-screen
-      background-color: #ffffff5d
 
     .firstNotebook-index
       position: relative
@@ -38,3 +28,12 @@
       background-repeat: no-repeat
       background-position: center
       z-index: -10
+
+    .firstProjetosGithub
+      align-content: center
+      align-items: center
+      display: flex
+      flex-direction: column
+      justify-content: center
+      height: 100%
+      width: 100%

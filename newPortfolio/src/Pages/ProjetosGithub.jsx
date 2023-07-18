@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+
+import log from "loglevel";
 
 import "../Styles/Components/ProjetosGit.sass";
 import "../Styles/Components/Loading.sass";
 import moment from "moment";
 import Loading from "./Loading";
+
+import useTypewriter from "react-typewriter-hook";
 
 const ProjetosGithub = () => {
   const [userGitHub, setUserGitHub] = useState([]);
@@ -12,8 +16,22 @@ const ProjetosGithub = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const ENDPOINTRepos = "https://api.github.com/users/RCVigil/repos";
-  const ENDPOINTUser = "https://api.github.com/users/RCVigil";
+  const [magicName, setMagicName] = useState("");
+  const intervalRef = useRef();
+  const magicNameMaker = useTypewriter(magicName);
+
+  // Quando o userGitHub.bio for alterado, atualize magicName
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setMagicName(userGitHub?.bio || "");
+    }, 200);
+    return function clear() {
+      clearInterval(intervalRef.current);
+    };
+  }, [userGitHub]);
+
+  const ENDPOINTRepos = import.meta.env.VITE_APP_ENDPOINT_REPOS;
+  const ENDPOINTUser = import.meta.env.VITE_APP_ENDPOINT_USER;
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,14 +41,28 @@ const ProjetosGithub = () => {
           "Content-Type": "application/json",
         },
       })
-        .then((resp) => resp.json())
+        .then((resp) => {
+          if (!resp.ok) {
+            throw new Error("Network response was not ok");
+          }
+          const contentType = resp.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) {
+            return resp.text().then((text) => {
+              throw new Error(
+                `Response is not a valid JSON. Received: ${text}`,
+              );
+            });
+          }
+          return resp.json();
+        })
         .then((data) => {
-          console.log(data);
+          log.info(data);
           setProjectsGitHub(data);
           setLoading(true);
         })
         .catch((error) => {
-          setErrorMsg(error);
+          setErrorMsg(error.toString());
+          log.error(error);
         });
 
       fetch(ENDPOINTUser, {
@@ -41,14 +73,14 @@ const ProjetosGithub = () => {
       })
         .then((resp) => resp.json())
         .then((data) => {
-          console.log(data);
+          log.info(data);
           setUserGitHub(data);
           setLoading(true);
         })
         .catch((error) => {
           setErrorMsg(error);
         });
-    }, 1000);
+    }, 2000);
   }, []);
 
   const experiency = () => {
@@ -57,118 +89,106 @@ const ProjetosGithub = () => {
   };
 
   return (
-    <main className="divProjetoG container-fluid d-flex col-11 flex-wrap flex-column">
-      <div className="tituloProjetos d-flex justify-content-center p-4">
-        <h2 className="text-center text-wrap text-capitalize fs-1 fw-bolder fst-italic font-monospace text-decoration-none">
-          Principais Projetos
-        </h2>
+    <main className="divProjetoG">
+      <div className="tituloProjetos">
+        <h2 className="h2ProjetosGithub">Principais Projetos</h2>
       </div>
 
-      <div className="divMainProjetos d-flex col-11 flex-row w-full">
-        {
-          <div className="d-flex col-3 ">
-            {!loading ? (
-              // <Loading />
-              ""
-            ) : (
-              <div className="divUserGit d-flex flex-column align-items-center justify-content-between p-2">
-                <h1 className="h1Name text-lg-right lh-sm font-italic text-capitalize text-decoration-none text-monospace mt-4">
-                  {userGitHub.name}
-                </h1>
+      <div className="divMainProjetos">
+        {loading && (
+          <div className="loadingProjetosGithub ">
+            <div className="divUserGit">
+              <h1 className="h1Name">{userGitHub.name}</h1>
 
-                <img
-                  className="imgUser d-flex img-fluid col-2 align-self-center align-items-center mt-5 h-auto w-50"
-                  src={userGitHub.avatar_url}
-                  alt="Foto do github"
-                />
+              <img
+                className="imgUser"
+                src={userGitHub?.avatar_url}
+                alt="Foto do github"
+              />
 
-                <p className="pBioGitUser card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
-                  {userGitHub.bio}
-                </p>
+              <p className="pBioGitUser magicMakerP">{magicNameMaker}</p>
 
-                <hr />
+              <hr />
 
-                <h1 className=" pBioGitUser card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
-                  {!userGitHub.company ? (
-                    <>
-                      <p>Vamos conversar!</p>
-                      <p>
-                        Posso contribuir com o desenvolvimento de projetos para
-                        sua empresa.
-                      </p>
-                      <p>Aqui você encontra todos meus contatos.</p>
-                    </>
-                  ) : (
-                    `Trabalhando atualmente na empresa ${userGitHub.company}`
-                  )}
-                </h1>
+              <h1 className=" pBioGitUser">
+                {!userGitHub.company ? (
+                  <>
+                    <p>Vamos conversar!</p>
+                    <p>
+                      Posso contribuir com o desenvolvimento de projetos para
+                      sua empresa.
+                    </p>
+                    <p>Aqui você encontra todos meus contatos.</p>
+                  </>
+                ) : (
+                  `Trabalhando atualmente na empresa ${userGitHub.company}`
+                )}
+              </h1>
 
-                <hr />
+              <hr />
 
-                <div className="justify-content-center">
-                  <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
-                    {`Estou no GitHub desde`}
-                  </p>
-
-                  <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-5">
-                    {experiency()}
-                  </h1>
-                </div>
-
-                <hr />
-
+              <div className="justify-content-center">
                 <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
-                  {userGitHub.location}
+                  {`Estou no GitHub desde`}
                 </p>
 
-                <hr />
+                <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-5">
+                  {experiency()}
+                </h1>
+              </div>
 
-                <div className="justify-content-center">
-                  <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
-                    {`O último updated foi em:`}
-                  </p>
+              <hr />
 
-                  <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-5 mb-5">
-                    {`${moment(userGitHub.updated_at).format(
-                      "DD / MM / YYYY",
-                    )}`}
-                  </h1>
-                </div>
+              <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
+                {userGitHub.location}
+              </p>
 
-                <div className="justify-content-center">
-                  <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
-                    Quer conhecer todos meus projetos?
-                  </p>
-                  <button
-                    // onClick={() => path.push('/projetosFull')}
-                    className="btnReposit btn btn-outline-info"
-                  >
-                    {/* <a
+              <hr />
+
+              <div className="justify-content-center">
+                <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
+                  {`O último updated foi em:`}
+                </p>
+
+                <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-5 mb-5">
+                  {`${moment(userGitHub.updated_at).format("DD / MM / YYYY")}`}
+                </h1>
+              </div>
+
+              <div className="divRepProjGithub">
+                <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
+                  Quer conhecer todos meus projetos?
+                </p>
+                <button
+                  // onClick={() => path.push('/projetosFull')}
+                  className="btnReposit"
+                >
+                  {/* <a
                     href={ProjetosFullGit}
                     target="_blank"
                   > */}
-                    <Link to="/projetosFull">
-                      Repositório{" "}
-                      <i className="bi bi-pc-display-horizontal">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          className="bi bi-pc-display-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z" />
-                        </svg>
-                      </i>
-                      {/* </a> */}
-                    </Link>
-                  </button>
-                </div>
+                  <Link to="/projetosFull">
+                    Repositório{" "}
+                    <i className="bi bi-pc-display-horizontal">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className="bi bi-pc-display-horizontal"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z" />
+                      </svg>
+                    </i>
+                    {/* </a> */}
+                  </Link>
+                </button>
               </div>
-            )}
+            </div>
           </div>
-        }
+        )}
+
         {!loading && <Loading />}
         {
           <div className="divProjectGit">
