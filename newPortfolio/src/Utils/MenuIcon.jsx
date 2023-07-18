@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 import "../Styles/Menu.css";
-import "../Styles/Components/menuHamburguer.sass"
+import "../Styles/Components/menuHamburguer.sass";
 import HeaderContext from "../Context/HeaderContext";
 
 // Variáveis para animar o menu
 const menuVariants = {
-  hidden: { x: '-100vw', transition: { duration: 0.6 } },
-  visible: { x: '0vw', transition: { delay: 0.1, duration: 0.8 } }
+  hidden: { x: "-100vw", transition: { duration: 0.6 } },
+  visible: { x: "0vw", transition: { delay: 0.1, duration: 0.8 } },
 };
 
 // Componente MenuIcon
@@ -32,11 +32,11 @@ const MenuIcon = () => {
       >
         <div className="hamburguer hamburguerIcon"></div>
       </div>
-      
+
       <AnimatePresence>
         {/* Renderiza o menu se estiver aberto */}
         {menuOpen && (
-          <motion.div 
+          <motion.div
             className="menuOpen"
             variants={menuVariants}
             initial="hidden"

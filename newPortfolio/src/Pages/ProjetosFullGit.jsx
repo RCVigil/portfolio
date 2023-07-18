@@ -66,14 +66,13 @@ const ProjetosFullGit = () => {
                   return (
                     <div className="divRender d-flex col-11" key={proj.id}>
                       <div className="d-flex flex-column col-3 ">
-                        <h1 className="mb-5 mt-5 fs-2 text-capitalize">Stacks usadas neste Projeto</h1>
+                        <h1 className="mb-5 mt-5 fs-2 text-capitalize">
+                          Stacks usadas neste Projeto
+                        </h1>
                         <div className="divStacks d-flex flex-column align-items-center justify-content-center">
                           {proj.topics.map((topic, index) => {
                             return (
-                              <ul
-                              key={index}
-                                className="list-group col-9"
-                              >
+                              <ul key={index} className="list-group col-9">
                                 <li className="list-group-item fs-5 text-capitalize text-primary mt-1 list-group-item-info">
                                   {topic}
                                 </li>
@@ -90,9 +89,7 @@ const ProjetosFullGit = () => {
                             </h1>
 
                             <div className="divCriadoP d-flex justify-content-center mt-4">
-                              <p className="card-text text-info">
-                                Criado em :
-                              </p>
+                              <p className="card-text text-info">Criado em :</p>
 
                               <p className="criadoP ms-3 card-text card-subtitle text-light">
                                 {moment(proj.created_at).format("MM / YYYY")}

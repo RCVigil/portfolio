@@ -13,10 +13,7 @@ const Error404 = () => {
         />
       </div>
       <h1>Not Found 404</h1>
-      <Link 
-        className="btn btn-warning"
-        to='/'
-      >
+      <Link className="btn btn-warning" to="/">
         <i className="bi bi-skip-backward-fill"></i>
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -26,18 +26,14 @@ function Header() {
       <div className="menuIconInHeader">
         <MenuIcon />
       </div>
-      <div         className={
-          !menuOpen
-            ? "h1DivHeader"
-            : "h1DivHeaderDelayed"
-        }>
-      <div
-        className={
-          !menuOpen
-            ? "h1DivHeader menuCloseActive"
-            : "h1DivHeader menuOpenActive"
-        }
-      >
+      <div className={!menuOpen ? "h1DivHeader" : "h1DivHeaderDelayed"}>
+        <div
+          className={
+            !menuOpen
+              ? "h1DivHeader menuCloseActive"
+              : "h1DivHeader menuOpenActive"
+          }
+        >
           <a href="https://portfolio-cuervo.vercel.app/">
             <img
               className="imgPegasus"
