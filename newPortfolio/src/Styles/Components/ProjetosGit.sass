@@ -1,13 +1,23 @@
 @use '../variables'
 @use '../mixins'
 
+.renderLoading
+  border: 1px solid green
+  align-self: center
+  display: flex
+  height: 100vh
+  justify-content: center
+  width: 100%
+  svg
+    text-align: center
+
 .divProjetoG
   align-content: center
   color: variables.$text-color-secondary
   display: flex
   flex-direction: column
   gap: 20px
-  height: 50px auto
+  height: 100%
   justify-content: center
   width: 99vw
 
@@ -23,9 +33,11 @@
     font-family: variables.$font-tercery
     text-align: center
 
+
   .divMainProjetos
     display: flex
-    height: auto
+    flex-direction: row
+    height: 100%
     justify-content: center
     margin-left: 5.5vw
     width: 94.5% !important
@@ -35,7 +47,7 @@
       align-items: center
       display: flex
       flex-direction: column
-      height: auto
+      height: 100% !important
       justify-content: center
       width: 35vw
 
@@ -45,7 +57,7 @@
       flex-direction: column
       gap: 2rem
       justify-content: center
-      height: auto !important
+      height: 100% !important
       width: 100%
       border: 0.5vh solid variables.$text-color-third
       border-radius: variables.$card-border-radius
@@ -56,7 +68,7 @@
 
       .h1Name
         color: variables.$text-color-secondary
-        font-size: 40px
+        font-size: 45px
         margin-top: 3vh
         text-align: center
         width: 100%
@@ -69,65 +81,90 @@
         width: 80%
 
       .magicMakerP
-        font-size: 1.4rem
+        color: variables.$text-color
+        font-size: 1.6rem
         font-weight: 600
         font-family: variables.$font-secondary
+        line-height: 5vh
+        font-style: italic
 
-  .divMainProjetos
-    display: flex
-    flex-direction: row
-    width: 100%
+      .companyProjGithub
+        text-align: center
+
+        .pProjetGithub
+          color: variables.$text-color-secondary
+          font-size: 1.3rem
+
+        .pHeaderProjetGithub
+          font-size: 1.5rem
+          height: 100%
+          margin-bottom: 1rem
+
+        .imgDivProjSVG
+          align-items: center
+          display: flex
+          height: 5vh
+          gap: 1.5vw
+          justify-content: center
+          margin-top: 2.5vh
+          svg
+            height: 2rem
+            width: 2rem
+            color: variables.$color-boot
+
+      .divLocationProjGithub
+        align-items: center
+        display: flex
+        gap: 1vw
+        height: auto
+        justify-content: center
+        width: 100%
+        svg
+          width: 2vw
+          color: variables.$text-color
 
     .divProjectGit
+      // border: 13px solid blue
       align-items: center
-      border: 2px dotted gold
       display: flex
-      flex-direction: row
+      flex-direction: column
       flex-grow: 1
       flex-wrap: wrap
-      justify-content: space-evenly
-      gap: 50px
+      height: auto
+      justify-content: space-between
+      // gap: 50px
       width: 65vw
 
     .divProjectMap
+      // border: 1px solid yellow
       display: flex
-      border: 0.2em solid variables.$text-color-third
       border-radius: variables.$card-border-radius
       color: variables.$text-color-secondary
       flex-direction: row
       flex-wrap: wrap
-      height: 25em
-      // opacity: 1
-      width: 19em
+      height: 33%
+      justify-content: space-evenly
+      width: 100%
 
       .divCards
-        // border: 3px solid green
+        border: 0.5vh solid variables.$text-color-third
+        border-radius: variables.$card-border-radius
         display: flex
         flex-direction: column
-        justify-content: center
-        width: 20em
+        height: 100%
+        justify-content: flex-start
+        width: 45%
         text-align: center
 
-      // .divCards:hover
-      //   background: #3b3b3bc7
-      //   border: 0.2em solid variables.$text-color-third
-      //   border-radius: variables.$card-border-radius
-      //   height: 110%
-      //   width: 110%
-      //   opacity: 1
-      //   transform: scale(1.05)
-      //   background-position: -60px
-      //   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(29, 17, 17, 0.23)
-
         .cardHeader
-          // border: 1px solid white
-          height: 8em
+          background-color: rgb(249, 0, 0, 0.1)
+          height: 70%
 
         .hrLineProj
-          border: 0.1em solid variables.$text-color-third
-          opacity: 1
-          // border-radius: 0 0 50px 50px
-          // width: 90%
+          align-self: center
+          border: 0.1px solid variables.$text-color-third
+          opacity: 0.8
+          width: 100%
 
       a
         transition: 0.3s
@@ -158,3 +195,91 @@
 
     .btnReposit a
       color: white
+
+  .h1NameProjetos
+    color: variables.$text-color-secondary
+    font-family: variables.$font-tercery
+    font-size: 35px
+    margin-bottom: 1vh
+    margin-top: 1.7vh
+    text-align: center
+    text-transform: capitalize
+    width: 100%
+
+  .divCriadoP
+    align-items: center
+    display: flex
+    justify-content: center
+    flex-direction: column
+    height: 10vh
+    margin-top: 1rem
+    width: 100%
+
+    .pCreatedProject
+      font-size: 16px
+
+    .criadoDataProj
+      font-size: 18px
+      color: variables.$text-color
+
+    .svgPlayProject
+      color: variables.$color-boot
+      height: 3rem
+      margin-top: 0.4rem
+      width: 3rem
+
+  .descricaoProjeto
+    align-items: center
+    display: flex
+    flex-direction: column
+    font-family: variables.$font-secondary
+    font-size: 1.2rem
+    font-weight: 100
+    height: 50%
+    justify-content: flex-end
+    margin-bottom: 1rem
+    width: 100%
+
+  .divFooterProjeto
+    height: 30%
+
+    .lingPredominateProjeto
+      display: flex
+      justify-content: center
+      flex-direction: column
+      height: 50%
+      width: 100%
+
+      .card-footer-projetoGit
+        font-size: 16px
+        text-align: center
+
+      .card-text
+        font-size: 18px
+        color: variables.$text-color
+        font-family: variables.$font-secondary
+        font-weight: 500
+        margin-top: 0.5rem
+        text-transform: capitalize
+
+    .divButtonProjetos
+      align-items: center
+      display: flex
+      flex-direction: column
+      height: 50%
+      justify-content: center
+      width: 100%
+
+      .btnProjetoGithub
+        border: 1px solid variables.$text-color-third
+        border-radius: variables.$container-border-radius
+        height: auto
+        margin-top: 0.5rem
+        width: 50%
+        cursor: pointer
+
+      .btnProjetoGithub:hover
+        scale: 1.1
+        a
+          color: variables.$color-boot
+          scale: 1.1

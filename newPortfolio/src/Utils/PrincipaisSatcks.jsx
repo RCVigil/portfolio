@@ -1,5 +1,10 @@
 import React from "react";
 import "../Styles/Utils/PrincipaisSatacks.sass";
+import Javascript from "./StacksImages/Javascript";
+import HTML from "./StacksImages/HTML";
+import CSS from "./StacksImages/CSS";
+import ReactImg from "./StacksImages/ReactImg";
+import RtestingL from "./StacksImages/RtestingL";
 
 const PrincipaisSatcks = () => {
   return (
@@ -12,84 +17,23 @@ const PrincipaisSatcks = () => {
         <tbody className="tBody1">
           <tr className="tr_tBody1">
             <td className="td_tBody1">
-              <a
-                target="_blank"
-                // rel="noopener noreferrer nofollow"
-                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
-                rel="noreferrer"
-              >
-                <img
-                  alt="Imagem JavaScript"
-                  className="img_tBody"
-                  src="https://camo.githubusercontent.com/85fe5c1ea414287d8a9bc8eb336b53dc79a21a3352d9b5e26fc1c31c4aac6e01/68747470733a2f2f75706c6f61642e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6a6176617363726970742f696d616765732f32333965633861342d313633652d343739322d383362362d3366366439363931313735372e737667"
-                  data-canonical-src="https://upload.vectorlogo.zone/logos/javascript/images/239ec8a4-163e-4792-83b6-3f6d96911757.svg"
-                />
-                <strong>Javascript</strong>
-              </a>
+              <Javascript/>
             </td>
 
             <td className="td_tBody1">
-              <a
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
-              >
-                <img
-                  alt="Imagem HTML"
-                  className="img_tBody"
-                  src="https://camo.githubusercontent.com/da7acacadecf91d6dc02efcd2be086bb6d78ddff19a1b7a0ab2755a6fda8b1e9/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f68746d6c352f68746d6c352d6f726967696e616c2e737667"
-                  data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                />
-                <strong>HTML</strong>
-              </a>
+              <HTML/>
             </td>
 
             <td className="td_tBody1">
-              <a
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"
-              >
-                <img
-                  alt="Imagem CSS"
-                  className="img_tBody"
-                  src="https://camo.githubusercontent.com/2e496d4bfc6f753ddca87b521ce95c88219f77800212ffa6d4401ad368c82170/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f637373332f637373332d6f726967696e616c2e737667"
-                  data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                />
-                <strong>CSS</strong>
-              </a>
+              <CSS/>
             </td>
 
             <td className="td_tBody1">
-              <a
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                href="https://pt-br.reactjs.org/"
-              >
-                <img
-                  alt="Imagem ReactJS"
-                  className="img_tBody"
-                  src="https://camo.githubusercontent.com/27d0b117da00485c56d69aef0fa310a3f8a07abecc8aa15fa38c8b78526c60ac/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f72656163742f72656163742d6f726967696e616c2e737667"
-                  data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                />
-                <strong>React</strong>
-              </a>
+              <ReactImg/>
             </td>
 
             <td className="td_tBody1">
-              <a
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                href="https://testing-library.com/"
-              >
-                <img
-                  alt="Imagem RTL"
-                  className="img_tBody"
-                  src="https://camo.githubusercontent.com/aa85cea585880ae694b4fe8dde116d092b8907d6351c71fcd76f00f7586fad72/68747470733a2f2f74657374696e672d6c6962726172792e636f6d2f696d672f6f63746f7075732d313238783132382e706e67"
-                  data-canonical-src="https://testing-library.com/img/octopus-128x128.png"
-                />
-                <strong>RTL</strong>
-              </a>
+              <RtestingL/>
             </td>
 
             <td className="td_tBody1">

@@ -30,7 +30,6 @@ const ProjetosGithub = () => {
     };
   }, [userGitHub]);
 
-
   const ENDPOINTRepos = import.meta.env.VITE_REACT_APP_ENDPOINT_REPOS;
   const ENDPOINTUser = import.meta.env.VITE_REACT_APP_ENDPOINT_USER;
 
@@ -90,7 +89,7 @@ const ProjetosGithub = () => {
   };
 
   return (
-    <main className="divProjetoG">
+    <div className="divProjetoG">
       <div className="tituloProjetos">
         <h2 className="h2ProjetosGithub">Principais Projetos</h2>
       </div>
@@ -111,15 +110,44 @@ const ProjetosGithub = () => {
 
               <hr />
 
-              <h1 className=" pBioGitUser">
+              <h1 className=" pBioGitUser companyProjGithub">
                 {!userGitHub.company ? (
                   <>
-                    <p>Vamos conversar!</p>
-                    <p>
+                    <p className="pProjetGithub pHeaderProjetGithub">
+                      Vamos conversar!
+                    </p>
+                    <p className="pProjetGithub">
                       Posso contribuir com o desenvolvimento de projetos para
                       sua empresa.
                     </p>
-                    <p>Aqui você encontra todos meus contatos.</p>
+                    <p className="pProjetGithub">
+                      Aqui você encontra todos meus contatos.
+                    </p>
+                    <div className="imgDivProjSVG">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-arrow-left-square"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        // width="16"
+                        // height="16"
+                        fill="currentColor"
+                        class="bi bi-person-lines-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+                      </svg>
+                    </div>
                   </>
                 ) : (
                   `Trabalhando atualmente na empresa ${userGitHub.company}`
@@ -128,7 +156,7 @@ const ProjetosGithub = () => {
 
               <hr />
 
-              <div className="justify-content-center">
+              <div>
                 <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
                   {`Estou no GitHub desde`}
                 </p>
@@ -140,9 +168,22 @@ const ProjetosGithub = () => {
 
               <hr />
 
-              <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
-                {userGitHub.location}
-              </p>
+              <div className="divLocationProjGithub">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  // width="16"
+                  // height="16"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+                <p className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-6 mt-4">
+                  {userGitHub.location}
+                </p>
+              </div>
 
               <hr />
 
@@ -190,93 +231,94 @@ const ProjetosGithub = () => {
           </div>
         )}
 
-        {!loading && <Loading />}
         {
           <div className="divProjectGit">
-            {!projectsGitHub ? (
-              <Loading />
+            {!loading || !projectsGitHub ? (
+              <div className="renderLoading">
+                <Loading />
+              </div>
             ) : (
-              projectsGitHub.map((proj) => {
-                if (proj.private === false) {
-                  if (proj.stargazers_count === 1) {
-                    return (
-                      <div className="divProjectMap d-flex" key={proj.id}>
-                        <div className="divCards ">
-                          <div className="cardHeader d-flex text-center flex-column ">
-                            <h1 className="h1Name text-center text-wrap text-capitalize fs-4 fw-bolder fst-italic font-monospace text-decoration-none">
-                              {proj.name}
-                            </h1>
-                            {/* <h1>
-                            {proj.description}
-                            </h1> */}
+              projectsGitHub
+                .filter(
+                  (proj) =>
+                    proj.private === false && proj.stargazers_count === 1,
+                )
+                .reduce((groups, proj, index) => {
+                  if (index % 2 === 0) {
+                    groups.push([proj]);
+                  } else {
+                    groups[groups.length - 1].push(proj);
+                  }
+                  return groups;
+                }, [])
+                .map((group, groupIndex) => (
+                  <div className="divProjectMap" key={groupIndex}>
+                    {group.map((proj, index) => (
+                      <div className={`divCards`} key={proj.id}>
+                        <div className="cardHeader ">
+                          <h1 className="h1NameProjetos">{proj.name}</h1>
+                          <div className="divCriadoP">
+                            <p className="pCreatedProject">{`Criado em :`}</p>
 
-                            <div className="divCriadoP">
-                              <p className="">{`Criado em :`}</p>
-
-                              <p className="criadoP card-text card-subtitle">
-                                {moment(proj.created_at).format("MM / YYYY")}
-                              </p>
-                              {!proj.homepage ? (
-                                ""
-                              ) : (
-                                <button className="LinkProject btn btn-outline-primary rounded-pill">
-                                  <a
-                                    className=""
-                                    href={`${proj.homepage}`}
-                                    target="_blank"
-                                  >
-                                    <i className="bi bi-play-btn mx-1">
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="19"
-                                        height="19"
-                                        fill="currentColor"
-                                        className="bi bi-play-btn"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                                      </svg>
-                                    </i>
-                                  </a>
-                                </button>
-                              )}
-                            </div>
+                            <p className="criadoDataProj">
+                              {moment(proj.created_at).format("MM / YYYY")}
+                            </p>
+                            {!proj.homepage ? (
+                              ""
+                            ) : (
+                              <button className="LinkProject">
+                                <a href={`${proj.homepage}`} target="_blank">
+                                  <i className="bi bi-play-btn mx-1">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="currentColor"
+                                      className="svgPlayProject"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+                                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                    </svg>
+                                  </i>
+                                </a>
+                              </button>
+                            )}
                           </div>
+                          <h1 className="descricaoProjeto">
+                            {proj.description}
+                          </h1>
+                        </div>
 
-                          <hr className="hrLineProj" />
+                        <hr className="hrLineProj" />
 
-                          <div>
-                            <p className="card-text">
+                        <div className="divFooterProjeto">
+                          <div className="lingPredominateProjeto">
+                            <p className="card-footer-projetoGit">
                               A linguagem predominante é:
                             </p>
                             <h5 className="card-text">{`${proj.language}`}</h5>
+                          </div>
 
-                            <br />
+                          <div className="divButtonProjetos">
+                            <p className="card-footer-projetoGit">
+                              {`Quer conhecer mais sobre este projeto?`}
+                            </p>
 
-                            <div>
-                              <p className="card-footer">
-                                {`Quer conhecer mais sobre este projeto?`}
-                              </p>
-
-                              <button className="btn btn-outline-primary">
-                                <a href={`${proj.svn_url}`} target="_blank">
-                                  Clique aqui!
-                                </a>
-                              </button>
-                            </div>
+                            <button className="btnProjetoGithub">
+                              <a href={`${proj.svn_url}`} target="_blank">
+                                Clique aqui!
+                              </a>
+                            </button>
                           </div>
                         </div>
                       </div>
-                    );
-                  }
-                }
-              })
+                    ))}
+                  </div>
+                ))
             )}
           </div>
         }
       </div>
-    </main>
+    </div>
   );
 };
 

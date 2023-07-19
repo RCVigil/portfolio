@@ -5,7 +5,7 @@ import loadingImage from "../images/loadingInfinity.svg";
 
 const Loading = () => {
   return (
-    <div className="loaderContainer d-flex align-items-end flex-column mb-3">
+    <div className="loaderContainer">
       <img
         className="loader"
         src={loadingImage}
