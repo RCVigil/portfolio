@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, useScroll } from "framer-motion";
 
 import "../Styles/Components/index.sass";
 
@@ -11,8 +12,14 @@ import Footer from "./Footer";
 import ScrollToTopButton from "../Utils/ScrollToTopButtn";
 
 const Index = () => {
+  const { scrollYProgress } = useScroll();
+
   return (
     <div className="sumIndex">
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
       <div className="firstHeader">
         <Header />
       </div>

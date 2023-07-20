@@ -8,6 +8,7 @@
     "vincaslt.highlight-matching-tag",
     "esbenp.prettier-vscode",
     "dotatong.wt-prettier-vscode",
-    "formulahendry.auto-close-tag"
+    "formulahendry.auto-close-tag",
+    "wscats.eno"
   ]
 }

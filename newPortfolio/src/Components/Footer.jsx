@@ -1,6 +1,5 @@
 import moment from "moment";
 import React from "react";
-import AsideLeft from "./Aside-Left";
 
 import "../Styles/Components/footer.sass";
 import FooterCenter from "./Footer/FooterCenter";
