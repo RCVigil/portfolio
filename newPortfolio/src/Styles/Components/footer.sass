@@ -2,10 +2,9 @@
 @import '../mixins'
 
 #footerAll
-  // border: 3px dashed white
   align-items: center
   align-content: center
-  background-color: variables.$bg-color-secondary
+  background-color: rgb(255, 0, 0, 0.1)
   color: variables.$text-color
   display: flex
   flex-direction: column
@@ -15,7 +14,144 @@
   width: 100% !important
 
   .divFooter
-    border: 1px solid blue
+    align-items: center
+    display: flex
+    justify-content: center
+    flex-direction: column
+    width: 100%
+
+  .maincontentFooter
+    align-items: center
+    height: 44.5vh !important
+    display: flex
+    height: 100%
+    justify-content: space-between
+    width: 100%
+
+    .divFooterLeft
+      align-items: center
+      display: flex
+      flex-direction: column
+      height: 100%
+      justify-content: center
+      width: 30%
+
+      .footerTitle
+        font-size: 28px
+        font-family: variables.$font-primary
+
+      .footerparagrafo
+        font-size: 18px
+        font-family: variables.$font-secondary
+        color: variables.$text-color-secondary
+
+    .divFooterCenter
+      align-items: center
+      border-right: 1px solid rgb(0, 202, 255, 0.3)
+      border-left: 1px solid rgb(0, 202, 255, 0.3)
+      display: flex
+      flex-direction: column
+      height: 85%
+      justify-content: center
+      width: 39%
+
+    .divFooterRight
+      display: flex
+      flex-direction: column
+      height: 100%
+      justify-content: center
+      width: 30%
+
+      .gitHubFooter
+        border-bottom: 1px solid variables.$text-color-third
+        display: flex
+        justify-content: center
+        height: 17%
+        width: 90%
+
+        .svgGithub
+          background-color: #fff
+          border-radius: 50%
+          margin-left: 0.4rem
+
+        .btn-share-footer-github
+          align-items: center
+          cursor: pointer
+          display: flex
+          justify-content: flex-start
+          gap: 2vw
+          height: 100%
+          width: 100%
+
+      .linkedinFooter-linkedin
+        border-bottom: 1px solid variables.$text-color-third
+        display: flex
+        justify-content: center
+        height: 17%
+        width: 90%
+
+        .btn-share-footer-linkedin
+          align-items: center
+          cursor: pointer
+          display: flex
+          justify-content: flex-start
+          gap: 2vw
+          height: 100%
+          width: 100%
+
+      .instagramFooter
+        border-bottom: 1px solid variables.$text-color-third
+        display: flex
+        justify-content: center
+        height: 17%
+        width: 90%
+
+        .btn-share-footer-instagram
+          align-items: center
+          cursor: pointer
+          display: flex
+          justify-content: flex-start
+          gap: 2vw
+          height: 100%
+          width: 100%
+          svg
+            margin-left: -0.6rem
+
+      .emailFooter
+        border-bottom: 1px solid variables.$text-color-third
+        display: flex
+        justify-content: center
+        height: 17%
+        width: 90%
+
+        .btn-share-footer-email
+          align-items: center
+          cursor: pointer
+          display: flex
+          justify-content: flex-start
+          gap: 2vw
+          height: 100%
+          width: 100%
+          svg
+            margin-left: 0.6rem
+
+      .telegramFooter
+        border-bottom: 1px solid variables.$text-color-third
+        display: flex
+        justify-content: center
+        height: 17%
+        width: 90%
+
+        .btn-share-footer-telegram
+          align-items: center
+          cursor: pointer
+          display: flex
+          justify-content: flex-start
+          gap: 2vw
+          height: 100%
+          width: 100%
+          svg
+            margin-left: 0.2rem
 
     .span1Footer
       @include small-screen

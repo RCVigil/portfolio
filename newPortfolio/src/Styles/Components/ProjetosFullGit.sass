@@ -1,5 +1,12 @@
 @use '../variables'
 
+.firstDivFullGit
+  border: 1px solid white
+  display: flex
+  flex-direction: column
+  height: 100%
+  width: 100%
+
 h2
   background: variables.$gradient
   -webkit-background-clip: text
@@ -13,9 +20,9 @@ h2
 
   .divProjectF
     align-items: center
-    // border: 2px dotted gold
+    border: 2px dotted gold
     display: flex
-    flex-direction: row
+    flex-direction: column
     flex-grow: 1
     flex-wrap: wrap
     justify-content: space-evenly
@@ -91,3 +98,6 @@ h2
 
     .LinkProjectF:hover
       opacity: 1
+
+    .firstFooter
+      width: 100%

@@ -10,6 +10,8 @@ import goHome from "../images/goHome.svg";
 import { Link } from "react-router-dom";
 import Header from "../Components/Header";
 import AsideLeft from "../Components/Aside-Left";
+import Footer from "../Components/Footer";
+import ScrollToTopButton from "../Utils/ScrollToTopButtn";
 
 const ProjetosFullGit = () => {
   const [projectsGitHub, setProjectsGitHub] = useState([]);
@@ -43,7 +45,7 @@ const ProjetosFullGit = () => {
   };
 
   return (
-    <div>
+    <div className="firstDivFullGit">
       <Header />
       <div className="asideLeft">
         <AsideLeft />
@@ -54,10 +56,11 @@ const ProjetosFullGit = () => {
         </h2>
       </div>
 
-      <div className="divMainProjetosF d-flex flex-row w-full">
-        {!loading && <Loading />}
-        {
-          <div className="divProjectF d-flex align-content-around flex-column">
+      <div className="divMainProjetosF">
+        {!loading ? (
+          <Loading />
+        ) : (
+          <div className="divProjectF">
             {!projectsGitHub ? (
               <Loading />
             ) : (
@@ -177,8 +180,12 @@ const ProjetosFullGit = () => {
               })
             )}
           </div>
-        }
+        )}
       </div>
+      <div className="firstFooter">
+        <Footer />
+      </div>
+      <ScrollToTopButton />
     </div>
   );
 };
