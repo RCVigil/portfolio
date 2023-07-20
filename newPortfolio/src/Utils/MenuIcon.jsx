@@ -43,7 +43,7 @@ const MenuIcon = () => {
             animate="visible"
             exit="hidden"
           >
-            <div className="list">
+            <nav className="list">
               {/* Itens do menu */}
               <ul className="listItems listUl" aria-hidden="true">
                 <li className="liItemsMenu">
@@ -73,7 +73,7 @@ const MenuIcon = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
