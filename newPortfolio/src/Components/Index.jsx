@@ -8,7 +8,7 @@ import Notebook from "../Utils/Notebook";
 import PrincipaisSatcks from "../Utils/PrincipaisSatcks";
 import ProjetosGithub from "../Pages/ProjetosGithub";
 import Footer from "./Footer";
-// import NoteApple from '../images/noteApple.jpg'
+import ScrollToTopButton from "../Utils/ScrollToTopButtn";
 
 const Index = () => {
   return (
@@ -33,6 +33,7 @@ const Index = () => {
       <div className="firstFooter">
         <Footer />
       </div>
+      <ScrollToTopButton/>
     </div>
   );
 };
