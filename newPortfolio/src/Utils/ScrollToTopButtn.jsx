@@ -47,7 +47,7 @@ const ScrollToTopButton = () => {
         />
       </svg>
       <img className="imgScrollTop" src={pegasusIcon} alt="Pegasus" />
-      <p style={{ color: "#000"}}>UP</p>
+      <p style={{ color: "#000" }}>UP</p>
     </div>
   );
 };

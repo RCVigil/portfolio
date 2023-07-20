@@ -1,6 +1,6 @@
 import React from "react";
 
-import './_databases.sass'
+import "./_databases.sass";
 import MySqlImage from "../../StacksImages/MySqlImage";
 import MongodbImages from "../../StacksImages/MongodbImages";
 

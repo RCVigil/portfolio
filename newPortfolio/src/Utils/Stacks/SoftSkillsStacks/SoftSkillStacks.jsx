@@ -1,6 +1,6 @@
 import React from "react";
 
-import './_softSkillStacks.sass'
+import "./_softSkillStacks.sass";
 
 const SoftSkillsStacks = () => {
   return (

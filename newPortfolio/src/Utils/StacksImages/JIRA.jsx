@@ -10,7 +10,12 @@ export default function JIRA() {
         rel="noopener noreferrer nofollow"
         href="https://www.atlassian.com/software/jira"
       >
-        <svg className="img_tBody" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className="img_tBody"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
           <g
             id="SVGRepo_tracerCarrier"

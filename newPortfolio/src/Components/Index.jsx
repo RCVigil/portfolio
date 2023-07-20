@@ -33,7 +33,7 @@ const Index = () => {
       <div className="firstFooter">
         <Footer />
       </div>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
     </div>
   );
 };

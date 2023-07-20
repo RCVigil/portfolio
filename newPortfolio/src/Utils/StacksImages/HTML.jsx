@@ -1,6 +1,6 @@
 import React from "react";
 
-import './_stacksImages.sass'
+import "./_stacksImages.sass";
 
 export default function HTML() {
   return (
