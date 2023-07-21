@@ -11,9 +11,7 @@ const Loading = () => {
         src={loadingImage}
         alt="Loading format infinity object-fit-fill-lg-contain border rounded w-10"
       />
-      <p className="h1Name text-lg-right lh-sm font-italic text-capitalize text-decoration-none text-light fs-1 text-monospace mt-4">
-        Loading...
-      </p>
+      <p className="h1Name">Loading...</p>
     </div>
   );
 };
