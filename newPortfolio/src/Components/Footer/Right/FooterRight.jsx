@@ -1,11 +1,11 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 
-import "../../Styles/Components/footer.sass";
+import "./_footerRight.sass";
 
 export default function FooterRight() {
   return (
-    <div>
+    <div className="firstDivFooterRight">
       <h3 style={{ marginLeft: "4.4rem" }}>Contatos</h3>
       <div className="gitHubFooter">
         <motion.a
@@ -18,16 +18,16 @@ export default function FooterRight() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="svgGithub"
+            className="svgGithubFooter"
             x="0px"
             y="0px"
-            width="50"
-            height="50"
+            width="40"
+            height="40"
             viewBox="0 0 24 24"
           >
             <path d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z"></path>
           </svg>
-          <p style={{ marginLeft: "1.4rem" }}>https://github.com/RCVigil</p>
+          <p className="pFooterRight">https://github.com/RCVigil</p>
         </motion.a>
       </div>
       <div className="linkedinFooter-linkedin">
@@ -41,10 +41,11 @@ export default function FooterRight() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            className="svgLinkedinFooter"
             x="0px"
             y="0px"
-            width="60"
-            height="60"
+            width="50"
+            height="50"
             viewBox="0 0 48 48"
           >
             <path
@@ -64,7 +65,7 @@ export default function FooterRight() {
               d="M12,19h5v17h-5V19z M14.485,17h-0.028C12.965,17,12,15.888,12,14.499C12,13.08,12.995,12,14.514,12	c1.521,0,2.458,1.08,2.486,2.499C17,15.887,16.035,17,14.485,17z M36,36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698	c-1.501,0-2.313,1.012-2.707,1.99C24.957,25.543,25,26.511,25,27v9h-5V19h5v2.616C25.721,20.5,26.85,19,29.738,19	c3.578,0,6.261,2.25,6.261,7.274L36,36L36,36z"
             ></path>
           </svg>
-          <p style={{ marginLeft: "1.2rem" }}>
+          <p className="pFooterRight">
             https://www.linkedin.com/in/rodrigocvigil/
           </p>
         </motion.a>
@@ -80,57 +81,15 @@ export default function FooterRight() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            width="80"
-            height="80"
-            viewBox="0 0 48 48"
+            className="svgInstagramFooter"
+            width="40"
+            height="40"
+            fill="currentColor"
+            viewBox="0 0 16 16"
           >
-            <radialGradient
-              id="yOrnnhliCrdS2gy~4tD8ma"
-              cx="19.38"
-              cy="42.035"
-              r="44.899"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stopColor="#fd5"></stop>
-              <stop offset=".328" stopColor="#ff543f"></stop>
-              <stop offset=".348" stopColor="#fc5245"></stop>
-              <stop offset=".504" stopColor="#e64771"></stop>
-              <stop offset=".643" stopColor="#d53e91"></stop>
-              <stop offset=".761" stopColor="#cc39a4"></stop>
-              <stop offset=".841" stopColor="#c837ab"></stop>
-            </radialGradient>
-            <path
-              fill="url(#undefined)"
-              d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
-            ></path>
-            <radialGradient
-              id="yOrnnhliCrdS2gy~4tD8mb"
-              cx="11.786"
-              cy="5.54"
-              r="29.813"
-              gradientTransform="matrix(1 0 0 .6663 0 1.849)"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stopColor="#4168c9"></stop>
-              <stop offset=".999" stopColor="#4168c9" stopOpacity="0"></stop>
-            </radialGradient>
-            <path
-              fill="url(#undefined)"
-              d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
-            ></path>
-            <path
-              fill="#fff"
-              d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
-            ></path>
-            <circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle>
-            <path
-              fill="#fff"
-              d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
-            ></path>
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
           </svg>
-          <p style={{ marginLeft: "0.5rem" }}>
+          <p className="pFooterRight">
             https://www.instagram.com/rodrigocuervodev/
           </p>
         </motion.a>
@@ -146,10 +105,10 @@ export default function FooterRight() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
+            width="36"
+            height="36"
             fill="#fff"
-            className="imageSVGAsideLeft"
+            className="svgEmailFooter"
             viewBox="0 0 16 16"
           >
             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z" />
@@ -158,7 +117,7 @@ export default function FooterRight() {
               d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"
             />
           </svg>
-          <p style={{ marginLeft: "1.2rem" }}>rodrigouervodev@gmail.com</p>
+          <p className="pFooterRight">rodrigouervodev@gmail.com</p>
         </motion.a>
       </div>
       <div className="telegramFooter">
@@ -172,10 +131,11 @@ export default function FooterRight() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            className="svgTelegramFooter"
             x="0px"
             y="0px"
-            width="60"
-            height="60"
+            width="50"
+            height="50"
             viewBox="0 0 48 48"
           >
             <linearGradient
@@ -206,7 +166,7 @@ export default function FooterRight() {
               d="M11.553,23.717c6.99-3.075,16.035-6.824,17.284-7.343c3.275-1.358,4.28-1.098,3.779,1.91	c-0.36,2.162-1.398,9.319-2.226,13.774c-0.491,2.642-1.593,2.955-3.325,1.812c-0.833-0.55-5.038-3.331-5.951-3.984	c-0.833-0.595-1.982-1.311-0.541-2.721c0.513-0.502,3.874-3.712,6.493-6.21c0.343-0.328-0.088-0.867-0.484-0.604	c-3.53,2.341-8.424,5.59-9.047,6.013c-0.941,0.639-1.845,0.932-3.467,0.466c-1.226-0.352-2.423-0.772-2.889-0.932	C9.384,25.282,9.81,24.484,11.553,23.717z"
             ></path>
           </svg>
-          <p style={{ marginLeft: "1rem" }}>https://t.me/RodrigoCVigil</p>
+          <p className="pFooterRight">https://t.me/RodrigoCVigil</p>
         </motion.a>
       </div>
     </div>

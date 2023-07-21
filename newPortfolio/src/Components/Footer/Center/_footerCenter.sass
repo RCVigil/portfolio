@@ -1,5 +1,5 @@
-@use '../../Styles/variables'
-@import '../../Styles/mixins'
+@use '../../../Styles/variables'
+@import '../../../Styles/mixins'
 
 .listFooter
   align-items: center
@@ -41,9 +41,15 @@
           height: 100%
           width: 20%
 
+        .divSvgFooter svg
+          color: variables.$color-boot
+
         .divParagFooterCenter
           align-items: center
+          color: #373737
           display: flex
+          font-family: variables.$font-secondary
+          font-weight: 600
           justify-content: center
           height: 100%
           width: 40%

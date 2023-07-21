@@ -15,7 +15,7 @@ const Index = () => {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div className="sumIndex">
+    <div className="sumIndex" id="home">
       <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}

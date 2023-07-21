@@ -3,7 +3,7 @@ import "../Styles/Utils/Notebook.sass";
 
 const Notebook = () => {
   return (
-    <section className="divImgNoteb">
+    <section className="divImgNoteb" id="sobre">
       <div className="pImgNote">
         <p className="p-saudacao">Olá!</p>
         <p className="p-saudacao">Seja muito bem-vindo(a) ao nosso site.</p>

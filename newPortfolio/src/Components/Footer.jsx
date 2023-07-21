@@ -1,19 +1,21 @@
 import moment from "moment";
 import React from "react";
 
+import FooterCenter from "./Footer/Center/FooterCenter";
+import FooterRight from "./Footer/Right/FooterRight";
+import FooterLeft from "./Footer/Left/FooterLeft";
+
 import "../Styles/Components/footer.sass";
-import FooterCenter from "./Footer/FooterCenter";
-import FooterRight from "./Footer/FooterRight";
 
 const Footer = () => {
   // const isMobile = window.innerWidth < 768;
   // return !isMobile ? (
   return (
     <footer id="footerAll">
+      <div className="headerFooter"></div>
       <div className="maincontentFooter">
         <div className="divFooterLeft">
-          <span className="footerTitle">Rodrigo Cuervo Dev</span>
-          <span className="footerparagrafo">Desenvolvedor Fullstack</span>
+          <FooterLeft />
         </div>
         <div className="divFooterCenter">
           <FooterCenter />

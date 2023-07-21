@@ -12,7 +12,7 @@ const PrincipaisSatcks = () => {
   const [mobileStackStudent] = React.useState(false);
   const [softSkillsStackStudent] = React.useState(false);
   return (
-    <div className="divStacksPrinc">
+    <div className="divStacksPrinc" id="principaisStacks">
       <h1 className="h1PStacks">
         As Stacks revolucionárias que impulsionaram meu sucesso!
       </h1>

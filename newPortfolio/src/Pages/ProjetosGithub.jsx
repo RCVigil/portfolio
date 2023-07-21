@@ -89,7 +89,7 @@ const ProjetosGithub = () => {
   };
 
   return (
-    <div className="divProjetoG">
+    <div className="divProjetoG" id="PProjetos">
       <div className="tituloProjetos">
         <h2 className="h2ProjetosGithub">Principais Projetos</h2>
       </div>
