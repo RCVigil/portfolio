@@ -6,13 +6,13 @@ import MongodbImages from "../../StacksImages/MongodbImages";
 
 const DatabaseStacks = () => {
   return (
-    <div className="firstDivStackContent">
-      <h2 className="h2Stack">Database</h2>
-      <div className="divStacksContent">
-        <div className="divStackUnit">
+    <div className="firstDivStackContentDB">
+      <h2 className="h2StackDB">Database</h2>
+      <div className="divStacksContentDB">
+        <div className="divStackUnitDB">
           <MySqlImage />
         </div>
-        <div className="divStackUnit">
+        <div className="divStackUnitDB">
           <MongodbImages />
         </div>
       </div>

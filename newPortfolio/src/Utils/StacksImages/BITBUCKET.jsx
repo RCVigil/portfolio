@@ -12,7 +12,7 @@ export default function BITBUCKET() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="img_tBody"
+          className="img_tBody bitBucketSVG"
           aria-label="Bitbucket"
           role="img"
           viewBox="0 0 512 512"

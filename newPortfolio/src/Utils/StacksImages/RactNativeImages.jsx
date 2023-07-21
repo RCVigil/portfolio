@@ -25,8 +25,8 @@ export default function RactNativeImages() {
             y2="36.722"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#6dc7ff"></stop>
-            <stop offset="1" stop-color="#e6abff"></stop>
+            <stop offset="0" stopColor="#6dc7ff"></stop>
+            <stop offset="1" stopColor="#e6abff"></stop>
           </linearGradient>
           <circle
             cx="32"
@@ -42,8 +42,8 @@ export default function RactNativeImages() {
             y2="53.44"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#1a6dff"></stop>
-            <stop offset="1" stop-color="#c822ff"></stop>
+            <stop offset="0" stopColor="#1a6dff"></stop>
+            <stop offset="1" stopColor="#c822ff"></stop>
           </linearGradient>
           <path
             fill="url(#9GkdZLxQa1XTDblOFwLcpb_t4YbEbA834uH_gr2)"

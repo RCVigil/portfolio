@@ -2,22 +2,26 @@ import React from "react";
 import NODEJS from "../../StacksImages/NODEJS";
 import NESTJS from "../../StacksImages/NESTJS";
 import TYPESCRIPT from "../../StacksImages/TYPESCRIPT";
+import DOCKERIMG from "../../StacksImages/DOCKERIMG";
 
 import "./_backend.sass";
 
 const BackEndStacks = () => {
   return (
-    <div className="firstDivStackContent">
-      <h2 className="h2Stack">Back-end</h2>
-      <div className="divStacksContent">
-        <div className="divStackUnit">
+    <div className="firstDivStackContentBack">
+      <h2 className="h2StackBack">Back-end</h2>
+      <div className="divStacksContentBack">
+        <div className="divStackUnitBack">
+          <TYPESCRIPT />
+        </div>
+        <div className="divStackUnitBack">
+          <DOCKERIMG />
+        </div>
+        <div className="divStackUnitBack">
           <NODEJS />
         </div>
-        <div className="divStackUnit">
+        <div className="divStackUnitBack">
           <NESTJS />
-        </div>
-        <div className="divStackUnit">
-          <TYPESCRIPT />
         </div>
       </div>
     </div>
