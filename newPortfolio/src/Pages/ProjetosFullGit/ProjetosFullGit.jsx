@@ -100,59 +100,70 @@ const ProjetosFullGit = () => {
                             </div>
                           </div>
 
-                          <hr className="text-primary" />
+                          <hr className="hrDivisory" />
 
-                          <div>
+                          <div className="divMainCardPFG">
                             {!proj.language ? (
                               ""
                             ) : (
-                              <div className="d-flex justify-content-center m-2">
-                                <p className="card-text text-info">
+                              <div className="predominanteDivPFG">
+                                <p className="predominantePPFG">
                                   A linguagem predominante é:
                                 </p>
-                                <h5 className="card-text text-light ms-3">{`${proj.language}`}</h5>
+                                <h5 className="predominanteH5PFG">{`${proj.language}`}</h5>
                               </div>
                             )}
 
                             <br />
 
-                            <p className="text-light">{proj.description}</p>
+                            <div className="divPDescricaoPFG">
+                              <p className="pDescricaoPFG">
+                                {proj.description}
+                              </p>
+                            </div>
 
                             <br />
 
-                            <div className="mt-3">
-                              <p className="card-footer text-light">
-                                {`Quer conhecer mais sobre este projeto?`}
+                            <div className="divCodigoPFG">
+                              <p className="pCodigoPFG">
+                                {`Quer conhecer o código deste projeto?`}
                               </p>
 
-                              <button className="btn btn-outline-primary">
-                                <a href={`${proj.svn_url}`} target="_blank">
+                              <button className="btnCodigoPFG">
+                                <a
+                                  className="aCodigoPFG"
+                                  href={`${proj.svn_url}`}
+                                  target="_blank"
+                                >
                                   Clique aqui!
                                 </a>
                               </button>
                             </div>
                           </div>
                         </div>
-                        <div className="goHomeDiv col-12">
-                          <div className="aplicPlay col-6 d-flex justify-content-center">
+                        <div className="goHomeDiv">
+                          <div className="aplicPlay">
                             {!proj.homepage ? (
                               ""
                             ) : (
-                              <div className="d-flex align-items-center align-content-center flex-column justify-content-center">
-                                <p className="pPlay text-light">{`Quer ver a aplicação rodando, é so clicar no play`}</p>
+                              <div className="divPlayPFG">
+                                <p className="pPlayPFG">
+                                  Quer ver a aplicação rodando, é so clicar no
+                                  play
+                                </p>
                                 <button className="LinkProjectF btn btn-outline-primary rounded-pill">
                                   <a
-                                    className=""
+                                    className="aPlayPFG"
                                     href={`${proj.homepage}`}
                                     target="_blank"
                                   >
                                     <i className="bi bi-play-btn mx-1">
                                       <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="29"
-                                        height="29"
+                                        // width="50"
+                                        // height="50"
                                         fill="currentColor"
-                                        className="bi bi-play-btn"
+                                        id="PlayIconPFG"
                                         viewBox="0 0 16 16"
                                       >
                                         <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
@@ -163,14 +174,6 @@ const ProjetosFullGit = () => {
                                 </button>
                               </div>
                             )}
-                          </div>
-
-                          <div className="imageGoHome col-6 d-flex justify-content-end">
-                            {/* https://loading.io/ */}
-                            <Link to="/">
-                              <img src={goHome} />
-                              <h1>{`Go Home`}</h1>
-                            </Link>
                           </div>
                         </div>
                       </div>
