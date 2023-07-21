@@ -44,10 +44,6 @@ const FrontEndStacks = () => {
     }
   }, [inView, isVisible]);
 
-  // React.useEffect(() => {
-  //   setIsVisible(inView);
-  // }, [inView]);
-
   const imageAnimation = {
     hidden: { x: -800, opacity: 0 }, // posição inicial fora da tela (à direita)
     visible: { x: 0, transition: { duration: 1 }, opacity: 1 }, // posição final (x: 0) com duração de 1 segundo

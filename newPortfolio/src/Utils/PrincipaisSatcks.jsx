@@ -10,7 +10,7 @@ import SoftSkillsStacks from "./Stacks/SoftSkillsStacks/SoftSkillStacks";
 
 const PrincipaisSatcks = () => {
   const [mobileStackStudent] = React.useState(false);
-  const [softSkillsStackStudent] = React.useState(false);
+  const [softSkillsStackStudent] = React.useState(true);
   return (
     <div className="divStacksPrinc" id="principaisStacks">
       <h1 className="h1PStacks">
