@@ -2,8 +2,8 @@ import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 // import { MemoryRouter } from "react-router";
 import Index from "./Components/Index";
-import ProjetosFullGit from "./Pages/ProjetosFullGit";
 import Error404 from "./Pages/Error404";
+import ProjetosFullGit from "./Pages/ProjetosFullGit/ProjetosFullGit";
 
 function RoutersApp() {
   return (

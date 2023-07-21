@@ -1,0 +1,102 @@
+@use '../../Styles/variables'
+@import '../../Styles/mixins'
+
+.loadingProjetosFullgit
+  align-items: center
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+.firstDivFullGit
+  border: 1px solid white
+  display: flex
+  flex-direction: column
+  height: 100%
+  width: 99vw
+
+.h2ProjectFullGit
+  align-items: center
+  color: variables.$text-color
+  display: flex
+  font-size: 4rem
+  height: 15vh
+  justify-content: center
+  font-family: variables.$font-tercery
+
+.divMainProjetosF
+  // background-color: rgb(255, 255, 255, 0.2)
+  display: flex
+  margin-left: 5vw
+  padding-bottom: 20vh
+  padding-top: 10vh
+  width: 95%
+
+  .divProjectF
+    align-items: center
+    display: flex
+    flex-grow: 1
+    flex-wrap: wrap
+    justify-content: space-evenly
+    gap: 5vh 0
+
+    .divRenderPFG
+      border: 0.5vw solid variables.$text-color-third
+      border-radius: variables.$container-border-radius
+      height: 80vh
+      width: 40%
+
+      .cardHeader
+        background-color: rgb(255, 0, 0, 0.05)
+        display: flex
+        flex-direction: column
+        height: 30vh
+        width: 100%
+
+        .h1NamePFG
+          color: variables.$text-color
+          font-family: variables.$font-primary
+          font-size: 2.2rem
+          padding: 1rem
+          text-align: center
+          text-transform: capitalize
+
+        .stackCretedAsPFG
+          align-items: center
+          display: flex
+          justify-content: center
+
+          .divTopicosPFG
+            height: 100%
+            width: 80%
+
+            .h1StacksPFG
+              color: variables.$text-color-secondary
+
+            .divStacks
+              align-items: center
+              height: 17vh
+              display: flex
+              flex-wrap: wrap
+              width: 100%
+
+              .list-group-PFG
+                max-height: 2rem
+                width: 33%
+
+            .list-group-item-stacksPFG
+              color: variables.$text-color
+              text-transform: capitalize
+              font-family: variables.$font-secondary
+              font-size: 1.1rem
+
+          .cardCriadoPFG
+            color: variables.$text-color-secondary
+            font-size: 1rem
+            font-family: variables.$font-secondary
+
+          .dataCriadoPFG
+            color: variables.$text-color
+            font-family: variables.$font-primary
+            font-size: 1.4rem
+            margin-top: 0.5rem
+            text-align: center
