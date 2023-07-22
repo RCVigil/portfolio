@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-import "../Styles/Menu.css";
 import "../Styles/Components/menuHamburguer.sass";
 import HeaderContext from "../Context/HeaderContext";
+
+import "../Styles/Menu.css";
 
 // Variáveis para animar o menu
 const menuVariants = {

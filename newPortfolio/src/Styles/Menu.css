@@ -153,3 +153,10 @@
     url("../Fonts/Demo_ConeriaScript.ttf"),
     url("../Fonts/Demo_ConeriaScript_Slanted.ttf") format("truetype");
 }
+
+@media (max-width: 374px) {
+  #menuBurgger {
+    margin-left: -3rem !important;
+    margin-top: 2rem !important;
+  }
+}

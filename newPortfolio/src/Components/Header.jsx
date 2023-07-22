@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
-import "../Styles/Components/Header.sass";
 
 import pegasusIcon from "../images/pegasus.svg";
 
 import MenuIcon from "../Utils/MenuIcon";
 
 import HeaderProvider from "../providers/HeaderProviders";
+
 import HeaderContext from "../Context/HeaderContext";
+
+import "../Styles/Components/Header.sass";
 
 function Header() {
   const { menuOpen, setMenuOpen } = useContext(HeaderContext);
@@ -23,7 +25,7 @@ function Header() {
 
   return (
     <header className="allHeader">
-      <div className="menuIconInHeader">
+      <div className="menuIconInHeaderCont">
         <MenuIcon />
       </div>
       <div className={!menuOpen ? "h1DivHeader" : "h1DivHeaderDelayed"}>

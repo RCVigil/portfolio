@@ -1,4 +1,5 @@
 @use '../variables'
+@import '../mixins'
 
 .divImgNoteb
   opacity: 1
@@ -13,17 +14,9 @@
     color: variables.$text-color-secondary
     padding: 2rem
     width: 75vw
-
-    // .title
-    //   padding-bottom: 1rem
-    //   color: variables.$text-color
-
-    // .pNote
-    //   text-indent: 6vh
-    //   text-align: justify
-
-      cite
-        font-size: 2.3rem
+    @include small-screen
+      width: 95vw
+      padding: 0 1rem
 
   .imgNote
     border-radius: variables.$full-border-radius
@@ -38,3 +31,6 @@
     line-height: 2.8rem
     text-align: justify
     text-indent: 5vw
+    @include small-screen
+      font-size: 1rem
+      line-height: 1.9rem

@@ -1,8 +1,6 @@
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 
-import "../Styles/Components/index.sass";
-
 import Header from "./Header";
 import AsideLeft from "./Aside-Left";
 import Notebook from "../Utils/Notebook";
@@ -10,6 +8,8 @@ import PrincipaisSatcks from "../Utils/PrincipaisSatcks";
 import ProjetosGithub from "../Pages/ProjetosGithub";
 import Footer from "./Footer";
 import ScrollToTopButton from "../Utils/ScrollToTopButtn";
+
+import "../Styles/Components/index.sass";
 
 const Index = () => {
   const { scrollYProgress } = useScroll();

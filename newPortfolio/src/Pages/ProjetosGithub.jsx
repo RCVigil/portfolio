@@ -254,7 +254,7 @@ const ProjetosGithub = () => {
                 .map((group, groupIndex) => (
                   <div className="divProjectMap" key={groupIndex}>
                     {group.map((proj, index) => (
-                      <div className={`divCards`} key={proj.id}>
+                      <div className={`divCards ${proj?.name}`} key={proj.id}>
                         <div className="cardHeader ">
                           <h1 className="h1NameProjetos">{proj.name}</h1>
                           <div className="divCriadoP">
@@ -283,9 +283,11 @@ const ProjetosGithub = () => {
                               </button>
                             )}
                           </div>
-                          <h1 className="descricaoProjeto">
-                            {proj.description}
-                          </h1>
+                          <div className="h1DescriptionPGH">
+                            <h1 className="descricaoProjeto">
+                              {proj.description}
+                            </h1>
+                          </div>
                         </div>
 
                         <hr className="hrLineProj" />

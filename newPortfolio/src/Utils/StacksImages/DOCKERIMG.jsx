@@ -8,7 +8,7 @@ export default function DOCKERIMG() {
       <a
         target="_blank"
         rel="noopener noreferrer nofollow"
-        href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+        href="https://docs.docker.com/"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

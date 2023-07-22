@@ -6,7 +6,7 @@ export default function MongodbImages() {
       <a
         target="_blank"
         rel="noopener noreferrer nofollow"
-        href="https://dev.mysql.com/"
+        href="https://www.mongodb.com/docs/"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

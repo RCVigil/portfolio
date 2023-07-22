@@ -19,6 +19,10 @@
   height: 100%
   justify-content: center
   width: 99vw
+  @include mixins.small-screen
+    border: 2px solid yellow
+    height: 100% !important
+    gap: 0
 
   .h2ProjetosGithub
     align-items: center
@@ -31,7 +35,11 @@
     font-size: 3rem
     font-family: variables.$font-tercery
     text-align: center
-
+    @include mixins.small-screen
+      font-size: variables.$font-size-mobile-Title-2
+      font-weight: 300
+      font-family: variables.$font-secondary
+      height: 10vh
 
   .divMainProjetos
     display: flex
@@ -40,6 +48,10 @@
     justify-content: center
     margin-left: 5.5vw
     width: 94.5% !important
+    @include mixins.small-screen
+      margin-left: 0
+      width: 100vw !important
+      flex-direction: column
 
     .loadingProjetosGithub
       align-content: center
@@ -49,6 +61,8 @@
       height: 100% !important
       justify-content: center
       width: 35vw
+      @include mixins.small-screen
+        width: 98vw
 
     .divUserGit
       align-items: center
@@ -56,7 +70,7 @@
       flex-direction: column
       gap: 2rem
       justify-content: center
-      height: 100% !important
+      height: 182vh !important
       width: 100%
       border: 0.5vh solid variables.$text-color-third
       border-radius: variables.$card-border-radius
@@ -71,13 +85,22 @@
         margin-top: 3vh
         text-align: center
         width: 100%
+        @include mixins.small-screen
+          font-size: variables.$font-size-mobile-Title-2
+          margin-top: 0
 
       .imgUser
         border-radius: 2rem
+        @include mixins.small-screen
+          border-radius: 1rem
+          height: 60%
+          width: 60%
 
       .pBioGitUser
         text-align: justify
         width: 80%
+        @include mixins.small-screen
+          font-size: variables.$font-size-mobile-Title-2
 
       .magicMakerP
         color: variables.$text-color
@@ -86,18 +109,31 @@
         font-family: variables.$font-secondary
         line-height: 5vh
         font-style: italic
+        @include mixins.small-screen
+          font-size: variables.$font-size-mobile-Normal
 
       .companyProjGithub
         text-align: center
+        @include mixins.small-screen
+          font-size: variables.$font-size-mobile-Normal
 
         .pProjetGithub
           color: variables.$text-color-secondary
           font-size: 1.3rem
+          @include mixins.small-screen
+            font-size: variables.$font-size-mobile-Normal
 
         .pHeaderProjetGithub
-          font-size: 1.5rem
-          height: 100%
-          margin-bottom: 1rem
+          align-items: center
+          display: flex
+          gap: 1vw
+          height: auto
+          justify-content: center
+          width: 100%
+          @include mixins.small-screen
+            font-size: variables.$font-size-mobile-Title-2
+            margin-bottom: 0
+            height: 5vh
 
         .imgDivProjSVG
           align-items: center
@@ -123,7 +159,6 @@
           color: variables.$text-color
 
     .divProjectGit
-      // border: 13px solid blue
       align-items: center
       display: flex
       flex-direction: column
@@ -131,8 +166,11 @@
       flex-wrap: wrap
       height: auto
       justify-content: space-between
-      // gap: 50px
       width: 65vw
+      @include mixins.small-screen
+        border: 3px solid red
+        height: auto !important
+        width: 99vw
 
     .divProjectMap
       display: flex
@@ -143,6 +181,10 @@
       height: 33%
       justify-content: space-evenly
       width: 100%
+      @include mixins.small-screen
+        background-color: rgb(255, 255, 255, 0.2)
+        height: 32%
+        width: 99vw
 
       .divCards
         border: 0.5vh solid variables.$text-color-third
@@ -153,10 +195,19 @@
         justify-content: flex-start
         width: 45%
         text-align: center
+        @include mixins.small-screen
+        height: 60vh
+          width: 49%
 
         .cardHeader
+          align-items: center
           background-color: rgb(249, 0, 0, 0.1)
+          display: flex
+          justify-content: space-between
+          flex-direction: column
           height: 70%
+          @include mixins.small-screen
+            height: 60%
 
         .hrLineProj
           align-self: center
@@ -175,6 +226,8 @@
     flex-direction: column
     gap: 3vh
     justify-content: center
+    @include mixins.small-screen
+      gap: 0
 
     .btnReposit
       align-content: center
@@ -186,10 +239,15 @@
       justify-content: center
       margin-bottom: 3vh
       width: 80%
+      @include mixins.small-screen
+        margin-bottom: 1vh
 
     .btnReposit:hover
       transform: scale(1.2, 1.2)
       border-radius: 0 0 2vh 2vh
+      @include mixins.small-screen
+        transform: scale(0)
+        border-radius: 0
 
     .btnReposit a
       color: white
@@ -203,6 +261,9 @@
     text-align: center
     text-transform: capitalize
     width: 100%
+    @include mixins.small-screen
+      font-size: 1rem
+      font-family: variables.$font-secondary
 
   .divCriadoP
     align-items: center
@@ -212,19 +273,31 @@
     height: 10vh
     margin-top: 1rem
     width: 100%
+    @include mixins.small-screen
+      height: 9vh
+      margin-top: 0.5vh
 
     .pCreatedProject
       font-size: 16px
+      @include mixins.small-screen
+        font-size: 14px
 
     .criadoDataProj
       font-size: 18px
       color: variables.$text-color
+      @include mixins.small-screen
+        font-size: 16px
 
     .svgPlayProject
       color: variables.$color-boot
       height: 3rem
       margin-top: 0.4rem
       width: 3rem
+      @include mixins.small-screen
+      height: 1.8rem
+
+  .h1DescriptionPGH
+    width: 80%
 
   .descricaoProjeto
     align-items: center
@@ -234,9 +307,16 @@
     font-size: 1.2rem
     font-weight: 100
     height: 50%
+    text-align: start
     justify-content: flex-end
     margin-bottom: 1rem
     width: 100%
+    @include mixins.small-screen
+      justify-content: center
+      text-align: center
+      line-height: 0.9rem
+      font-size: 0.85rem
+      margin-top: 0.3rem !important
 
   .divFooterProjeto
     height: 30%
@@ -251,6 +331,8 @@
       .card-footer-projetoGit
         font-size: 16px
         text-align: center
+        @include mixins.small-screen
+          font-size: 11.5px
 
       .card-text
         font-size: 18px
@@ -259,6 +341,9 @@
         font-weight: 500
         margin-top: 0.5rem
         text-transform: capitalize
+        @include mixins.small-screen
+          font-size: 15px
+          margin-top: 0.3rem
 
     .divButtonProjetos
       align-items: center
