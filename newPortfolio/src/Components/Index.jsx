@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import { motion, useScroll } from "framer-motion";
 
 import Header from "./Header";
@@ -14,6 +15,11 @@ import "../Styles/Components/index.sass";
 const Index = () => {
   const { scrollYProgress } = useScroll();
 
+  // Define uma media query para telas de celular
+  const isMobile = useMediaQuery({
+    query: "(max-width: 767px)", // Define aqui o tamanho máximo para considerar como celular
+  });
+
   return (
     <div className="sumIndex" id="home">
       <motion.div
@@ -23,9 +29,11 @@ const Index = () => {
       <div className="firstHeader">
         <Header />
       </div>
-      <div className="asideLeft">
-        <AsideLeft />
-      </div>
+      {!isMobile && (
+        <div className="asideLeft">
+          <AsideLeft />
+        </div>
+      )}
       <main className="body-site">
         <div className="firstNotebook-index">
           <Notebook />

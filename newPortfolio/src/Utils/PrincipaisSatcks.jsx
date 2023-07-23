@@ -1,5 +1,4 @@
 import React from "react";
-import "../Styles/Utils/PrincipaisSatacks.sass";
 
 import FrontEndStacks from "./Stacks/FrontendStacks/FrontEndStacks";
 import BackEndStacks from "./Stacks/BackendStacks/BackEndStacks";
@@ -7,6 +6,8 @@ import DevOpsStacks from "./Stacks/DevopsStacks/DevOpsStacks";
 import DatabaseStacks from "./Stacks/DatabasesStacks/DatabaseStacks";
 import MobileStacks from "./Stacks/MobileStacks/MobileStacks";
 import SoftSkillsStacks from "./Stacks/SoftSkillsStacks/SoftSkillStacks";
+
+import "../Styles/Utils/PrincipaisSatacks.sass";
 
 const PrincipaisSatcks = () => {
   const [mobileStackStudent] = React.useState(false);

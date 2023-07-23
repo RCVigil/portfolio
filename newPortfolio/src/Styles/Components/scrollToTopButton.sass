@@ -1,0 +1,39 @@
+@use '../variables'
+@use '../mixins'
+
+#scrollToTopStyles
+  align-items: center
+  // background-color: rgba(249, 249, 249, 0.5)
+  border-radius: 50%
+  cursor: pointer
+  display: flex
+  flex-direction: column
+  height: 16vh
+  justify-content: center
+  left: 91vw
+  position: fixed
+  top: 80vh
+  width: 5vw
+
+  .svgArrowUpSTTB
+    color: variables.$text-color
+    height: variables.$icone-small
+    margin-bottom: 1rem
+    width: variables.$icone-small
+
+  .imgScrollTop
+    height: variables.$icone-small
+    transform: scale(3)
+    transition: transform 0.3s ease
+    width: variables.$icone-small
+
+  .imgScrollTop:hover
+    transform: scale(5)
+
+  .pScrollTop
+    color: variables.$text-color
+    font-size: 1.3rem
+    height: variables.$icone-small
+    margin-top: 1rem
+    margin-left: 0.4rem
+    width: variables.$icone-small

@@ -20,7 +20,6 @@
   .divStacksContent
     align-content: center
     align-items: center
-    // border: 3px solid white
     display: flex
     flex-wrap: wrap
     gap: 1.5vh 0.5vw
@@ -28,14 +27,17 @@
     justify-content: center
     padding: 3vh 0
     width: 100%
+    @include small-screen
+      margin: 3vh 0
 
     .divStackUnitFront
       align-items: center
-      // border: 3px dotted green
       display: flex
       justify-content: center
       width: 40%
       height: 19%
+      @include small-screen
+        margin: 1vh
 
     .divStackUnitFront:hover
       background-color: rgba(205, 255, 255, 0.3)

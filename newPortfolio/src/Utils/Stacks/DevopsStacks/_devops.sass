@@ -4,6 +4,7 @@
 .firstDivDevops
   display: flex
   flex-direction: column
+  height: 100%
   width: 100%
 
   .h2Stack2Devops
@@ -19,6 +20,10 @@
     height: 18vh
     display: flex
     justify-content: space-around
+    @include small-screen
+      flex-wrap: wrap
+      height: 100%
+      width: 100%
 
     .divStackUnit2Devops
       align-items: center
@@ -27,6 +32,10 @@
       justify-content: center
       height: 100%
       width: 18%
+      @include small-screen
+        flex-wrap: wrap
+        height: 20vh
+        width: 40%
 
     .divStackUnit2Devops:hover
       background-color: rgba(205, 255, 255, 0.3)

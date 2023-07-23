@@ -34,6 +34,10 @@
     background-color: #fff
     border-radius: 50%
     margin-left: 0.9rem
+    min-height: 32px
+    min-width: 32px
+    max-height: 36px
+    max-width: 36px
     @include small-screen
       text-align: center
 
@@ -63,8 +67,10 @@
 
   .svgLinkedinFooter
     margin-left: 0.5rem
-    height: 3.2rem !important
-    width: 3.2rem !important
+    min-height: 44px
+    min-width: 44px
+    max-height: 48px
+    max-width: 48px
     @include small-screen
       height: 2rem !important
       width: 2rem !important
@@ -96,7 +102,14 @@
 
   .svgInstagramFooter
     margin-left: 1rem
+    // margin-left: 0.5rem
+    min-height: 32px
+    min-width: 32px
+    max-height: 36px
+    max-width: 36px
     color: variables.$text-color
+    @include full-large-screen
+      margin-right: -0.7rem
 
   .btn-share-footer-instagram
     align-items: center
@@ -136,6 +149,10 @@
 
     .svgEmailFooter
       margin-left: 1rem
+      min-height: 32px
+      min-width: 32px
+      max-height: 36px
+      max-width: 36px
 
 .telegramFooter
   display: flex
@@ -163,6 +180,10 @@
 
     .svgTelegramFooter
       margin-left: 0.5rem
+      min-height: 44px
+      min-width: 44px
+      max-height: 48px
+      max-width: 48px
 
 .pFooterRight
   color: variables.$text-color-secondary

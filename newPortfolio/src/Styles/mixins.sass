@@ -42,7 +42,7 @@
     @content
 
 // Mixin para estilos em telas full screen
-// acima de 1440px
+// acima de 1440px até 1919
 @mixin full-large-screen
-  @media (min-width: ($screen-Large + 1))
+  @media (min-width: ($screen-Large + 1)) and (max-width: $screen-Extra-Large)
     @content

@@ -4,7 +4,11 @@
 .firstDivSSkills
   display: flex
   flex-direction: column
+  height: 100%
   width: 100%
+  @include small-screen
+    align-items: center
+    justify-content: center
 
   .h2Stack2SSkills
     align-items: center
@@ -20,6 +24,9 @@
     display: flex
     justify-content: space-evenly
     width: 100%
+    @include small-screen
+      height: 100%
+      flex-wrap: wrap
 
     .divStackUnit2SSkills
       align-items: center
@@ -29,6 +36,10 @@
       height: 100%
       text-align: center
       width: 13%
+      @include small-screen
+        flex-wrap: wrap
+        height: 20vh
+        width: 40%
 
     .divStackUnit2SSkills:hover
       // background-color: rgba(205, 255, 255, 0.3)

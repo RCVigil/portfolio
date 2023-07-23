@@ -20,9 +20,8 @@
   justify-content: center
   width: 99vw
   @include mixins.small-screen
-    border: 2px solid yellow
     height: 100% !important
-    gap: 0
+    gap: 5px
 
   .h2ProjetosGithub
     align-items: center
@@ -39,12 +38,13 @@
       font-size: variables.$font-size-mobile-Title-2
       font-weight: 300
       font-family: variables.$font-secondary
-      height: 10vh
+      height: 12vh
+      margin-bottom: 3vh
 
   .divMainProjetos
     display: flex
     flex-direction: row
-    height: 100%
+    height: 100% !important
     justify-content: center
     margin-left: 5.5vw
     width: 94.5% !important
@@ -87,14 +87,14 @@
         width: 100%
         @include mixins.small-screen
           font-size: variables.$font-size-mobile-Title-2
-          margin-top: 0
+          margin-top: -5rem
 
       .imgUser
         border-radius: 2rem
         @include mixins.small-screen
           border-radius: 1rem
-          height: 60%
-          width: 60%
+          height: 15rem
+          width: 15rem
 
       .pBioGitUser
         text-align: justify
@@ -168,8 +168,7 @@
       justify-content: space-between
       width: 65vw
       @include mixins.small-screen
-        border: 3px solid red
-        height: auto !important
+        height: 110rem !important
         width: 99vw
 
     .divProjectMap
@@ -182,7 +181,6 @@
       justify-content: space-evenly
       width: 100%
       @include mixins.small-screen
-        background-color: rgb(255, 255, 255, 0.2)
         height: 32%
         width: 99vw
 
@@ -250,7 +248,7 @@
         border-radius: 0
 
     .btnReposit a
-      color: white
+      color: variables.$text-color
 
   .h1NameProjetos
     color: variables.$text-color
@@ -312,11 +310,13 @@
     margin-bottom: 1rem
     width: 100%
     @include mixins.small-screen
-      justify-content: center
-      text-align: center
+      align-items: flex-end
+      justify-content: flex-start
+      text-align: justify
       line-height: 0.9rem
-      font-size: 0.85rem
-      margin-top: 0.3rem !important
+      font-size: 0.8rem
+      margin-top: 0.5rem !important
+      margin-bottom: 0
 
   .divFooterProjeto
     height: 30%
