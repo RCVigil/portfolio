@@ -4,17 +4,38 @@
 .firstDivFooterRight
   height: 100%
   width: 100%
+  @include small-screen
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 5vh 0
+
+  .h3FooterRight
+    margin-left: 4.4rem
+    @include small-screen
+      margin-left: 0.7rem
+      margin-bottom: 2vh
+      font-size: variables.$font-size-mobile-Title-2
 
 .gitHubFooter
   display: flex
   justify-content: center
   height: 17%
   width: 90%
+  @include small-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
 
   .svgGithubFooter
     background-color: #fff
     border-radius: 50%
     margin-left: 0.9rem
+    @include small-screen
+      text-align: center
 
   .btn-share-footer-github
     align-items: center
@@ -24,15 +45,30 @@
     gap: 2.1vw
     height: 100%
     width: 100%
+    @include small-screen
+      justify-content: center
+      flex-direction: column
 
 .linkedinFooter-linkedin
   display: flex
   justify-content: center
   height: 17%
   width: 90%
+  @include small-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
 
   .svgLinkedinFooter
     margin-left: 0.5rem
+    height: 3.2rem !important
+    width: 3.2rem !important
+    @include small-screen
+      height: 2rem !important
+      width: 2rem !important
+      text-align: center
 
   .btn-share-footer-linkedin
     align-items: center
@@ -42,12 +78,21 @@
     gap: 2vw
     height: 100%
     width: 100%
+    @include small-screen
+      justify-content: center
+      flex-direction: column
 
 .instagramFooter
   display: flex
   justify-content: center
   height: 17%
   width: 90%
+  @include small-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
 
   .svgInstagramFooter
     margin-left: 1rem
@@ -61,12 +106,21 @@
     gap: 2.1vw
     height: 100%
     width: 100%
+    @include small-screen
+      justify-content: center
+      flex-direction: column
 
 .emailFooter
   display: flex
   justify-content: center
   height: 17%
   width: 90%
+  @include small-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
 
   .btn-share-footer-email
     align-items: center
@@ -76,6 +130,9 @@
     gap: 2.3vw
     height: 100%
     width: 100%
+    @include small-screen
+      justify-content: center
+      flex-direction: column
 
     .svgEmailFooter
       margin-left: 1rem
@@ -85,6 +142,12 @@
   justify-content: center
   height: 17%
   width: 90%
+  @include small-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
 
   .btn-share-footer-telegram
     align-items: center
@@ -94,6 +157,9 @@
     gap: 2vw
     height: 100%
     width: 100%
+    @include small-screen
+      justify-content: center
+      flex-direction: column
 
     .svgTelegramFooter
       margin-left: 0.5rem
@@ -104,3 +170,5 @@
   font-size: 1rem
   font-weight: 600
   margin-left: 1.4rem
+  @include small-screen
+    font-size: 0.8rem

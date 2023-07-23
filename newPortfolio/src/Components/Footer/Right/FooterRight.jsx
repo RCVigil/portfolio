@@ -1,12 +1,12 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 import "./_footerRight.sass";
 
 export default function FooterRight() {
   return (
     <div className="firstDivFooterRight">
-      <h3 style={{ marginLeft: "4.4rem" }}>Contatos</h3>
+      <h3 className="h3FooterRight">Contatos</h3>
       <div className="gitHubFooter">
         <motion.a
           className="btn-share-footer-github"
@@ -44,9 +44,13 @@ export default function FooterRight() {
             className="svgLinkedinFooter"
             x="0px"
             y="0px"
-            width="50"
-            height="50"
+            // width="50"
+            // height="50"
             viewBox="0 0 48 48"
+            // style={{
+            //   transform: "scale(1.7)",
+            //   transition: "transform 0.3s ease",
+            // }}
           >
             <path
               fill="#0078d4"

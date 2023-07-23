@@ -10,11 +10,15 @@
   flex-direction: column
   height: 70vh
   justify-content: center
-  // margin-left: 4rem
   width: 100% !important
+  @include small-screen
+    height: 100% !important
+    width: 100vw !important
 
   .headerFooter
     height: 20% !important
+    @include small-screen
+      height: 10vh
 
   .divFooter
     align-items: center
@@ -23,6 +27,15 @@
     justify-content: flex-end
     flex-direction: column
     width: 100%
+    @include small-screen
+      width: 100vw !important
+      text-align: center
+      margin: 5vh 0
+
+    .spanDataFooter
+      color: variables.$text-color
+      font-weight: 700
+
 
   .maincontentFooter
     align-items: center
@@ -31,6 +44,11 @@
     height: 100%
     justify-content: space-between
     width: 100%
+    @include small-screen
+      height: 100% !important
+      flex-direction: column
+      justify-content: center
+      width: 100vw !important
 
     .divFooterLeft
       align-items: center
@@ -39,6 +57,9 @@
       height: 100%
       justify-content: center
       width: 30%
+      @include small-screen
+        width: 99vw
+        margin-top: 5vh
 
     .divFooterCenter
       align-items: center
@@ -49,18 +70,19 @@
       height: 85%
       justify-content: center
       width: 39%
+      @include small-screen
+        border: none
+        height: 100%
+        margin: 5vh 0
+        width: 99vw
 
-    .divFooterRight
+    #divFooterRight
       display: flex
       flex-direction: column
       height: 100%
       justify-content: center
       width: 30%
-
-    .span1Footer
       @include small-screen
-
-    .pFooter
-      @include small-screen
-        padding-top: 1rem
-        padding-bottom: 0.7rem
+        align-items: center
+        width: 99vw
+        text-align: center 

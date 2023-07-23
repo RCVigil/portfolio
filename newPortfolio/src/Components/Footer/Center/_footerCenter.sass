@@ -7,6 +7,8 @@
   justify-content: center
   height: 100%
   width: 100%
+  @include small-screen
+    width: 100vw
 
   .listUlFooter
     align-items: center
@@ -15,6 +17,9 @@
     height: 100%
     justify-content: space-evenly
     width: 100%
+    @include small-screen
+      gap: 3vh
+      justify-content: center
 
     .liItemsMenuFooter
       align-items: center
@@ -25,6 +30,9 @@
       height: 5vh
       justify-content: space-evenly
       width: 60%
+      @include small-screen
+        width: 80vw
+        justify-content: center
 
       .linkItemsMenuFooter
         align-items: center
@@ -33,6 +41,8 @@
         height: 100%
         justify-content: space-evenly
         width: 100% !important
+        @include small-screen
+          justify-content: center
 
         .divSvgFooter
           align-items: center
@@ -53,3 +63,5 @@
           justify-content: center
           height: 100%
           width: 40%
+          @include small-screen
+            width: 60vw
