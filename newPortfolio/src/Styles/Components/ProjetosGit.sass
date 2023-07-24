@@ -22,6 +22,9 @@
   @include mixins.small-screen 
     height: 100% !important
     gap: 5px
+  @include mixins.medium-screen 
+    height: 100% !important
+    gap: 5px
 
   .h2ProjetosGithub
     align-items: center
@@ -35,12 +38,15 @@
     font-family: variables.$font-tercery
     text-align: center
     @include mixins.small-screen
-      border:1px solid yellow
       font-size: variables.$font-size-mobile-Title-2
       font-weight: 300
       font-family: variables.$font-secondary
       height: 5vh
-      // margin-bottom: 3vh
+    @include mixins.medium-screen
+      font-size: variables.$font-size-mobile-Title-2
+      font-weight: 300
+      font-family: variables.$font-secondary
+      height: 5vh
 
   .divMainProjetos
     display: flex
@@ -50,6 +56,10 @@
     margin-left: 5.5vw
     width: 94.5% !important
     @include mixins.small-screen
+      margin-left: 0
+      width: 100vw !important
+      flex-direction: column
+    @include mixins.medium-screen
       margin-left: 0
       width: 100vw !important
       flex-direction: column
@@ -63,6 +73,10 @@
       justify-content: center
       width: 35vw
       @include mixins.small-screen
+        height: auto !important
+        margin-bottom: 10vh
+        width: 98vw
+      @include mixins.medium-screen
         height: auto !important
         margin-bottom: 10vh
         width: 98vw
@@ -91,10 +105,17 @@
         @include mixins.small-screen
           font-size: variables.$font-size-mobile-Title-2
           margin-top: -5rem
+        @include mixins.medium-screen
+          font-size: variables.$font-size-mobile-Title-2
+          margin-top: -5rem
 
       .imgUser
         border-radius: 2rem
         @include mixins.small-screen
+          border-radius: 1rem
+          height: 15rem
+          width: 15rem
+        @include mixins.medium-screen
           border-radius: 1rem
           height: 15rem
           width: 15rem
@@ -103,6 +124,8 @@
         text-align: justify
         width: 80%
         @include mixins.small-screen
+          font-size: variables.$font-size-mobile-Title-2
+        @include mixins.medium-screen
           font-size: variables.$font-size-mobile-Title-2
 
       .magicMakerP
@@ -114,16 +137,22 @@
         font-style: italic
         @include mixins.small-screen
           font-size: variables.$font-size-mobile-Normal
+        @include mixins.medium-screen
+          font-size: variables.$font-size-mobile-Normal
 
       .companyProjGithub
         text-align: center
         @include mixins.small-screen
+          font-size: variables.$font-size-mobile-Normal
+        @include mixins.medium-screen
           font-size: variables.$font-size-mobile-Normal
 
         .pProjetGithub
           color: variables.$text-color-secondary
           font-size: 1.3rem
           @include mixins.small-screen
+            font-size: variables.$font-size-mobile-Normal
+          @include mixins.medium-screen
             font-size: variables.$font-size-mobile-Normal
 
         .pHeaderProjetGithub
@@ -134,6 +163,10 @@
           justify-content: center
           width: 100%
           @include mixins.small-screen
+            font-size: variables.$font-size-mobile-Title-2
+            margin-bottom: 0
+            height: 5vh
+          @include mixins.medium-screen
             font-size: variables.$font-size-mobile-Title-2
             margin-bottom: 0
             height: 5vh
@@ -173,6 +206,9 @@
       @include mixins.small-screen
         height: 110rem !important
         width: 99vw
+      @include mixins.medium-screen
+        height: 110rem !important
+        width: 99vw
 
     .divProjectMap
       display: flex
@@ -184,6 +220,9 @@
       justify-content: space-evenly
       width: 100%
       @include mixins.small-screen
+        height: 32%
+        width: 99vw
+      @include mixins.medium-screen
         height: 32%
         width: 99vw
 
@@ -199,6 +238,9 @@
         @include mixins.small-screen
         height: 60vh
           width: 49%
+        @include mixins.medium-screen
+        height: 60vh
+          width: 49%
 
         .cardHeader
           align-items: center
@@ -208,6 +250,8 @@
           flex-direction: column
           height: 70%
           @include mixins.small-screen
+            height: 60%
+          @include mixins.medium-screen
             height: 60%
 
         .hrLineProj
@@ -229,6 +273,8 @@
     justify-content: center
     @include mixins.small-screen
       gap: 0
+    @include mixins.medium-screen
+      gap: 0
 
     .btnReposit
       align-content: center
@@ -242,11 +288,16 @@
       width: 80%
       @include mixins.small-screen
         margin-bottom: 1vh
+      @include mixins.medium-screen
+        margin-bottom: 1vh
 
     .btnReposit:hover
       transform: scale(1.2, 1.2)
       border-radius: 0 0 2vh 2vh
       @include mixins.small-screen
+        transform: scale(0)
+        border-radius: 0
+      @include mixins.medium-screen
         transform: scale(0)
         border-radius: 0
 
@@ -265,6 +316,9 @@
     @include mixins.small-screen
       font-size: 1rem
       font-family: variables.$font-secondary
+    @include mixins.medium-screen
+      font-size: 1rem
+      font-family: variables.$font-secondary
 
   .divCriadoP
     align-items: center
@@ -277,16 +331,23 @@
     @include mixins.small-screen
       height: 9vh
       margin-top: 0.5vh
+    @include mixins.medium-screen
+      height: 9vh
+      margin-top: 0.5vh
 
     .pCreatedProject
       font-size: 16px
       @include mixins.small-screen
+        font-size: 14px
+      @include mixins.medium-screen
         font-size: 14px
 
     .criadoDataProj
       font-size: 18px
       color: variables.$text-color
       @include mixins.small-screen
+        font-size: 16px
+      @include mixins.medium-screen
         font-size: 16px
 
     .svgPlayProject
@@ -295,6 +356,8 @@
       margin-top: 0.4rem
       width: 3rem
       @include mixins.small-screen
+      height: 1.8rem
+      @include mixins.medium-screen
       height: 1.8rem
 
   .h1DescriptionPGH
@@ -320,6 +383,14 @@
       font-size: 0.8rem
       margin-top: 0.5rem !important
       margin-bottom: 0
+    @include mixins.medium-screen
+      align-items: flex-end
+      justify-content: flex-start
+      text-align: justify
+      line-height: 0.9rem
+      font-size: 0.8rem
+      margin-top: 0.5rem !important
+      margin-bottom: 0
 
   .divFooterProjeto
     height: 30%
@@ -336,6 +407,8 @@
         text-align: center
         @include mixins.small-screen
           font-size: 11.5px
+        @include mixins.medium-screen
+          font-size: 11.5px
 
       .card-text
         font-size: 18px
@@ -345,6 +418,9 @@
         margin-top: 0.5rem
         text-transform: capitalize
         @include mixins.small-screen
+          font-size: 15px
+          margin-top: 0.3rem
+        @include mixins.medium-screen
           font-size: 15px
           margin-top: 0.3rem
 

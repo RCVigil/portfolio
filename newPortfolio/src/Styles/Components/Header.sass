@@ -10,11 +10,16 @@
   @include small-screen
     height: 40vh
     flex-direction: column
+  @include medium-screen
+    height: 40vh
+    flex-direction: column
 
   .menuIconInHeaderCont
     height: 3rem
     width: 100%
     @include small-screen
+      margin-bottom: 4vh
+    @include medium-screen
       margin-bottom: 4vh
 
 
@@ -27,6 +32,9 @@
     width: 90%
     transition-delay: 5000ms
     @include small-screen
+      width: 100vw
+      flex-direction: column
+    @include medium-screen
       width: 100vw
       flex-direction: column
 
@@ -42,6 +50,11 @@
       text-align: center
       flex-direction: column
       margin-top: 2.5vh
+    @include medium-screen
+      width: 100vw
+      text-align: center
+      flex-direction: column
+      margin-top: 2.5vh
 
   .menuOpenActive
     margin: 5rem
@@ -49,6 +62,7 @@
     @include small-screen
       margin: 0
     @include medium-screen
+      margin: 0
 
   .menuCloseActive
     transition-duration: 1s
@@ -59,6 +73,7 @@
     @include small-screen
       width: 8rem
     @include medium-screen
+      width: 8rem
 
   .h1Header
     background: variables.$gradient
@@ -70,4 +85,6 @@
     letter-spacing: 0.8rem
     opacity: 1
     @include small-screen
+      font-size: 6vh
+    @include medium-screen
       font-size: 6vh

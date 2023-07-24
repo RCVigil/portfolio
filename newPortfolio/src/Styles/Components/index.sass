@@ -12,7 +12,6 @@
     flex-direction: column
     width: 100vw !important
   @include medium-screen
-    border: 3px solid red
     align-items: center
     display: flex
     height: auto
@@ -54,6 +53,8 @@
       z-index: -10
       @include small-screen
         background-image: none
+      @include medium-screen
+        background-image: none
 
     .firstProjetosGithub
       align-content: center
@@ -64,5 +65,8 @@
       height: 100%
       width: 100%
       @include small-screen
+        display: flex
+        flex-direction: column
+      @include medium-screen
         display: flex
         flex-direction: column

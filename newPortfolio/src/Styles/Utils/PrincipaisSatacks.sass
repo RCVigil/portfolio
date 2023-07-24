@@ -13,6 +13,9 @@
   @include small-screen
     padding-bottom: 5vh
     width: 100vw
+  @include medium-screen
+    padding-bottom: 5vh
+    width: 100vw
 
   .h1PStacks
     background: variables.$gradient
@@ -28,6 +31,8 @@
     width: 100%
     @include small-screen
       font-size: variables.$font-size-mobile-Title-2
+    @include medium-screen
+      font-size: variables.$font-size-mobile-Title-2
 
   .divHardskills1
     display: flex
@@ -39,11 +44,19 @@
       height: auto
       justify-content: center
       width: 100vw
+    @include medium-screen
+      align-items: center
+      flex-direction: column
+      height: auto
+      justify-content: center
+      width: 100vw
 
     .divFrontend
       border-radius: variables.$card-border-radius
       width: 32%
       @include small-screen
+        width: 95vw
+      @include medium-screen
         width: 95vw
 
     .divBackend
@@ -55,11 +68,19 @@
         border: none
         height: 60vh
         width: 95vw
+      @include medium-screen
+        border: none
+        height: 60vh
+        width: 95vw
 
     .divDatabase
       border-radius: variables.$card-border-radius
       width: 32%
       @include small-screen
+        border: none
+        height: 60vh
+        width: 95vw
+      @include medium-screen
         border: none
         height: 60vh
         width: 95vw
@@ -75,6 +96,8 @@
     height: 100%
     width: 94%
     @include small-screen
+      width: 100%
+    @include medium-screen
       width: 100%
 
     .divDevops
@@ -95,11 +118,16 @@
     width: 94%
     @include small-screen
       width: 100vw
+    @include medium-screen
+      width: 100vw
 
   .divH3PS
     align-self: center
     color: variables.$text-color
     margin-bottom: 10vh
     @include small-screen
+      margin-bottom: 15vh
+      text-align: center
+    @include medium-screen
       margin-bottom: 15vh
       text-align: center
