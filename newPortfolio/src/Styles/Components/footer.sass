@@ -14,10 +14,15 @@
   @include small-screen
     height: 100% !important
     width: 100vw !important
+  @include medium-screen
+    height: 100% !important
+    width: 100vw !important
 
   .headerFooter
     height: 20% !important
     @include small-screen
+      height: 10vh
+    @include medium-screen
       height: 10vh
 
   .divFooter
@@ -28,6 +33,10 @@
     flex-direction: column
     width: 100%
     @include small-screen
+      width: 100vw !important
+      text-align: center
+      margin: 5vh 0
+    @include medium-screen
       width: 100vw !important
       text-align: center
       margin: 5vh 0
@@ -49,6 +58,11 @@
       flex-direction: column
       justify-content: center
       width: 100vw !important
+    @include medium-screen
+      height: 100% !important
+      flex-direction: column
+      justify-content: center
+      width: 100vw !important
 
     .divFooterLeft
       align-items: center
@@ -58,6 +72,9 @@
       justify-content: center
       width: 30%
       @include small-screen
+        width: 99vw
+        margin-top: 5vh
+      @include medium-screen
         width: 99vw
         margin-top: 5vh
 
@@ -75,6 +92,11 @@
         height: 100%
         margin: 5vh 0
         width: 99vw
+      @include medium-screen
+        border: none
+        height: 100%
+        margin: 5vh 0
+        width: 99vw
 
     #divFooterRight
       display: flex
@@ -83,6 +105,10 @@
       justify-content: center
       width: 30%
       @include small-screen
+        align-items: center
+        width: 99vw
+        text-align: center 
+      @include medium-screen
         align-items: center
         width: 99vw
         text-align: center 

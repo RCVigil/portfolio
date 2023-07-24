@@ -10,10 +10,20 @@
     flex-direction: column
     justify-content: center
     margin: 5vh 0
+  @include medium-screen
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 5vh 0
 
   .h3FooterRight
     margin-left: 4.4rem
     @include small-screen
+      margin-left: 0.7rem
+      margin-bottom: 2vh
+      font-size: variables.$font-size-mobile-Title-2
+    @include medium-screen
       margin-left: 0.7rem
       margin-bottom: 2vh
       font-size: variables.$font-size-mobile-Title-2
@@ -24,6 +34,12 @@
   height: 17%
   width: 90%
   @include small-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
+  @include medium-screen
     height: auto !important
     align-items: center
     flex-direction: column
@@ -40,6 +56,8 @@
     max-width: 36px
     @include small-screen
       text-align: center
+    @include medium-screen
+      text-align: center
 
   .btn-share-footer-github
     align-items: center
@@ -52,6 +70,9 @@
     @include small-screen
       justify-content: center
       flex-direction: column
+    @include medium-screen
+      justify-content: center
+      flex-direction: column
 
 .linkedinFooter-linkedin
   display: flex
@@ -59,6 +80,12 @@
   height: 17%
   width: 90%
   @include small-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
+  @include medium-screen
     height: auto !important
     align-items: center
     flex-direction: column
@@ -75,6 +102,10 @@
       height: 2rem !important
       width: 2rem !important
       text-align: center
+    @include medium-screen
+      height: 2rem !important
+      width: 2rem !important
+      text-align: center
 
   .btn-share-footer-linkedin
     align-items: center
@@ -87,6 +118,9 @@
     @include small-screen
       justify-content: center
       flex-direction: column
+    @include medium-screen
+      justify-content: center
+      flex-direction: column
 
 .instagramFooter
   display: flex
@@ -94,6 +128,12 @@
   height: 17%
   width: 90%
   @include small-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
+  @include medium-screen
     height: auto !important
     align-items: center
     flex-direction: column
@@ -122,6 +162,9 @@
     @include small-screen
       justify-content: center
       flex-direction: column
+    @include medium-screen
+      justify-content: center
+      flex-direction: column
 
 .emailFooter
   display: flex
@@ -129,6 +172,12 @@
   height: 17%
   width: 90%
   @include small-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
+  @include medium-screen
     height: auto !important
     align-items: center
     flex-direction: column
@@ -144,6 +193,9 @@
     height: 100%
     width: 100%
     @include small-screen
+      justify-content: center
+      flex-direction: column
+    @include medium-screen
       justify-content: center
       flex-direction: column
 
@@ -165,6 +217,12 @@
     flex-direction: column
     width: 100vw
     margin: 1vh 0
+  @include medium-screen
+    height: auto !important
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    margin: 1vh 0
 
   .btn-share-footer-telegram
     align-items: center
@@ -175,6 +233,9 @@
     height: 100%
     width: 100%
     @include small-screen
+      justify-content: center
+      flex-direction: column
+    @include medium-screen
       justify-content: center
       flex-direction: column
 
@@ -192,4 +253,6 @@
   font-weight: 600
   margin-left: 1.4rem
   @include small-screen
+    font-size: 0.8rem
+  @include medium-screen
     font-size: 0.8rem

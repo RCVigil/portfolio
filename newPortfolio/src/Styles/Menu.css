@@ -133,20 +133,6 @@
   width: 0;
 }
 
-/* Para dispositivos com largura de tela menor ou igual a 600px */
-@media (max-width: 425px) {
-  .list {
-    align-self: center;
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    text-align: center;
-  }
-  #linkItemsMenu:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-}
-
 @font-face {
   font-family: "coneria-Script";
   src:
@@ -157,6 +143,20 @@
 @media (max-width: 374px) {
   #menuBurgger {
     margin-left: -3rem !important;
-    margin-top: 2rem !important;
+    margin-top: -2rem !important;
+  }
+}
+
+/* Para dispositivos com largura de tela menor ou igual a 600px */
+@media (max-width: 600px) {
+  .list {
+    align-self: center;
+    font-size: 1rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  #linkItemsMenu:hover {
+    color: #fff;
+    text-decoration: none;
   }
 }

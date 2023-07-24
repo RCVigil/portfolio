@@ -5,13 +5,20 @@
   color: variables.$text-color-secondary
   width: 100%
   @include small-screen
-    // border: 3px solid red
     align-items: center
     display: flex
     height: auto
     justify-content: center
     flex-direction: column
-    width: 100vw
+    width: 100vw !important
+  @include medium-screen
+    border: 3px solid red
+    align-items: center
+    display: flex
+    height: auto
+    justify-content: center
+    flex-direction: column
+    width: 100vw !important
 
   .progress-bar
     position: fixed
@@ -31,7 +38,6 @@
 
     .firstNotebook-index
       position: relative
-      @include small-screen
 
     .firstNotebook-index ::before
       content: ""
