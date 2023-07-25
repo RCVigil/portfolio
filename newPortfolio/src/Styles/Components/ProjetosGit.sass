@@ -21,10 +21,10 @@
   width: 99vw
   @include mixins.small-screen 
     height: 100% !important
-    gap: 5px
-  @include mixins.medium-screen 
+    gap: 9vh
+  @include mixins.medium-screen
     height: 100% !important
-    gap: 5px
+    gap: 9vh
 
   .h2ProjetosGithub
     align-items: center
@@ -97,10 +97,12 @@
         border-radius: variables.$card-border-radius
 
       .h1Name
-        color: variables.$text-color-secondary
+        color: variables.$text-color
         font-size: 45px
+        font-weight: 600
         margin-top: 3vh
         text-align: center
+        text-transform: capitalize
         width: 100%
         @include mixins.small-screen
           font-size: variables.$font-size-mobile-Title-2
