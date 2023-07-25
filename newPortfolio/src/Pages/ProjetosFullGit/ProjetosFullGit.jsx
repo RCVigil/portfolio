@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
+import { useScroll } from "framer-motion";
 
 import moment from "moment";
 
@@ -6,8 +8,6 @@ import "./ProjetosFullGit.sass";
 
 import Loading from "../Loading";
 
-import goHome from "../../images/goHome.svg";
-import { Link } from "react-router-dom";
 import Header from "../../Components/Header";
 import AsideLeft from "../../Components/Aside-Left";
 import Footer from "../../Components/Footer";
@@ -44,12 +44,21 @@ const ProjetosFullGit = () => {
     return inicio;
   };
 
+  const { scrollYProgress } = useScroll();
+
+  // Define uma media query para telas de celular
+  const isMobile = useMediaQuery({
+    query: "(max-width: 767px)", // Define aqui o tamanho máximo para considerar como celular
+  });
+
   return (
     <div className="firstDivFullGit">
       <Header />
-      <div className="asideLeft">
-        <AsideLeft />
-      </div>
+      {!isMobile && (
+        <div className="asideLeft">
+          <AsideLeft />
+        </div>
+      )}
       <h2 className="h2ProjectFullGit">Todos Projetos</h2>
 
       <div className="divMainProjetosF">
@@ -72,7 +81,7 @@ const ProjetosFullGit = () => {
                             <h1 className="h1NamePFG">{proj.name}</h1>
                             <div className="stackCretedAsPFG">
                               <div className="divTopicosPFG ">
-                                <h1 className="h1StacksPFG mb-5 mt-5 fs-2 text-capitalize">
+                                <h1 className="h1StacksPFG">
                                   Stacks usadas neste projeto:
                                 </h1>
                                 <div className="divStacks">

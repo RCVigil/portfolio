@@ -21,6 +21,10 @@
   height: 15vh
   justify-content: center
   font-family: variables.$font-tercery
+  @include small-screen
+    font-size: variables.$font-size-mobile-Title-2
+  @include medium-screen
+    font-size: variables.$font-size-mobile-Title-2
 
 .divMainProjetosF
   // background-color: rgb(255, 255, 255, 0.2)
@@ -29,6 +33,12 @@
   padding-bottom: 20vh
   padding-top: 10vh
   width: 95%
+  @include small-screen
+    margin: 0
+    width: 100vw
+  @include medium-screen
+    margin: 0
+    width: 100vw
 
   .divProjectF
     align-items: center
@@ -37,12 +47,24 @@
     flex-wrap: wrap
     justify-content: space-evenly
     gap: 5vh 0
+    @include small-screen
+      border: 3px solid blueviolet
+      width: 100vw
+    @include medium-screen
+      width: 100vw
+
 
     .divRenderPFG
       border: 0.5vw solid variables.$text-color-third
       border-radius: variables.$container-border-radius
       height: 80vh
       width: 40%
+      @include small-screen
+        height: 100vh
+        width: 90vw
+      @include medium-screen
+        height: 100vh
+        width: 90vw
 
       .cardHeader
         background-color: rgb(255, 0, 0, 0.05)
@@ -58,18 +80,44 @@
           padding: 1rem
           text-align: center
           text-transform: capitalize
+          @include small-screen
+            font-size: variables.$font-size-mobile-Title-2
+            padding: 0.5rem
+          @include medium-screen
+            font-size: variables.$font-size-mobile-Title-2
+            padding: 0.5rem
 
         .stackCretedAsPFG
           align-items: center
           display: flex
           justify-content: center
+          @include small-screen
+            flex-direction: column
+            height: 100%
+            justify-content: flex-start
+            margin: 1vh 0
+          @include medium-screen
+            flex-direction: column
+            height: 100%
+            justify-content: flex-start
+            margin: 1vh 0
 
           .divTopicosPFG
             height: 100%
             width: 80%
+            @include small-screen
+              width: 90%
+            @include medium-screen
+              width: 90%
 
             .h1StacksPFG
               color: variables.$text-color-secondary
+              @include small-screen
+                font-size: variables.$font-size-mobile-Normal
+                margin-top: 0.5vh
+              @include medium-screen
+                margin-top: 0.5vh
+                font-size: variables.$font-size-mobile-Normal
 
             .divStacks
               align-items: center
@@ -77,21 +125,49 @@
               display: flex
               flex-wrap: wrap
               width: 100%
+              @include small-screen
+                height: 14vh
+                align-items: flex-start
+                flex-direction: column
+              @include medium-screen
+                height: 14vh
+                align-items: flex-start
+                flex-direction: column
 
               .list-group-PFG
                 max-height: 2rem
                 width: 33%
+                @include small-screen
+                  display: flex
+                  flex-wrap: wrap
+                  width: 43vw
+                  list-style: square
+                  margin: 0.5vh 0.7vh 
+                @include medium-screen
+                  display: flex
+                  flex-wrap: wrap
+                  width: 43vw
+                  list-style: square
+                  margin: 0.5vh 0.7vh 
 
             .list-group-item-stacksPFG
               color: variables.$text-color
               text-transform: capitalize
               font-family: variables.$font-secondary
               font-size: 1.1rem
+              @include small-screen
+                font-size: variables.$font-size-mobile-Normal
+              @include medium-screen
+                font-size: variables.$font-size-mobile-Normal
 
           .cardCriadoPFG
             color: variables.$text-color-secondary
             font-size: 1rem
             font-family: variables.$font-secondary
+            @include small-screen
+              font-size: variables.$font-size-mobile-Normal
+            @include medium-screen
+              font-size: variables.$font-size-mobile-Normal
 
           .dataCriadoPFG
             color: variables.$text-color
@@ -100,9 +176,13 @@
             font-weight: 600
             margin-top: 0.5rem
             text-align: center
+            @include small-screen
+              font-size: variables.$font-size-mobile-Title-2
+            @include medium-screen
+              font-size: variables.$font-size-mobile-Title-2
 
       .hrDivisory
-        border: 1px solid variables.$text-color-third
+        border: 0.1vh solid variables.$text-color-third
 
       .divMainCardPFG
         align-items: center
@@ -121,6 +201,10 @@
           color: variables.$text-color-secondary
           font-family: variables.$font-secondary
           font-size: 1.2rem
+          @include small-screen
+            font-size: variables.$font-size-mobile-Normal
+          @include medium-screen
+            font-size: variables.$font-size-mobile-Normal
 
         .predominanteH5PFG
           color: variables.$text-color
@@ -129,6 +213,10 @@
           padding: 0.5rem
           font-weight: 600
           text-transform: capitalize
+          @include small-screen
+            font-size: variables.$font-size-mobile-Title-2
+          @include medium-screen
+            font-size: variables.$font-size-mobile-Title-2
 
       .divPDescricaoPFG
         height: auto
@@ -139,6 +227,12 @@
           font-family: variables.$font-secondary
           font-size: 1.2rem
           text-indent: 1.5vw
+          @include small-screen
+            font-size: variables.$font-size-mobile-Normal
+            text-indent: 1vw
+          @include medium-screen
+            font-size: variables.$font-size-mobile-Normal
+            text-indent: 1vw
 
       .divCodigoPFG
         align-items: center
@@ -154,6 +248,10 @@
           font-family: variables.$font-secondary
           font-size: 1.1rem
           margin-bottom: 1.5vh
+          @include small-screen
+            font-size: variables.$font-size-mobile-Normal
+          @include medium-screen
+            font-size: variables.$font-size-mobile-Normal
 
         .btnCodigoPFG
           align-items: center
@@ -163,6 +261,10 @@
           justify-content: center
           height: 5vh
           width: 10vw
+          @include small-screen
+            width: 80%
+          @include medium-screen
+            width: 80%
 
         .btnCodigoPFG:hover
           scale: 1.1
@@ -201,12 +303,23 @@
             height: 100%
             width: 100%
             gap: 2vh
+            @include small-screen
+              margin-top: 2vh
+            @include medium-screen
+              margin-top: 2vh
 
             .pPlayPFG
               color: variables.$text-color-secondary
               font-family: variables.$font-secondary
               font-size: 1.1rem
-              // margin-bottom: 1vh
+              @include small-screen
+                font-size: variables.$font-size-mobile-Normal
+                text-align: center
+                padding: 1vh 0
+              @include medium-screen
+                font-size: variables.$font-size-mobile-Normal
+                text-align: center
+                padding: 1vh 0
 
             #PlayIconPFG
               color: variables.$color-boot
