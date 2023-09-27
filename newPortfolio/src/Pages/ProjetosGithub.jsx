@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 
 import log from "loglevel";
 
-import "../Styles/Components/ProjetosGit.sass";
-import "../Styles/Components/Loading.sass";
 import moment from "moment";
 import Loading from "./Loading";
+
+import "../Styles/Components/ProjetosGit.sass";
+import "../Styles/Components/Loading.sass";
 
 import useTypewriter from "react-typewriter-hook";
 
@@ -19,6 +20,8 @@ const ProjetosGithub = () => {
   const [magicName, setMagicName] = useState("");
   const intervalRef = useRef();
   const magicNameMaker = useTypewriter(magicName);
+
+  console.log(magicName);
 
   // Quando o userGitHub.bio for alterado, atualize magicName
   useEffect(() => {
