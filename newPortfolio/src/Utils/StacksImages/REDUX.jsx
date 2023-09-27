@@ -9,6 +9,7 @@ export default function REDUX() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://redux.js.org/"
+        id="outlineNone"
       >
         <img
           alt="Imagem Redux"

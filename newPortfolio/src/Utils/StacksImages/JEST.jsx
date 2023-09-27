@@ -9,6 +9,7 @@ export default function JEST() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://jestjs.io/pt-BR/"
+        id="outlineNone"
       >
         <img
           alt="Imagem Jest"

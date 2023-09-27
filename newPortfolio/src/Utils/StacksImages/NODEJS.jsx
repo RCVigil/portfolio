@@ -9,6 +9,7 @@ export default function NODEJS() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://nodejs.org/en/docs/"
+        id="outlineNone"
       >
         <img
           alt="Imagem Node.js"

@@ -9,6 +9,7 @@ export default function ReactImg() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://pt-br.reactjs.org/"
+        id="outlineNone"
       >
         <img
           alt="Imagem ReactJS"

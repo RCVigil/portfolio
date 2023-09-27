@@ -9,6 +9,7 @@ export default function CSS() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+        id="outlineNone"
       >
         <img
           alt="Imagem CSS"

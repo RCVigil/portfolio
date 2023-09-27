@@ -7,6 +7,7 @@ export default function MySqlImage() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://dev.mysql.com/"
+        id="outlineNone"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

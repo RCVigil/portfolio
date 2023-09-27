@@ -9,6 +9,7 @@ export default function GIT() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://git-scm.com/"
+        id="outlineNone"
       >
         <img
           alt="Imagem Git"

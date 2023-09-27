@@ -9,6 +9,7 @@ export default function RtestingL() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://testing-library.com/"
+        id="outlineNone"
       >
         <img
           alt="Imagem RTL"

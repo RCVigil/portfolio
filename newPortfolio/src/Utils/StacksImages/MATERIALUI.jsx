@@ -11,6 +11,7 @@ export default function MATERIALUI() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://mui.com/material-ui/"
+        id="outlineNone"
       >
         <img className="img_tBody" src={MaterialuiIMG} alt="Logo Mui" />
         <p className="pImgStacks">Material UI</p>

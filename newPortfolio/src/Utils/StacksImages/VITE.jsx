@@ -8,6 +8,7 @@ export default function VITE() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://vitejs.dev/"
+        id="outlineNone"
       >
         <svg
           className="img_tBody"

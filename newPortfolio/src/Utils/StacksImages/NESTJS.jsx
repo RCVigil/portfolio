@@ -8,6 +8,7 @@ export default function NESTJS() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://nestjs.com/"
+        id="outlineNone"
       >
         <svg
           viewBox="0 0 32 32"

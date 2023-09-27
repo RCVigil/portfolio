@@ -9,6 +9,7 @@ export default function JIRA() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://www.atlassian.com/software/jira"
+        id="outlineNone"
       >
         <svg
           className="img_tBody"

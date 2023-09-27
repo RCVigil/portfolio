@@ -10,6 +10,7 @@ export default function RactNativeImages() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://reactnative.dev/docs/intro-react"
+        id="outlineNone"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

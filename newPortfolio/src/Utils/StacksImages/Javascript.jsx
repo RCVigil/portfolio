@@ -10,6 +10,7 @@ export default function Javascript() {
         // rel="noopener noreferrer nofollow"
         href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
         rel="noreferrer"
+        id="outlineNone"
       >
         <img
           alt="Imagem JavaScript"

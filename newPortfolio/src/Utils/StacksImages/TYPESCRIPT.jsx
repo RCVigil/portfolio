@@ -9,6 +9,7 @@ export default function TYPESCRIPT() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://www.typescriptlang.org/"
+        id="outlineNone"
       >
         <svg
           className="img_tBody"

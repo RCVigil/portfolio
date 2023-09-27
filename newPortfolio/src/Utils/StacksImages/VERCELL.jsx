@@ -9,6 +9,7 @@ export default function VERCELL() {
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://vercel.com"
+        id="outlineNone"
       >
         <svg
           className="img_tBody"
