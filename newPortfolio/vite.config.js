@@ -9,5 +9,8 @@ export default defineConfig({
     sass: {
       additionalData: `@import 'src/Styles/variables.sass*';`
     },
-  }
+  },
+  build: {
+    chunkSizeWarningLimit: 1000, // Aumente o limite para 1000 kB
+  },
 })
