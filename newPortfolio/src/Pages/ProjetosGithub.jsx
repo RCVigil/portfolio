@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+
 import { Link } from "react-router-dom";
 
 import log from "loglevel";
@@ -13,15 +14,16 @@ import useTypewriter from "react-typewriter-hook";
 
 const ProjetosGithub = () => {
   const [userGitHub, setUserGitHub] = useState([]);
+
   const [projectsGitHub, setProjectsGitHub] = useState([]);
+
   const [errorMsg, setErrorMsg] = useState("");
+
   const [loading, setLoading] = useState(false);
 
   const [magicName, setMagicName] = useState("");
   const intervalRef = useRef();
   const magicNameMaker = useTypewriter(magicName);
-
-  console.log(magicName);
 
   // Quando o userGitHub.bio for alterado, atualize magicName
   useEffect(() => {
@@ -37,53 +39,44 @@ const ProjetosGithub = () => {
   const ENDPOINTUser = import.meta.env.VITE_REACT_APP_ENDPOINT_USER;
 
   useEffect(() => {
-    setTimeout(() => {
-      fetch(ENDPOINTRepos, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((resp) => {
-          if (!resp.ok) {
-            throw new Error("Network response was not ok");
-          }
-          const contentType = resp.headers.get("content-type");
-          if (!contentType || !contentType.includes("application/json")) {
-            return resp.text().then((text) => {
-              throw new Error(
-                `Response is not a valid JSON. Received: ${text}`,
-              );
-            });
-          }
-          return resp.json();
-        })
-        .then((data) => {
-          log.info(data);
-          setProjectsGitHub(data);
-          setLoading(true);
-        })
-        .catch((error) => {
-          setErrorMsg(error.toString());
-          log.error(error);
+    const fetchData = async () => {
+      try {
+        const responseRepos = await fetch(ENDPOINTRepos, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
         });
 
-      fetch(ENDPOINTUser, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((resp) => resp.json())
-        .then((data) => {
-          log.info(data);
-          setUserGitHub(data);
-          setLoading(true);
-        })
-        .catch((error) => {
-          setErrorMsg(error);
+        if (!responseRepos.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const dataRepos = await responseRepos.json();
+
+        const responseUser = await fetch(ENDPOINTUser, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
         });
-    }, 2000);
+
+        if (!responseUser.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const dataUser = await responseUser.json();
+
+        setProjectsGitHub(dataRepos);
+        setUserGitHub(dataUser);
+        setLoading(true);
+      } catch (error) {
+        setErrorMsg(error.toString());
+        log.error(error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const experiency = () => {
