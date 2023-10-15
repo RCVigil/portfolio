@@ -22,7 +22,6 @@ function LanguageSeal({ topicos }) {
         let contentImage = "";
         let contentAltSeal = "";
 
-        console.log(topic);
         switch (topic) {
           case "angular":
             contentImage = imageAngular;

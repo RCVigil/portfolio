@@ -4,10 +4,8 @@ import HeaderContext from "../Context/HeaderContext";
 export default function HeaderProvider(props) {
   const { children } = props;
   const [menuOpen, setMenuOpen] = React.useState(false);
-  console.log(menuOpen);
 
   const [projectsGitHub, setProjectsGitHub] = React.useState([]);
-  console.log(projectsGitHub);
 
   const object = {
     menuOpen,

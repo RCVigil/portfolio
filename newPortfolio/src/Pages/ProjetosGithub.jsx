@@ -18,7 +18,6 @@ import LanguageSeal from "../Utils/LanguageSeal/LanguageSeal";
 
 const ProjetosGithub = () => {
   const [projectsGitHub, setProjectsGitHub] = React.useState([]);
-  // console.log(projectsGitHub);
 
   const [userGitHub, setUserGitHub] = React.useState([]);
 
