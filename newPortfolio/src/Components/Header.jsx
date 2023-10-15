@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import * as React from "react";
 
 import pegasusIcon from "../images/pegasus.svg";
 
@@ -11,7 +11,7 @@ import HeaderContext from "../Context/HeaderContext";
 import "../Styles/Components/Header.sass";
 
 function Header() {
-  const { menuOpen, setMenuOpen } = useContext(HeaderContext);
+  const { menuOpen, setMenuOpen } = React.useContext(HeaderContext);
 
   function preventImageDownload(event) {
     event.preventDefault();

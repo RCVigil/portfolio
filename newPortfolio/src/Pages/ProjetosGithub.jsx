@@ -1,32 +1,41 @@
-import React, { useState, useEffect, useRef } from "react";
+import * as React from "react";
 
 import { Link } from "react-router-dom";
 
 import log from "loglevel";
 
 import moment from "moment";
-import Loading from "./Loading";
 
-import "../Styles/Components/ProjetosGit.sass";
-import "../Styles/Components/Loading.sass";
+import Loading from "./Loading";
 
 import useTypewriter from "react-typewriter-hook";
 
+import fetchGitHubData from "../Service/GithubService";
+
+import "../Styles/Components/ProjetosGit.sass";
+import "../Styles/Components/Loading.sass";
+import LanguageSeal from "../Utils/LanguageSeal/LanguageSeal";
+
 const ProjetosGithub = () => {
-  const [userGitHub, setUserGitHub] = useState([]);
+  const [projectsGitHub, setProjectsGitHub] = React.useState([]);
+  // console.log(projectsGitHub);
 
-  const [projectsGitHub, setProjectsGitHub] = useState([]);
+  const [userGitHub, setUserGitHub] = React.useState([]);
 
-  const [errorMsg, setErrorMsg] = useState("");
+  const [errorMsg, setErrorMsg] = React.useState("");
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = React.useState(false);
 
-  const [magicName, setMagicName] = useState("");
-  const intervalRef = useRef();
+  const [magicName, setMagicName] = React.useState("");
+
+  const [dataFetched, setDataFetched] = React.useState(false);
+
+  const intervalRef = React.useRef();
+
   const magicNameMaker = useTypewriter(magicName);
 
   // Quando o userGitHub.bio for alterado, atualize magicName
-  useEffect(() => {
+  React.useEffect(() => {
     intervalRef.current = setInterval(() => {
       setMagicName(userGitHub?.bio || "");
     }, 200);
@@ -35,49 +44,31 @@ const ProjetosGithub = () => {
     };
   }, [userGitHub]);
 
-  const ENDPOINTRepos = import.meta.env.VITE_REACT_APP_ENDPOINT_REPOS;
-  const ENDPOINTUser = import.meta.env.VITE_REACT_APP_ENDPOINT_USER;
-
-  useEffect(() => {
+  React.useEffect(() => {
     const fetchData = async () => {
+      if (dataFetched) {
+        return;
+      }
+
       try {
-        const responseRepos = await fetch(ENDPOINTRepos, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const { repos, user } = await fetchGitHubData(); // Use o serviço
 
-        if (!responseRepos.ok) {
-          throw new Error("Network response was not ok");
-        }
-
-        const dataRepos = await responseRepos.json();
-
-        const responseUser = await fetch(ENDPOINTUser, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-
-        if (!responseUser.ok) {
-          throw new Error("Network response was not ok");
-        }
-
-        const dataUser = await responseUser.json();
-
-        setProjectsGitHub(dataRepos);
-        setUserGitHub(dataUser);
+        setProjectsGitHub(repos);
+        setUserGitHub(user);
         setLoading(true);
+        setDataFetched(true);
       } catch (error) {
         setErrorMsg(error.toString());
         log.error(error);
       }
     };
 
-    fetchData();
-  }, []);
+    // fetchData();
+    // Verifique se os dados já foram buscados
+    if (projectsGitHub.length === 0 && userGitHub.length === 0 && !loading) {
+      fetchData();
+    }
+  }, [projectsGitHub, userGitHub, loading]);
 
   const experiency = () => {
     const inicio = moment(userGitHub.created_at).format("MM / YYYY");
@@ -253,6 +244,7 @@ const ProjetosGithub = () => {
                       <div className={`divCards ${proj?.name}`} key={proj.id}>
                         <div className="cardHeader ">
                           <h1 className="h1NameProjetos">{proj.name}</h1>
+                          <LanguageSeal topicos={proj.topics} />
                           <div className="divCriadoP">
                             <p className="pCreatedProject">{`Criado em :`}</p>
 
