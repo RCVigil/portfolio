@@ -14,6 +14,7 @@ import REDUX from "../../StacksImages/REDUX";
 import VITE from "../../StacksImages/VITE";
 import MATERIALUI from "../../StacksImages/MATERIALUI";
 import TYPESCRIPT from "../../StacksImages/TYPESCRIPT";
+import AngularIMG from "../../StacksImages/AngularIMG";
 
 import "./_frontend.sass";
 
@@ -64,6 +65,50 @@ const FrontEndStacks = () => {
           className="divStackUnitFront"
           initial={isVisible ? "visible" : "hidden"}
           animate={isVisible ? "visible" : "hidden"}
+          custom={4}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          variants={imageAnimation}
+        >
+          <AngularIMG />
+        </motion.div>
+        <motion.div
+          className="divStackUnitFront"
+          initial={isVisible ? "visible" : "hidden"}
+          animate={isVisible ? "visible" : "hidden"}
+          custom={5}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          variants={imageAnimation}
+        >
+          <ReactImg />
+        </motion.div>
+        <motion.div
+          className="divStackUnitFront"
+          initial={isVisible ? "visible" : "hidden"}
+          animate={isVisible ? "visible" : "hidden"}
+          custom={6}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          variants={imageAnimation}
+        >
+          <TYPESCRIPT />
+        </motion.div>
+        <motion.div
+          className="divStackUnitFront"
+          initial={isVisible ? "visible" : "hidden"}
+          animate={isVisible ? "visible" : "hidden"}
+          custom={7}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          variants={imageAnimation}
+        >
+          <REDUX />
+        </motion.div>
+        <motion.div
+          className="divStackUnitFront"
+          initial={isVisible ? "visible" : "hidden"}
+          animate={isVisible ? "visible" : "hidden"}
           custom={1}
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -108,39 +153,6 @@ const FrontEndStacks = () => {
           className="divStackUnitFront"
           initial={isVisible ? "visible" : "hidden"}
           animate={isVisible ? "visible" : "hidden"}
-          custom={5}
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          variants={imageAnimation}
-        >
-          <ReactImg />
-        </motion.div>
-        <motion.div
-          className="divStackUnitFront"
-          initial={isVisible ? "visible" : "hidden"}
-          animate={isVisible ? "visible" : "hidden"}
-          custom={6}
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          variants={imageAnimation}
-        >
-          <TYPESCRIPT />
-        </motion.div>
-        <motion.div
-          className="divStackUnitFront"
-          initial={isVisible ? "visible" : "hidden"}
-          animate={isVisible ? "visible" : "hidden"}
-          custom={7}
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          variants={imageAnimation}
-        >
-          <REDUX />
-        </motion.div>
-        <motion.div
-          className="divStackUnitFront"
-          initial={isVisible ? "visible" : "hidden"}
-          animate={isVisible ? "visible" : "hidden"}
           custom={8}
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -159,7 +171,7 @@ const FrontEndStacks = () => {
         >
           <JEST />
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className="divStackUnitFront"
           initial={isVisible ? "visible" : "hidden"}
           animate={isVisible ? "visible" : "hidden"}
@@ -169,7 +181,7 @@ const FrontEndStacks = () => {
           variants={imageAnimation}
         >
           <MATERIALUI />
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </div>
   );
