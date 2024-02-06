@@ -2,16 +2,16 @@ import React from "react";
 
 import "./_languageSeal.sass";
 
-import imageReactJs from "../../images/react.png";
 import imageAngular from "../../images/Angular1.png";
-import imageJava from "../../images/java1.png";
-import imageCss from "../../images/css.png";
-import imageJavascript from "../../images/javascript.png";
-import imageHtml from "../../images/html-5.png";
-import imageSass from "../../images/Sass.png";
-import imageNodeJs from "../../images/nodeJs-White.png";
 import imageNestJs from "../../images/NestJs.png";
+import imageSass from "../../images/Sass.png";
+import imageCss from "../../images/css3_Icon.svg";
 import imageExpressJs from "../../images/expressJs.png";
+import imageHtml from "../../images/html5_Icon.svg";
+import imageJava from "../../images/java1.png";
+import imageJavascript from "../../images/javascript.png";
+import imageNodeJs from "../../images/nodeJs-White.png";
+import imageReactJs from "../../images/react.png";
 
 function LanguageSeal({ topicos }) {
   const linguagens = topicos;

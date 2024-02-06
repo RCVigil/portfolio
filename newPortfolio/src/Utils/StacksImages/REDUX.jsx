@@ -1,5 +1,7 @@
 import React from "react";
 
+import reduxIcon from "../../images/reduxIcon.png";
+
 import "./_stacksImages.sass";
 
 export default function REDUX() {
@@ -11,12 +13,7 @@ export default function REDUX() {
         href="https://redux.js.org/"
         id="outlineNone"
       >
-        <img
-          alt="Imagem Redux"
-          className="img_tBody"
-          src="https://camo.githubusercontent.com/7b7f04b16cc2d2d4a32985710e4d640985337a32bbb1e60cdacede2c8a4ae57b/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f72656475782e737667"
-          data-canonical-src="https://cdn.worldvectorlogo.com/logos/redux.svg"
-        />
+        <img alt="Imagem Redux" className="img_tBody" src={reduxIcon} />
         <p className="pImgStacks">Redux</p>
       </a>
     </div>

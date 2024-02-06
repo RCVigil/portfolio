@@ -180,6 +180,7 @@ const ProjetosGithub = () => {
 
                 <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-5 mb-5">
                   {`${moment(userGitHub.updated_at).format("DD / MM / YYYY")}`}
+                  {console.log(userGitHub)}
                 </h1>
               </div>
 

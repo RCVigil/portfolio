@@ -2,9 +2,15 @@
 @import '../../Styles/mixins'
 
 .firstDivImages
+  align-items: center
+  box-sizing: border-box
+  display: flex !important
+  flex-direction: column !important
+  height: 10rem !important
+  justify-content: center
+  width: 75%
 
   a
-    align-content: center
     align-items: center
     display: flex
     flex-direction: column
@@ -20,8 +26,8 @@
 
   .img_tBody
     align-self: center
-    height: 60%
-    width: 60%
+    height: 90px
+    width: auto
 
   .pImgStacks
     color: variables.$text-color
