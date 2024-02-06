@@ -33,12 +33,26 @@
   padding-bottom: 20vh
   padding-top: 10vh
   width: 95%
+  box-sizing: border-box
   @include small-screen
     margin: 0
     width: 100vw
   @include medium-screen
     margin: 0
     width: 100vw
+
+.Container__ProjetosFullGit
+  align-items: flex-end
+  display: flex
+  flex-direction: column
+  height: auto
+  gap: 3rem
+  justify-content: center
+  h3
+    color: variables.$text-color
+    margin-right: 10vw
+    font-family: variables.$font-primary
+    font-size: 1.4rem
 
   .divProjectF
     align-items: center
@@ -141,13 +155,13 @@
                   flex-wrap: wrap
                   width: 43vw
                   list-style: square
-                  margin: 0.5vh 0.7vh 
+                  margin: 0.5vh 0.7vh
                 @include medium-screen
                   display: flex
                   flex-wrap: wrap
                   width: 43vw
                   list-style: square
-                  margin: 0.5vh 0.7vh 
+                  margin: 0.5vh 0.7vh
 
             .list-group-item-stacksPFG
               color: variables.$text-color
