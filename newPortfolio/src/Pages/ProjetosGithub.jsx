@@ -2,8 +2,6 @@ import * as React from "react";
 
 import { Link } from "react-router-dom";
 
-import log from "loglevel";
-
 import moment from "moment";
 
 import Loading from "./Loading";
@@ -15,6 +13,7 @@ import fetchGitHubData from "../Service/GithubService";
 import "../Styles/Components/ProjetosGit.sass";
 import "../Styles/Components/Loading.sass";
 import LanguageSeal from "../Utils/LanguageSeal/LanguageSeal";
+import OnGoingProjectCarousel from "../Components/OnGoingProjectCarousel/OnGoingProjectCarousel";
 
 const ProjetosGithub = () => {
   const [projectsGitHub, setProjectsGitHub] = React.useState([]);
@@ -58,7 +57,6 @@ const ProjetosGithub = () => {
         setDataFetched(true);
       } catch (error) {
         setErrorMsg(error.toString());
-        log.error(error);
       }
     };
 
@@ -78,6 +76,10 @@ const ProjetosGithub = () => {
     <div className="divProjetoG" id="PProjetos">
       <div className="tituloProjetos">
         <h2 className="h2ProjetosGithub">Principais Projetos</h2>
+      </div>
+
+      <div className="content__Carousel__ProjetosGitHub">
+        <OnGoingProjectCarousel />
       </div>
 
       <div className="divMainProjetos">
@@ -180,7 +182,6 @@ const ProjetosGithub = () => {
 
                 <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-5 mb-5">
                   {`${moment(userGitHub.updated_at).format("DD / MM / YYYY")}`}
-                  {console.log(userGitHub)}
                 </h1>
               </div>
 
@@ -228,7 +229,7 @@ const ProjetosGithub = () => {
               projectsGitHub
                 .filter(
                   (proj) =>
-                    proj.private === false && proj.stargazers_count === 1,
+                    proj.private === false && proj.stargazers_count === 1
                 )
                 .reduce((groups, proj, index) => {
                   if (index % 2 === 0) {

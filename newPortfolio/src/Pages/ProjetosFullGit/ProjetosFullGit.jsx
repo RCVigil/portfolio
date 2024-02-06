@@ -17,7 +17,6 @@ import "./ProjetosFullGit.sass";
 
 const ProjetosFullGit = () => {
   const [projectsGitHub, setProjectsGitHub] = useState([]);
-  console.log(projectsGitHub);
   const [errorMsg, setErrorMsg] = useState("");
   console.error(errorMsg);
   const [loading, setLoading] = useState(false);

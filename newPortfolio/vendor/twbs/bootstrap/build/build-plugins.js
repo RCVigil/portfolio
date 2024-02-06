@@ -82,8 +82,6 @@ const build = async plugin => {
     generatedCode: 'es2015',
     file: plugin.dist
   })
-
-  console.log(`Built ${plugin.className}`)
 }
 
 (async () => {
@@ -91,7 +89,6 @@ const build = async plugin => {
     const basename = path.basename(__filename)
     const timeLabel = `[${basename}] finished`
 
-    console.log('Building individual plugins...')
     console.time(timeLabel)
 
     await Promise.all(Object.values(resolvedPlugins).map(plugin => build(plugin)))
