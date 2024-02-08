@@ -11,8 +11,8 @@ import useTypewriter from "react-typewriter-hook";
 import fetchGitHubData from "../Service/GithubService";
 import LanguageSeal from "../Utils/LanguageSeal/LanguageSeal";
 
-import "../Styles/Components/ProjetosGit.sass";
 import "../Styles/Components/Loading.sass";
+import "../Styles/Components/ProjetosGit.sass";
 
 const ProjetosGithub = () => {
   const [projectsGitHub, setProjectsGitHub] = React.useState([]);
@@ -66,7 +66,7 @@ const ProjetosGithub = () => {
     }
   }, [projectsGitHub, userGitHub, loading]);
 
-  const experiency = () => {
+  const experience = () => {
     const inicio = moment(userGitHub.created_at).format("MM / YYYY");
     return inicio;
   };
@@ -149,7 +149,7 @@ const ProjetosGithub = () => {
                 </p>
 
                 <h1 className="card-text text-lg-right lh-sm font-italic text-decoration-none text-monospace fs-5">
-                  {experiency()}
+                  {experience()}
                 </h1>
               </div>
 
@@ -228,7 +228,7 @@ const ProjetosGithub = () => {
               projectsGitHub
                 .filter(
                   (proj) =>
-                    proj.private === false && proj.stargazers_count === 1,
+                    proj.private === false && proj.stargazers_count === 1
                 )
                 .reduce((groups, proj, index) => {
                   if (index % 2 === 0) {

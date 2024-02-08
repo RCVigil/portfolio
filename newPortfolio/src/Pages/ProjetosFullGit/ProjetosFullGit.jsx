@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
 import { useScroll } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import moment from "moment";
 
 import Loading from "../Loading";
 
-import Header from "../../Components/Header";
 import AsideLeft from "../../Components/Aside-Left";
 import Footer from "../../Components/Footer";
+import Header from "../../Components/Header";
 import ScrollToTopButton from "../../Utils/ScrollToTopButtn";
 
 import fetchGitHubProjectData from "../../Service/gitHubProjectService";
@@ -40,7 +40,7 @@ const ProjetosFullGit = () => {
     fetchData();
   }, []);
 
-  const experiency = () => {
+  const experience = () => {
     const inicio = moment(userGitHub.created_at).format("MM / YYYY");
     return inicio;
   };
@@ -108,7 +108,7 @@ const ProjetosFullGit = () => {
 
                                   <p className="dataCriadoPFG">
                                     {moment(proj.created_at).format(
-                                      "MM / YYYY",
+                                      "MM / YYYY"
                                     )}
                                   </p>
                                 </div>
