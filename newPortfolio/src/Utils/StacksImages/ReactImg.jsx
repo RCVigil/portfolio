@@ -20,7 +20,6 @@ export default function ReactImg() {
           style={{
             width: "auto !important",
             height: "105px !important",
-            border: "1px solid red",
           }}
         />
         {/* <p className="pImgStacks">React</p> */}
