@@ -9,11 +9,10 @@ import Loading from "./Loading";
 import useTypewriter from "react-typewriter-hook";
 
 import fetchGitHubData from "../Service/GithubService";
+import LanguageSeal from "../Utils/LanguageSeal/LanguageSeal";
 
 import "../Styles/Components/ProjetosGit.sass";
 import "../Styles/Components/Loading.sass";
-import LanguageSeal from "../Utils/LanguageSeal/LanguageSeal";
-import OnGoingProjectCarousel from "../Components/OnGoingProjectCarousel/OnGoingProjectCarousel";
 
 const ProjetosGithub = () => {
   const [projectsGitHub, setProjectsGitHub] = React.useState([]);
@@ -79,7 +78,7 @@ const ProjetosGithub = () => {
       </div>
 
       <div className="content__Carousel__ProjetosGitHub">
-        <OnGoingProjectCarousel />
+        {/* <OnGoingProjectCarousel /> */}
       </div>
 
       <div className="divMainProjetos">
@@ -229,7 +228,7 @@ const ProjetosGithub = () => {
               projectsGitHub
                 .filter(
                   (proj) =>
-                    proj.private === false && proj.stargazers_count === 1
+                    proj.private === false && proj.stargazers_count === 1,
                 )
                 .reduce((groups, proj, index) => {
                   if (index % 2 === 0) {

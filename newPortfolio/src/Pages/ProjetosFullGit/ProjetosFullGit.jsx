@@ -108,7 +108,7 @@ const ProjetosFullGit = () => {
 
                                   <p className="dataCriadoPFG">
                                     {moment(proj.created_at).format(
-                                      "MM / YYYY"
+                                      "MM / YYYY",
                                     )}
                                   </p>
                                 </div>
