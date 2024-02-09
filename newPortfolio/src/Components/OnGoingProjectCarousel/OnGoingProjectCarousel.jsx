@@ -65,7 +65,7 @@ const OnGoingProjectCarousel = () => {
       className="Content__OnGoingProjectCarousel"
       aria-labelledby="Saas-erp-title"
     >
-      <h2>Projeto em destaque - Saas - ERP</h2>
+      <h2>Projeto em destaque - Saas - Comercial</h2>
       <Carousel
         role="region"
         selectedItem={activeIndex}
