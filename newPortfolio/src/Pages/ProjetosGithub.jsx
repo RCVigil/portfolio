@@ -11,6 +11,8 @@ import useTypewriter from "react-typewriter-hook";
 import fetchGitHubData from "../Service/GithubService";
 import LanguageSeal from "../Utils/LanguageSeal/LanguageSeal";
 
+import OnGoingProjectCarousel from "../Components/OnGoingProjectCarousel/OnGoingProjectCarousel";
+
 import "../Styles/Components/Loading.sass";
 import "../Styles/Components/ProjetosGit.sass";
 
@@ -78,7 +80,7 @@ const ProjetosGithub = () => {
       </div>
 
       <div className="content__Carousel__ProjetosGitHub">
-        {/* <OnGoingProjectCarousel /> */}
+        <OnGoingProjectCarousel />
       </div>
 
       <div className="divMainProjetos">

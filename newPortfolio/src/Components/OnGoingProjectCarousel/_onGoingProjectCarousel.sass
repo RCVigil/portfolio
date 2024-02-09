@@ -1,0 +1,37 @@
+@use "../../Styles/variables"
+@import "../../Styles/mixins"
+
+.Content__OnGoingProjectCarousel
+  color: #fff
+  padding-left: 6vw
+  width: 96vw
+
+  div .thumbs
+    text-align: center
+
+  h2
+    text-align: center
+    font-family: variables.$font-primary
+    font-size: 3rem
+    margin-bottom: 3rem
+
+  .carousel .slide .legend
+    margin-left: -17%
+    margin-bottom: -0.5%
+
+  .content__div_ImgP__OnGoingProjectCarousel
+    align-items: center
+    display: flex
+    justify-content: center
+    width: 100%
+
+    .control-arrow::after,
+    .control-arrow::before
+      color: variables.$text-color !important
+
+    img
+      border-radius: 15px
+      width: 75%
+
+    .legend
+      width: 35%
