@@ -46,10 +46,13 @@
         height: auto
 
     .content__pBioGitUser__BodyPersonLeft
+      color: variables.$text-color
       grid-area: CPBGUBP
-      font-family: variables.$font-secondary
-      font-size: 2rem
       text-align: justify
+      font-family: variables.$font-secondary
+      text-indent: 7%
+      font-size: 2rem
+      font-style: italic
       padding: 1rem
       width: 100%
 
@@ -119,6 +122,8 @@
     align-items: center
     justify-content: center
     grid-area: CDEBP
+    h1
+      color: variables.$text-color
 
 
   .content__Hr3__BodyPersonLeft
@@ -145,7 +150,6 @@
 
     .content__divLocationProjGithub_SVG__BodyPersonLeft
       width: 2vw
-      color: variables.$text-color
     .content__imgDivProjSVG__BodyPersonLeft
       align-items: center
       box-sizing: border-box
@@ -155,6 +159,12 @@
       height: 5vh
       justify-content: center
       margin: 10% 0 5% 0
+
+    .content__pProjectGithub__BodyPersonLeft
+      color: variables.$text-color
+      font-size: 1.3rem
+      font-weight: 600
+
     h3
       font-size: 1.5rem
       font-family: variables.$font-primary
@@ -191,6 +201,9 @@
       justify-content: center
       flex-direction: column
 
+      h1
+        color: variables.$text-color
+
     .content__DivButton__BodyPersonLeft
       display: flex
       align-items: center
@@ -205,6 +218,8 @@
       border: 1px solid variables.$text-color-third
       border-radius: 1vh
       display: flex
+      font-weight: 600
+      font-size: 1.2rem
       height: 5vh
       justify-content: center
       margin-top: 5%

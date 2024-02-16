@@ -47,7 +47,7 @@ const BodyPersonLeft = ({ userGitHub, magicNameMaker }) => {
             <>
               <p
                 className="content__pProjectGithub__BodyPersonLeft pHeaderProjectGithub"
-                style={{ textAlign: "center", paddingBottom: "10%" }}
+                style={{ textAlign: "center", paddingBottom: "10%", color: "#f9f9f9" }}
               >
                 Vamos conversar!
               </p>
@@ -80,8 +80,6 @@ const BodyPersonLeft = ({ userGitHub, magicNameMaker }) => {
       <div className="content__Div_LocationProjGithub__BodyPersonLeft">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          // width="16"
-          // height="16"
           fill="currentColor"
           className="bi bi-geo-alt content__divLocationProjGithub_SVG__BodyPersonLeft"
           viewBox="0 0 16 16"
