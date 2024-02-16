@@ -85,11 +85,12 @@
       width: 100%
       @include mixins.small-screen
         height: auto !important
-        margin-bottom: 10vh
+        // margin-bottom: 10vh
         width: 98vw
       @include mixins.medium-screen
         height: auto !important
-        margin-bottom: 10vh
+        box-sizing: border-box
+        // margin-bottom: 10vh
         width: 98vw
 
       .divUserGit
@@ -104,6 +105,16 @@
         width: 100%
         border: 0.5vh solid variables.$text-color-third
         border-radius: variables.$card-border-radius
+        @include mixins.small-screen
+          height: auto !important
+          margin-bottom: 10vh
+          border: none
+          width: 100%
+        @include mixins.medium-screen
+          min-height: auto !important
+          border: none
+          width: 100%
+          // height: 100% !important
 
     .divProjectGit
       grid-area: DPG_PG

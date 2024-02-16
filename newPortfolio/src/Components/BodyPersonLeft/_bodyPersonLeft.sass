@@ -28,6 +28,7 @@
     justify-content: center
     height: 182vh !important
     width: 100%
+    margin-left: 5%
     border: 0.5vh solid variables.$text-color-third
     border-radius: variables.$card-border-radius
 
@@ -39,6 +40,9 @@
     grid-template-rows: 15% 45% 40%
     grid-template-areas: "CH1BP" "CIUBP" "CPBGUBP"
     padding: 3% 5%
+    @include mixins.medium-screen
+      height: auto
+      padding-bottom: 5rem
 
     .content__h1Name__BodyPersonLeft
       grid-area: CH1BP
@@ -50,6 +54,8 @@
       font-weight: 600
       justify-content: center
       text-transform: capitalize
+      @include mixins.medium-screen
+        font-size: 2rem
 
     .content__Div_ImgUser__BodyPersonLeft
       box-sizing: border-box
@@ -75,6 +81,8 @@
       font-style: italic
       padding: 1rem
       width: 100%
+      @include mixins.medium-screen
+        font-size: 1.5rem
 
   .content__Hr1__BodyPersonLeft
     grid-area: CHR1BP
@@ -86,6 +94,13 @@
     position: relative
     right: 10%
     width: 80%
+    @include mixins.medium-screen
+      display: flex
+      align-items: center
+      justify-content: center
+      align-content: center
+      right: 0
+      position: inherit
 
   .content__Div_Company_BodyPersonLeft
     box-sizing: border-box
@@ -135,6 +150,13 @@
     position: relative
     right: 10%
     width: 80%
+    @include mixins.medium-screen
+      display: flex
+      align-items: center
+      justify-content: center
+      align-content: center
+      right: 0
+      position: inherit
 
   .content__Div_Experience_BodyPersonLeft
     display: flex
@@ -156,6 +178,13 @@
     position: relative
     right: 10%
     width: 80%
+    @include mixins.medium-screen
+      display: flex
+      align-items: center
+      justify-content: center
+      align-content: center
+      right: 0
+      position: inherit
 
   .content__Div_LocationProjGithub__BodyPersonLeft
     box-sizing: border-box
@@ -202,6 +231,13 @@
     position: relative
     right: 10%
     width: 80%
+    @include mixins.medium-screen
+      display: flex
+      align-items: center
+      justify-content: center
+      align-content: center
+      right: 0
+      position: inherit
 
   .content__Div_UpdatedAndRepository_BodyPersonLeft
     box-sizing: border-box
