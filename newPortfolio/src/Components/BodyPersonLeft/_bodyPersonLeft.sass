@@ -10,6 +10,26 @@
   grid-template-areas:"CDHBP" "CHR1BP" "CDCBP" "CHR2BP" "CDEBP" "CHR3BP" "CDLPBP" "CHR4BP" "CDUARBP"
   height: 100%
   width: 100%
+  @include mixins.small-screen
+    align-items: center
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    justify-content: center
+    height: 182vh !important
+    width: 100%
+    border: 0.5vh solid variables.$text-color-third
+    border-radius: variables.$card-border-radius
+  @include mixins.medium-screen
+    align-items: center
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    justify-content: center
+    height: 182vh !important
+    width: 100%
+    border: 0.5vh solid variables.$text-color-third
+    border-radius: variables.$card-border-radius
 
   .content__Div_Header_BodyPersonLeft
     box-sizing: border-box
