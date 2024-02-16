@@ -49,12 +49,16 @@
       height: 5vh
 
   .divMainProjetos
-    display: flex
-    flex-direction: row
+    box-sizing: border-box
+    display: grid
+    grid-template-columns: 33% 63%
+    gap: 4%
+    grid-template-rows: 100%
+    grid-template-areas: "LPG_PG DPG_PG"
     height: 100% !important
-    justify-content: center
-    margin-left: 5.5vw
-    width: 94.5% !important
+    margin-left: 5.5%
+    width: 95vw
+    max-width: 94% !important
     @include mixins.small-screen
       margin-left: 0
       width: 100vw !important
@@ -65,13 +69,14 @@
       flex-direction: column
 
     .loadingProjetosGithub
+      grid-area: LPG_PG
       align-content: center
       align-items: center
       display: flex
       flex-direction: column
       height: 100% !important
       justify-content: center
-      width: 35vw
+      width: 100%
       @include mixins.small-screen
         height: auto !important
         margin-bottom: 10vh
@@ -81,138 +86,30 @@
         margin-bottom: 10vh
         width: 98vw
 
-    .divUserGit
-      align-items: center
-      display: flex
-      flex-direction: column
-      gap: 2rem
-      justify-content: center
-      height: 182vh !important
-      width: 100%
-      border: 0.5vh solid variables.$text-color-third
-      border-radius: variables.$card-border-radius
-      hr
-        width: 80%
+      .divUserGit
+        align-items: center
+        align-self: center
+        display: flex
+        flex-direction: column
+        justify-content: center
+        min-height: 220vh !important
+        height: 100%
+        min-width: 10vw !important
+        width: 100%
         border: 0.5vh solid variables.$text-color-third
         border-radius: variables.$card-border-radius
 
-      .h1Name
-        color: variables.$text-color
-        font-size: 45px
-        font-weight: 600
-        margin-top: 3vh
-        text-align: center
-        text-transform: capitalize
-        width: 100%
-        @include mixins.small-screen
-          font-size: variables.$font-size-mobile-Title-2
-          margin-top: -5rem
-        @include mixins.medium-screen
-          font-size: variables.$font-size-mobile-Title-2
-          margin-top: -5rem
-
-      .imgUser
-        border-radius: 2rem
-        @include mixins.small-screen
-          border-radius: 1rem
-          height: 15rem
-          width: 15rem
-        @include mixins.medium-screen
-          border-radius: 1rem
-          height: 15rem
-          width: 15rem
-
-      .pBioGitUser
-        text-align: justify
-        width: 80%
-        @include mixins.small-screen
-          font-size: variables.$font-size-mobile-Title-2
-        @include mixins.medium-screen
-          font-size: variables.$font-size-mobile-Title-2
-
-      .magicMakerP
-        color: variables.$text-color
-        font-size: 1.6rem
-        font-weight: 600
-        font-family: variables.$font-secondary
-        line-height: 5vh
-        font-style: italic
-        @include mixins.small-screen
-          font-size: variables.$font-size-mobile-Normal
-        @include mixins.medium-screen
-          font-size: variables.$font-size-mobile-Normal
-
-      .companyProjGithub
-        text-align: center
-        @include mixins.small-screen
-          font-size: variables.$font-size-mobile-Normal
-        @include mixins.medium-screen
-          font-size: variables.$font-size-mobile-Normal
-
-        .pProjetGithub
-          color: variables.$text-color-secondary
-          font-size: 1.3rem
-          @include mixins.small-screen
-            font-size: variables.$font-size-mobile-Normal
-          @include mixins.medium-screen
-            font-size: variables.$font-size-mobile-Normal
-
-        .pHeaderProjetGithub
-          align-items: center
-          display: flex
-          gap: 1vw
-          height: auto
-          justify-content: center
-          width: 100%
-          @include mixins.small-screen
-            font-size: variables.$font-size-mobile-Title-2
-            margin-bottom: 0
-            height: 5vh
-          @include mixins.medium-screen
-            font-size: variables.$font-size-mobile-Title-2
-            margin-bottom: 0
-            height: 5vh
-
-      .divLocationProjGithub
-        align-items: center
-        display: flex
-        flex-direction: column
-        gap: 1vw
-        height: auto
-        justify-content: center
-        width: 100%
-        svg
-          width: 2vw
-          color: variables.$text-color
-        .imgDivProjSVG
-          align-items: center
-          box-sizing: border-box
-          cursor: pointer
-          display: flex
-          flex-direction: column-reverse
-          height: 5vh
-          justify-content: center
-          margin: 10% 0 5% 0
-          h3
-            font-size: 1.5rem
-            font-family: variables.$font-primary
-            text-transform: capitalize
-            color: variables.$text-color
-          svg
-            height: 2.5rem
-            width: 2.5rem
-            color: variables.$color-boot
-
-
     .divProjectGit
+      grid-area: DPG_PG
       align-items: center
       display: flex
       flex-direction: column
       flex-grow: 1
       flex-wrap: wrap
       height: auto
+      min-height: 220vh !important
       justify-content: space-between
-      width: 65vw
+      width: 100%
       @include mixins.small-screen
         height: 110rem !important
         width: 99vw

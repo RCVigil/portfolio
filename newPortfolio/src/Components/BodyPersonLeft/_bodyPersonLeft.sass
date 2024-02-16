@@ -1,0 +1,234 @@
+@use "../../Styles/variables"
+@use "../../Styles/mixins"
+
+.Container__BodyPersonLeft
+  box-sizing: border-box
+  display: grid
+  gap: 0.6%
+  grid-template-columns: 100%
+  grid-template-rows: 40% 0.3% 14% 0.3% 5% 0.3% 20% 0.3% 15%
+  grid-template-areas:"CDHBP" "CHR1BP" "CDCBP" "CHR2BP" "CDEBP" "CHR3BP" "CDLPBP" "CHR4BP" "CDUARBP"
+  height: 100%
+  width: 100%
+
+  .content__Div_Header_BodyPersonLeft
+    box-sizing: border-box
+    grid-area: CDHBP
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: 15% 45% 40%
+    grid-template-areas: "CH1BP" "CIUBP" "CPBGUBP"
+    padding: 3% 5%
+
+    .content__h1Name__BodyPersonLeft
+      grid-area: CH1BP
+      align-items: center
+      color: variables.$text-color
+      display: flex
+      font-family: variables.$font-primary
+      font-size: 2.7rem
+      font-weight: 600
+      justify-content: center
+      text-transform: capitalize
+
+    .content__Div_ImgUser__BodyPersonLeft
+      box-sizing: border-box
+      grid-area: CIUBP
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
+
+      .content__imgUser__BodyPersonLeft
+        border-radius: variables.$container-border-radius
+        width: 50%
+        height: auto
+
+    .content__pBioGitUser__BodyPersonLeft
+      grid-area: CPBGUBP
+      font-family: variables.$font-secondary
+      font-size: 2rem
+      text-align: justify
+      padding: 1rem
+      width: 100%
+
+  .content__Hr1__BodyPersonLeft
+    grid-area: CHR1BP
+    align-content: center
+    background-color: variables.$text-color-third
+    border: 2px solid variables.$text-color-third
+    border-radius: variables.$card-border-radius
+    left: 10%
+    position: relative
+    right: 10%
+    width: 80%
+
+  .content__Div_Company_BodyPersonLeft
+    box-sizing: border-box
+    grid-area: CDCBP
+    display: flex
+    align-items: center
+    padding: 2rem 3rem
+
+    .companyProjGithub
+      @include mixins.small-screen
+        font-size: variables.$font-size-mobile-Normal
+      @include mixins.medium-screen
+        font-size: variables.$font-size-mobile-Normal
+
+      .content__pProjectGithub__BodyPersonLeft
+        color: variables.$text-color-secondary
+        font-size: 1.5rem
+        text-align: justify
+        @include mixins.small-screen
+          font-size: variables.$font-size-mobile-Normal
+        @include mixins.medium-screen
+          font-size: variables.$font-size-mobile-Normal
+
+      .pHeaderProjetGithub
+        display: flex
+        gap: 1vw
+        height: auto
+        justify-content: center
+        width: 100%
+        @include mixins.small-screen
+          font-size: variables.$font-size-mobile-Title-2
+          margin-bottom: 0
+          height: 5vh
+        @include mixins.medium-screen
+          font-size: variables.$font-size-mobile-Title-2
+          margin-bottom: 0
+          height: 5vh
+
+
+  .content__Hr2__BodyPersonLeft
+    grid-area: CHR2BP
+    align-content: center
+    background-color: variables.$text-color-third
+    border: 2px solid variables.$text-color-third
+    border-radius: variables.$card-border-radius
+    left: 10%
+    position: relative
+    right: 10%
+    width: 80%
+
+  .content__Div_Experience_BodyPersonLeft
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    grid-area: CDEBP
+
+
+  .content__Hr3__BodyPersonLeft
+    grid-area: CHR3BP
+    align-content: center
+    background-color: variables.$text-color-third
+    border: 2px solid variables.$text-color-third
+    border-radius: variables.$card-border-radius
+    left: 10%
+    position: relative
+    right: 10%
+    width: 80%
+
+  .content__Div_LocationProjGithub__BodyPersonLeft
+    box-sizing: border-box
+    grid-area: CDLPBP
+    align-items: center
+    display: flex
+    flex-direction: column
+    gap: 1vw
+    height: auto
+    justify-content: center
+    width: 100%
+
+    .content__divLocationProjGithub_SVG__BodyPersonLeft
+      width: 2vw
+      color: variables.$text-color
+    .content__imgDivProjSVG__BodyPersonLeft
+      align-items: center
+      box-sizing: border-box
+      cursor: pointer
+      display: flex
+      flex-direction: column-reverse
+      height: 5vh
+      justify-content: center
+      margin: 10% 0 5% 0
+    h3
+      font-size: 1.5rem
+      font-family: variables.$font-primary
+      text-transform: capitalize
+      color: variables.$text-color
+
+
+  .content__Hr4__BodyPersonLeft
+    grid-area: CHR4BP
+    align-content: center
+    background-color: variables.$text-color-third
+    border: 2px solid variables.$text-color-third
+    border-radius: variables.$card-border-radius
+    left: 10%
+    position: relative
+    right: 10%
+    width: 80%
+
+  .content__Div_UpdatedAndRepository_BodyPersonLeft
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    gap: 20%
+    padding: 2rem 3rem
+    grid-area: CDUARBP
+
+    .content__DivData__BodyPersonLeft
+      width: 100%
+      height: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+
+    .content__DivButton__BodyPersonLeft
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      width: 100%
+      height: 50%
+
+    .content__DivButton_Button__BodyPersonLeft
+      align-content: center
+      align-items: center
+      border: 1px solid variables.$text-color-third
+      border-radius: 1vh
+      display: flex
+      height: 5vh
+      justify-content: center
+      margin-top: 5%
+      width: 60%
+      @include mixins.small-screen
+        margin-bottom: 1vh
+      @include mixins.medium-screen
+        margin-bottom: 1vh
+
+    .content__DivButton_Button__BodyPersonLeft:hover
+      transform: scale(1.1, 1.1)
+      border-radius: 0 0 2vh 2vh
+      @include mixins.small-screen
+        transform: scale(0)
+        border-radius: 0
+      @include mixins.medium-screen
+        transform: scale(0)
+        border-radius: 0
+
+    .content__DivButton_Button__BodyPersonLeft a
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 10%
+      color: variables.$text-color
