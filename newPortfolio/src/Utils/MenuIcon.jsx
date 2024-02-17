@@ -1,9 +1,12 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+
 import { motion, AnimatePresence } from "framer-motion";
 
+import usePortfolioContext from "../Context/usePortfolioContext";
+
 import "../Styles/Components/menuHamburguer.sass";
-import HeaderContext from "../Context/HeaderContext";
 
 import "../Styles/Menu.css";
 
@@ -16,7 +19,7 @@ const menuVariants = {
 // Componente MenuIcon
 const MenuIcon = () => {
   // Acessando o estado e a função de HeaderContext usando o useContext
-  const { menuOpen, setMenuOpen } = React.useContext(HeaderContext);
+  const { menuOpen, setMenuOpen } = usePortfolioContext();
 
   // Função para alternar o estado do menu
   const toggleMenu = () => {
@@ -52,22 +55,6 @@ const MenuIcon = () => {
                     Home
                   </Link>
                 </li>
-                {/* Itens adicionais do menu */}
-                {/* <li className="liItemsMenu">
-                  <Link className="linkItemsMenu" to="/">
-                    Sobre
-                  </Link>
-                </li>
-                <li className="liItemsMenu">
-                  <Link className="linkItemsMenu" to="/">
-                    Principais Projetos
-                  </Link>
-                </li>
-                <li className="liItemsMenu">
-                  <Link className="linkItemsMenu" to="/">
-                    Principais Stacks
-                  </Link>
-                </li> */}
                 <li className="liItemsMenu">
                   <Link id="linkItemsMenu" to="/projetosFull">
                     Todos Projetos

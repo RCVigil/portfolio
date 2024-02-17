@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import ScrollToTopButton from "../Utils/ScrollToTopButtn";
 
 import "../Styles/Components/index.sass";
+import PortfolioProvider from "../Context/PortfolioProviders";
 
 const Index = () => {
   const { scrollYProgress } = useScroll();
@@ -38,9 +39,11 @@ const Index = () => {
         <div className="firstNotebook-index">
           <Notebook />
         </div>
-        <div className="firstProjetosGithub">
-          <ProjetosGithub />
-        </div>
+        <PortfolioProvider>
+          <div className="firstProjetosGithub">
+            <ProjetosGithub />
+          </div>
+        </PortfolioProvider>
         <div className="firstPrincipaisStacks">
           <PrincipaisSatcks />
         </div>

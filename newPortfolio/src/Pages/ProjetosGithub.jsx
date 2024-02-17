@@ -1,12 +1,8 @@
 import * as React from "react";
 
-import { Link } from "react-router-dom";
-
 import moment from "moment";
 
 import Loading from "./Loading";
-
-import useTypewriter from "react-typewriter-hook";
 
 import fetchGitHubData from "../Service/GithubService";
 import LanguageSeal from "../Utils/LanguageSeal/LanguageSeal";
@@ -15,11 +11,18 @@ import OnGoingProjectCarousel from "../Components/OnGoingProjectCarousel/OnGoing
 
 import BodyPersonLeft from "../Components/BodyPersonLeft/BodyPersonLeft";
 
+import usePortfolioContext from "../Context/usePortfolioContext";
+
 import "../Styles/Components/Loading.sass";
 import "../Styles/Components/ProjetosGit.sass";
 
 const ProjetosGithub = () => {
-  const [projectsGitHub, setProjectsGitHub] = React.useState([]);
+  const {
+    projectsGitHub,
+    setProjectsGitHub,
+    conectedUserGitHub,
+    setConectedUserGitHub,
+  } = usePortfolioContext();
 
   const [userGitHub, setUserGitHub] = React.useState([]);
 
@@ -27,46 +30,29 @@ const ProjetosGithub = () => {
 
   const [loading, setLoading] = React.useState(false);
 
-  const [magicName, setMagicName] = React.useState(userGitHub?.bio || "");
-
   const [dataFetched, setDataFetched] = React.useState(false);
 
-  const intervalRef = React.useRef();
+  const fetchData = async () => {
+    if (dataFetched) {
+      return;
+    }
 
-  const magicNameMaker = useTypewriter(magicName);
+    try {
+      const { repos, user } = await fetchGitHubData(); // Use o serviço
 
-  // Quando o userGitHub.bio for alterado, atualize magicName
+      setProjectsGitHub(repos);
+      setUserGitHub(user);
+      setLoading(true);
+      setDataFetched(true);
+      setConectedUserGitHub(true);
+    } catch (error) {
+      setErrorMsg(error.toString());
+      return errorMsg;
+    }
+  };
+
   React.useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setMagicName((prevMagicName) => userGitHub?.bio || prevMagicName);
-    }, 2000);
-
-    return () => {
-      clearInterval(intervalRef.current);
-    };
-  }, [userGitHub]);
-
-  React.useEffect(() => {
-    const fetchData = async () => {
-      if (dataFetched) {
-        return;
-      }
-
-      try {
-        const { repos, user } = await fetchGitHubData(); // Use o serviço
-
-        setProjectsGitHub(repos);
-        setUserGitHub(user);
-        setLoading(true);
-        setDataFetched(true);
-      } catch (error) {
-        setErrorMsg(error.toString());
-      }
-    };
-
-    // fetchData();
-    // Verifique se os dados já foram buscados
-    if (projectsGitHub.length === 0 && userGitHub.length === 0 && !loading) {
+    if ((!projectsGitHub || !userGitHub || !loading) && !conectedUserGitHub) {
       fetchData();
     }
   }, [projectsGitHub, userGitHub, loading]);
@@ -85,10 +71,7 @@ const ProjetosGithub = () => {
         {loading && (
           <div className="loadingProjetosGithub ">
             <div className="divUserGit">
-              <BodyPersonLeft
-                userGitHub={userGitHub}
-                magicNameMaker={magicNameMaker}
-              />
+              <BodyPersonLeft userGitHub={userGitHub} />
             </div>
           </div>
         )}
@@ -103,8 +86,9 @@ const ProjetosGithub = () => {
               projectsGitHub
                 .filter(
                   (proj) =>
-                    proj.private === false && proj.stargazers_count === 1,
+                    proj.private === false && proj.stargazers_count === 1
                 )
+                .filter((el) => el.name !== "shopping_list_Angular")
                 .reduce((groups, proj, index) => {
                   if (index % 2 === 0) {
                     groups.push([proj]);

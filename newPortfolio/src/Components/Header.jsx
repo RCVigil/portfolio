@@ -4,14 +4,14 @@ import pegasusIcon from "../images/pegasus.svg";
 
 import MenuIcon from "../Utils/MenuIcon";
 
-import HeaderProvider from "../providers/HeaderProviders";
+import PortfolioProvider from "../Context/PortfolioProviders";
 
-import HeaderContext from "../Context/HeaderContext";
+import usePortfolioContext from "../Context/usePortfolioContext";
 
 import "../Styles/Components/Header.sass";
 
 function Header() {
-  const { menuOpen, setMenuOpen } = React.useContext(HeaderContext);
+  const { menuOpen } = usePortfolioContext();
 
   function preventImageDownload(event) {
     event.preventDefault();
@@ -40,7 +40,7 @@ function Header() {
             <img
               className="imgPegasus"
               src={pegasusIcon}
-              alt="logo Pégasus"
+              alt="logo Pegasus"
               onClick={preventImageDownload}
               onContextMenu={handleContextMenu}
             />
@@ -54,9 +54,9 @@ function Header() {
 
 function HeaderWrapper() {
   return (
-    <HeaderProvider>
+    <PortfolioProvider>
       <Header />
-    </HeaderProvider>
+    </PortfolioProvider>
   );
 }
 

@@ -4,14 +4,21 @@ import moment from "moment";
 
 import { Link } from "react-router-dom";
 
+import useTypewriter from "react-typewriter-hook";
+
 import curriculumFStack from "../../Utils/Curriculum/CurriculumFStack-2024.pdf";
 
 import AssignmentIndRoundedIcon from "@mui/icons-material/AssignmentIndRounded";
 
 import "./_bodyPersonLeft.sass";
 
-const BodyPersonLeft = ({ userGitHub, magicNameMaker }) => {
-  // console.log(userGitHub, magicNameMaker)
+const BodyPersonLeft = ({ userGitHub }) => {
+
+  const magicNameMaker = (nameMagic) => {
+    const typing = useTypewriter(nameMagic);
+
+    return typing
+  };
 
   const experience = () => {
     const inicio = moment(userGitHub.created_at).format("MM / YYYY");
@@ -35,7 +42,7 @@ const BodyPersonLeft = ({ userGitHub, magicNameMaker }) => {
         </div>
 
         <p className="content__pBioGitUser__BodyPersonLeft magicMakerP">
-          {magicNameMaker}
+          {magicNameMaker(userGitHub?.bio)}
         </p>
       </div>
 
