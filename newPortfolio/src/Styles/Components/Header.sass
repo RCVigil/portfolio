@@ -9,19 +9,42 @@
   width: 100%
   @include small-screen
     height: 40vh
-    flex-direction: column
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: 25% 75%
+    grid-template-areas: "MIIHC_H" "H1DH_H"
   @include medium-screen
     height: 40vh
     flex-direction: column
 
   .menuIconInHeaderCont
+    box-sizing: border-box
     height: 3rem
     width: 100%
     @include small-screen
+      grid-area: MIIHC_H
       margin-bottom: 4vh
     @include medium-screen
       margin-bottom: 4vh
 
+  .h1DivHeader
+    align-items: center
+    display: flex
+    flex-direction: row
+    height: auto
+    justify-content: center
+    width: 90%
+    @include small-screen
+      grid-area: H1DH_H
+      width: 100%
+      text-align: center
+      flex-direction: column
+      margin-top: 2.5vh
+    @include medium-screen
+      width: 98vw
+      text-align: center
+      flex-direction: column
+      margin-top: 2.5vh
 
   .h1DivHeaderDelayed
     align-items: center
@@ -32,40 +55,20 @@
     width: 90%
     transition-delay: 5000ms
     @include small-screen
-      width: 100vw
-      flex-direction: column
+      width: 99%
     @include medium-screen
-      width: 100vw
-      flex-direction: column
+      width: 99%
 
-  .h1DivHeader
-    align-items: center
-    display: flex
-    flex-direction: row
-    height: auto
-    justify-content: center
-    width: 90%
-    @include small-screen
-      width: 100vw
-      text-align: center
-      flex-direction: column
-      margin-top: 2.5vh
-    @include medium-screen
-      width: 100vw
-      text-align: center
-      flex-direction: column
-      margin-top: 2.5vh
+    .menuOpenActive
+      margin: 5rem
+      transition-duration: 1s
+      @include small-screen
+        margin: 0
+      @include medium-screen
+        margin: 0
 
-  .menuOpenActive
-    margin: 5rem
-    transition-duration: 1s
-    @include small-screen
-      margin: 0
-    @include medium-screen
-      margin: 0
-
-  .menuCloseActive
-    transition-duration: 1s
+    .menuCloseActive
+      transition-duration: 1s
 
   .imgPegasus
     width: 16rem
