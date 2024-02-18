@@ -38,7 +38,7 @@ function Header() {
         >
           <a href="https://portfolio-cuervo.vercel.app/">
             <img
-              className="imgPegasus" 
+              className="imgPegasus"
               src={pegasusIcon}
               alt="logo Pegasus"
               onClick={preventImageDownload}
