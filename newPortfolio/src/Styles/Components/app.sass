@@ -1,7 +1,11 @@
 @use '../variables'
-@import '../mixins'
+@use '../mixins'
 
 #portfolio
   display: flex
   height: auto
   justify-content: space-between
+  @include mixins.medium-screen
+    box-sizing: border-box
+    width: 99vw
+    flex-direction: column

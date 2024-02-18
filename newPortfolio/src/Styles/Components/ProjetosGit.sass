@@ -136,8 +136,6 @@
 
     .divProjectMap
       display: flex
-      border-radius: variables.$card-border-radius
-      color: variables.$text-color-secondary
       flex-direction: row
       flex-wrap: wrap
       height: 33%
@@ -155,24 +153,27 @@
         border-radius: variables.$card-border-radius
         display: flex
         flex-direction: column
-        height: 100%
         justify-content: flex-start
-        width: 45%
+        min-height: 100%
+        width: 49%
         text-align: center
         @include mixins.small-screen
-        height: 60vh
+          height: 60vh
           width: 49%
         @include mixins.medium-screen
-        height: 60vh
+          height: 60vh
           width: 49%
 
         .cardHeader
           align-items: center
           background-color: rgb(249, 0, 0, 0.1)
-          display: flex
-          justify-content: space-between
-          flex-direction: column
-          height: 70%
+          box-sizing: border-box
+          display: grid
+          grid-template-columns: 100%
+          grid-template-rows: 10% 20% 30% 40%
+          grid-template-areas: "H1NP_PG" "LSC_PG" "DCP_PG" "H3DPGH_PG"
+          height: 70% !important
+          padding: 1rem
           @include mixins.small-screen
             height: 60%
           @include mixins.medium-screen
@@ -229,6 +230,7 @@
       color: variables.$text-color
 
   .h1NameProjetos
+    grid-area: H1NP_PG
     color: variables.$text-color
     font-family: variables.$font-tercery
     font-size: 35px
@@ -244,7 +246,12 @@
       font-size: 1rem
       font-family: variables.$font-secondary
 
+  .content__LanguageSeal__ProjetosGithub
+    grid-area: LSC_PG
+    width: 100%
+
   .divCriadoP
+    grid-area: DCP_PG
     align-items: center
     display: flex
     justify-content: center
@@ -285,19 +292,22 @@
       height: 1.8rem
 
   .h1DescriptionPGH
-    width: 80%
+    grid-area: H3DPGH_PG
+    height: 100% !important
+    width: 100%
 
   .descricaoProjeto
     align-items: center
+    box-sizing: border-box
     display: flex
-    flex-direction: column
     font-family: variables.$font-secondary
     font-size: 1.2rem
-    font-weight: 100
-    height: 50%
-    text-align: start
-    justify-content: flex-end
+    font-weight: 400
+    height: 100%
+    text-align: justify
+    justify-content: center
     margin-bottom: 1rem
+    padding: 0.5rem 1rem
     width: 100%
     @include mixins.small-screen
       align-items: flex-end

@@ -69,7 +69,7 @@ const ProjetosGithub = () => {
 
       <div className="divMainProjetos">
         {loading && (
-          <div className="loadingProjetosGithub ">
+          <div className="loadingProjetosGithub">
             <div className="divUserGit">
               <BodyPersonLeft userGitHub={userGitHub} />
             </div>
@@ -98,12 +98,24 @@ const ProjetosGithub = () => {
                   return groups;
                 }, [])
                 .map((group, groupIndex) => (
-                  <div className="divProjectMap" key={groupIndex}>
+                  <div
+                    className={`divProjectMap content__2Cards${
+                      groupIndex + 1
+                    }__ProjetosGithub`}
+                    key={groupIndex}
+                  >
                     {group.map((proj, index) => (
-                      <div className={`divCards ${proj?.name}`} key={proj.id}>
+                      <div
+                        className={`divCards ${proj?.name} content__Cards${
+                          index + 1
+                        }__ProjetosGithub`}
+                        key={proj.id}
+                      >
                         <div className="cardHeader ">
                           <h1 className="h1NameProjetos">{proj.name}</h1>
-                          <LanguageSeal topicos={proj.topics} />
+                          <div className="content__LanguageSeal__ProjetosGithub">
+                            <LanguageSeal topicos={proj.topics} />
+                          </div>
                           <div className="divCriadoP">
                             <p className="pCreatedProject">{`Criado em :`}</p>
 
@@ -131,9 +143,9 @@ const ProjetosGithub = () => {
                             )}
                           </div>
                           <div className="h1DescriptionPGH">
-                            <h1 className="descricaoProjeto">
+                            <h3 className="descricaoProjeto">
                               {proj.description}
-                            </h1>
+                            </h3>
                           </div>
                         </div>
 
