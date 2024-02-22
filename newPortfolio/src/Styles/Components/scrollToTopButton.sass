@@ -2,40 +2,69 @@
 @use '../mixins'
 
 #scrollToTopStyles
-  align-items: center
-  // background-color: rgba(249, 249, 249, 0.5)
-  border-radius: 50%
+  box-sizing: border-box
   cursor: pointer
-  display: flex
-  flex-direction: column
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 20% 60% 20%
+  grid-template-areas: "SVGAUSTTB" "IMGSTSTTB" "PSTSTTB"
+  place-items: center
+  justify-items: center
+  align-items: center
   height: 16vh
-  justify-content: center
-  left: 91vw
   position: fixed
+  left: 91vw
   top: 80vh
   width: 5vw
+  z-index: 9999
   @include mixins.medium-screen
     transform: scale(1.5)
+    left: 83vw
+    top: 65vh
+    width: 2.5rem !important
 
   .svgArrowUpSTTB
+    grid-area: SVGAUSTTB
     color: variables.$text-color
-    height: variables.$icone-small
-    margin-bottom: 1rem
-    width: variables.$icone-small
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
 
-  .imgScrollTop
-    height: variables.$icone-small
-    transform: scale(3)
-    transition: transform 0.3s ease
-    width: variables.$icone-small
+  .content__Img_Pegasus__ScrollToTopButton
+    grid-area: IMGSTSTTB
+    width: 75%
+    height: auto
+    @include mixins.medium-screen
+      height: 100%
+      width: 200%
 
-  .imgScrollTop:hover
-    transform: scale(5)
+    .imgScrollTop
+      height: variables.$icone-small
+      transform: scale(3)
+      transition: transform 0.3s ease
+      height: 100%
+      @include mixins.medium-screen
+        transform: none
+
+
+    .imgScrollTop:hover
+      transform: scale(5)
+      @include mixins.medium-screen
+        transform: none
 
   .pScrollTop
+    grid-area: PSTSTTB
     color: variables.$text-color
     font-size: 1.3rem
     height: variables.$icone-small
     margin-top: 1rem
     margin-left: 0.4rem
     width: variables.$icone-small
+    @include mixins.medium-screen
+      height: 100%
+      margin-top: 0
+      font-size: 1em
+      text-align: center
+      width: 100%

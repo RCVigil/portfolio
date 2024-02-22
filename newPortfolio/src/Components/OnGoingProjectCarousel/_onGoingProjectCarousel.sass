@@ -1,5 +1,5 @@
 @use "../../Styles/variables"
-@import "../../Styles/mixins"
+@use "../../Styles/mixins"
 
 .Content__OnGoingProjectCarousel
   color: #fff
@@ -7,13 +7,15 @@
   width: 96vw
 
   div .thumbs
-    text-align: center
+  text-align: center
 
   h2
     text-align: center
     font-family: variables.$font-primary
     font-size: 3rem
     margin-bottom: 3rem
+    @include mixins.medium-screen
+      font-size: 1.7em
 
   .carousel .slide .legend
     margin-left: -17%
@@ -32,6 +34,13 @@
     img
       border-radius: 15px
       width: 75%
+      @include mixins.medium-screen
+        border-radius: 5px
 
-    .legend
-      width: 35%
+  .legend
+    width: 35%
+    @include mixins.medium-screen
+    background-color: #fff
+    margin-left: -6.5rem !important
+    margin-bottom: -11% !important
+    max-width: 65% !important

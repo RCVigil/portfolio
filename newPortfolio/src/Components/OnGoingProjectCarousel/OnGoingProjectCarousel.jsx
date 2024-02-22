@@ -1,6 +1,7 @@
 import React from "react";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import { Carousel } from "react-responsive-carousel";
 
 import loginTelaInit from "../../images/loginTela.png";
@@ -11,6 +12,8 @@ import productCardTela from "../../images/cadastroDeProdutos1.png";
 import productListTela from "../../images/CadastroDeProdutos2.png";
 import cashTela from "../../images/Caixa.png";
 import clientTela from "../../images/Clientes.png";
+
+import VerifyMobile from "../../Utils/VerifyMobile/VerifyMobile"
 
 import "./_onGoingProjectCarousel.sass";
 
@@ -60,20 +63,24 @@ const carouselData = [
 const OnGoingProjectCarousel = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
 
+  const isMobile = VerifyMobile.isMobile();
+
   return (
     <section
       className="Content__OnGoingProjectCarousel"
       aria-labelledby="Saas-erp-title"
     >
       <h2>Projeto em destaque - Saas - Comercial</h2>
+      {console.log(isMobile)}
       <Carousel
         role="region"
         selectedItem={activeIndex}
         onChange={(index) => setActiveIndex(index)}
-        // showThumbs={false}
+        showThumbs={!isMobile}
         infiniteLoop
+        emulateTouch={false}
         autoPlay
-        stopOnHover={true}
+        stopOnHover={false}
         interval={8000}
         transitionTime={8000}
       >

@@ -48,6 +48,11 @@
       font-family: variables.$font-secondary
       height: 5vh
 
+  .content__Carousel__ProjetosGitHub
+    padding-bottom: 1rem
+    margin-bottom: 4rem
+    width: 95%
+
   .divMainProjetos
     box-sizing: border-box
     display: grid
@@ -67,14 +72,15 @@
       width: 100vw !important
       flex-direction: column
     @include mixins.medium-screen
-      display: flex
-      justify-content: center
       align-items: center
+      display: flex
+      flex-direction: column
+      justify-content: center
       margin-left: 0
       width: 100vw !important
-      flex-direction: column
 
     .loadingProjetosGithub
+      box-sizing: border-box
       grid-area: LPG_PG
       align-content: center
       align-items: center
@@ -85,15 +91,17 @@
       width: 100%
       @include mixins.small-screen
         height: auto !important
-        // margin-bottom: 10vh
+        margin-bottom: 10rem !important
         width: 98vw
       @include mixins.medium-screen
         height: auto !important
         box-sizing: border-box
-        // margin-bottom: 10vh
-        width: 98vw
+        margin-bottom: 10rem !important
+        margin-left: 1%
+        width: 99%
 
       .divUserGit
+        box-sizing: border-box
         align-items: center
         align-self: center
         display: flex
@@ -111,10 +119,10 @@
           border: none
           width: 100%
         @include mixins.medium-screen
-          min-height: auto !important
+          min-height: 100% !important
           border: none
           width: 100%
-          // height: 100% !important
+          height: 100% !important
 
     .divProjectGit
       grid-area: DPG_PG
@@ -132,7 +140,8 @@
         width: 99vw
       @include mixins.medium-screen
         height: 110rem !important
-        width: 99vw
+        margin-left: 0.5%
+        width: 99%
 
     .divProjectMap
       display: flex
