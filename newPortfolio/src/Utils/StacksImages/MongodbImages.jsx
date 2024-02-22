@@ -1,8 +1,10 @@
 import React from "react";
 
+import "./_stacksImages.sass";
+
 export default function MongodbImages() {
   return (
-    <div className="firstDivImages">
+    <div className="firstDivImages content__MongodbImages">
       <a
         target="_blank"
         rel="noopener noreferrer nofollow"
@@ -11,7 +13,7 @@ export default function MongodbImages() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="img_tBody"
+          className="img_tBody content_IMG_MySqlImage"
           viewBox="0 0 48 48"
         >
           <path fill="#dcedc8" d="M23 28H25V36H23z"></path>

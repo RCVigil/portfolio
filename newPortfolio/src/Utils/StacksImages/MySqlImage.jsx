@@ -1,8 +1,10 @@
 import React from "react";
 
+import "./_stacksImages.sass";
+
 export default function MySqlImage() {
   return (
-    <div className="firstDivImages">
+    <div className="firstDivImages content__MySqlImage">
       <a
         target="_blank"
         rel="noopener noreferrer nofollow"
@@ -13,7 +15,7 @@ export default function MySqlImage() {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          className="img_tBody"
+          className="img_tBody content_IMG_MySqlImage"
           viewBox="0 0 48 48"
         >
           <path
