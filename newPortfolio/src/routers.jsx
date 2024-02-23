@@ -5,8 +5,6 @@ import Index from "./Components/Index";
 import Error404 from "./Pages/Error404";
 import ProjetosFullGit from "./Pages/ProjetosFullGit/ProjetosFullGit";
 
-import sitemap from "../sitemap.xml"
-
 function RoutersApp() {
   return (
     <Routes>
@@ -14,7 +12,7 @@ function RoutersApp() {
 
       <Route exact path="/projetosFull" element={<ProjetosFullGit />} />
 
-      <Route exact path="/sitemap.xml" element={sitemap} />
+      <Route path="/sitemap.xml" element={<Navigate to="/sitemap.xml" />} />
 
       <Route path="/404" element={<Error404 />} />
 
