@@ -13,11 +13,10 @@ import AssignmentIndRoundedIcon from "@mui/icons-material/AssignmentIndRounded";
 import "./_bodyPersonLeft.sass";
 
 const BodyPersonLeft = ({ userGitHub }) => {
-
   const magicNameMaker = (nameMagic) => {
     const typing = useTypewriter(nameMagic);
 
-    return typing
+    return typing;
   };
 
   const experience = () => {
@@ -54,7 +53,11 @@ const BodyPersonLeft = ({ userGitHub }) => {
             <>
               <p
                 className="content__pProjectGithub__BodyPersonLeft pHeaderProjectGithub"
-                style={{ textAlign: "center", paddingBottom: "10%", color: "#f9f9f9" }}
+                style={{
+                  textAlign: "center",
+                  paddingBottom: "10%",
+                  color: "#f9f9f9",
+                }}
               >
                 Vamos conversar!
               </p>

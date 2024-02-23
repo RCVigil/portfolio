@@ -52,7 +52,7 @@ async function fetchAllPages(endpoint, totalPages, perPage) {
         headers: {
           "Content-Type": "application/json",
         },
-      }
+      },
     );
 
     if (!response.ok) {

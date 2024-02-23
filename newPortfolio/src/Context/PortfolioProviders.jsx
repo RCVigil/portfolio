@@ -26,6 +26,8 @@ export default function PortfolioProvider(props) {
     setConectedUserGitHub,
   };
   return (
-    <PortfolioContext.Provider value={object}>{children}</PortfolioContext.Provider>
+    <PortfolioContext.Provider value={object}>
+      {children}
+    </PortfolioContext.Provider>
   );
 }

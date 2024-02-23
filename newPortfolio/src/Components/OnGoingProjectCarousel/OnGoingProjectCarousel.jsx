@@ -13,7 +13,7 @@ import productListTela from "../../images/CadastroDeProdutos2.png";
 import cashTela from "../../images/Caixa.png";
 import clientTela from "../../images/Clientes.png";
 
-import VerifyMobile from "../../Utils/VerifyMobile/VerifyMobile"
+import VerifyMobile from "../../Utils/VerifyMobile/VerifyMobile";
 
 import "./_onGoingProjectCarousel.sass";
 

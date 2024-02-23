@@ -86,7 +86,7 @@ const ProjetosGithub = () => {
               projectsGitHub
                 .filter(
                   (proj) =>
-                    proj.private === false && proj.stargazers_count === 1
+                    proj.private === false && proj.stargazers_count === 1,
                 )
                 .filter((el) => el.name !== "shopping_list_Angular")
                 .reduce((groups, proj, index) => {

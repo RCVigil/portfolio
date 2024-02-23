@@ -12,7 +12,10 @@ function RoutersApp() {
 
       <Route exact path="/projetosFull" element={<ProjetosFullGit />} />
 
-      <Route path="/sitemap.xml" element={<Navigate to="/sitemap.xml" replace />} />
+      <Route
+        path="/sitemap.xml"
+        element={<Navigate to="/sitemap.xml" replace />}
+      />
 
       <Route path="/404" element={<Error404 />} />
 
