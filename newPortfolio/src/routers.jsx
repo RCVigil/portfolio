@@ -14,7 +14,7 @@ function RoutersApp() {
 
       <Route path="/404" element={<Error404 />} />
 
-      <Route path="/sitemap*.*" element={<Sitemap />} />
+      <Route path="/sitemap.xml" element={<Sitemap />} />
 
       <Route path="*" element={<Navigate to="/404" />} />
     </Routes>
