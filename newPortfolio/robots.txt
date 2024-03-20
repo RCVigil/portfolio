@@ -1,5 +1,5 @@
 User-Agent: *
-Allow: /
+Allow: /public/
 Disallow: /private/
 
 Sitemap: https://portfolio-cuervo.vercel.app/sitemap.xml
