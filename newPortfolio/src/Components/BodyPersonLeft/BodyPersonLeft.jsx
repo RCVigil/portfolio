@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import PropTypes from "prop-types";
+
 import moment from "moment";
 
 import { Link } from "react-router-dom";
@@ -155,6 +157,10 @@ const BodyPersonLeft = ({ userGitHub }) => {
       </div>
     </div>
   );
+};
+
+BodyPersonLeft.propTypes = {
+  userGitHub: PropTypes.object.isRequired,
 };
 
 export default BodyPersonLeft;

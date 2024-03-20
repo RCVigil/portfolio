@@ -12,7 +12,6 @@ import RtestingL from "../../StacksImages/RtestingL";
 import JEST from "../../StacksImages/JEST";
 import REDUX from "../../StacksImages/REDUX";
 import VITE from "../../StacksImages/VITE";
-import MATERIALUI from "../../StacksImages/MATERIALUI";
 import TYPESCRIPT from "../../StacksImages/TYPESCRIPT";
 import AngularIMG from "../../StacksImages/AngularIMG";
 

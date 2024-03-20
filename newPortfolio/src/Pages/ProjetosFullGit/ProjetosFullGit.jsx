@@ -1,4 +1,4 @@
-import { useScroll } from "framer-motion";
+// import { useScroll } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
@@ -40,12 +40,12 @@ const ProjetosFullGit = () => {
     fetchData();
   }, []);
 
-  const experience = () => {
-    const inicio = moment(userGitHub.created_at).format("MM / YYYY");
-    return inicio;
-  };
+  // const experience = () => {
+  //   const inicio = moment(userGitHub.created_at).format("MM / YYYY");
+  //   return inicio;
+  // };
 
-  const { scrollYProgress } = useScroll();
+  // const { scrollYProgress } = useScroll();
 
   // Define uma media query para telas de celular
   const isMobile = useMediaQuery({
@@ -149,6 +149,7 @@ const ProjetosFullGit = () => {
                                     className="aCodigoPFG"
                                     href={`${proj.svn_url}`}
                                     target="_blank"
+                                    rel="noreferrer"
                                   >
                                     Clique aqui!
                                   </a>
@@ -171,6 +172,7 @@ const ProjetosFullGit = () => {
                                       className="aPlayPFG"
                                       href={`${proj.homepage}`}
                                       target="_blank"
+                                      rel="noreferrer"
                                     >
                                       <i className="bi bi-play-btn mx-1">
                                         <svg

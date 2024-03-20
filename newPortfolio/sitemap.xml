@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
+<sitemapindex
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url>
+<sitemap>
   <loc>https://portfolio-cuervo.vercel.app/</loc>
   <lastmod>2024-02-23T00:26:11+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>1</priority>
-</url>
+</sitemap>
 
-<url>
-  <loc>https://portfolio-cuervo.vercel.app/projetosFull</loc>
-  <lastmod>2024-02-23T00:26:11+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-</url>
-
-</urlset>
+</sitemapindex>

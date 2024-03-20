@@ -3,7 +3,6 @@ import React from "react";
 import "./_stacksImages.sass";
 
 export default function RactNativeImages() {
-  const [estudado, setEstudado] = React.useState(false);
   return (
     <div className="firstDivImages">
       <a

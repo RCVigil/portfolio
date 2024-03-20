@@ -1,5 +1,7 @@
 import React from "react";
 
+import PropTypes from "prop-types";
+
 import "./_languageSeal.sass";
 
 import imageAngular from "../../images/Angular1.png";
@@ -89,5 +91,9 @@ function LanguageSeal({ topicos }) {
     </div>
   );
 }
+
+LanguageSeal.propTypes = {
+  topicos: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default LanguageSeal;

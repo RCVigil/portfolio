@@ -126,7 +126,11 @@ const ProjetosGithub = () => {
                               ""
                             ) : (
                               <button className="LinkProject">
-                                <a href={`${proj.homepage}`} target="_blank">
+                                <a
+                                  href={`${proj.homepage}`}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
                                   <i className="bi bi-play-btn mx-1">
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +169,11 @@ const ProjetosGithub = () => {
                             </p>
 
                             <button className="btnProjetoGithub">
-                              <a href={`${proj.svn_url}`} target="_blank">
+                              <a
+                                href={`${proj.svn_url}`}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
                                 Clique aqui!
                               </a>
                             </button>

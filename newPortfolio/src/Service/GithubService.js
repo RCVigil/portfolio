@@ -5,41 +5,37 @@ async function fetchGitHubData() {
   const ENDPOINTUser = import.meta.env.VITE_REACT_APP_ENDPOINT_USER;
   const perPage = 100; // Número de objetos por página
 
-  try {
-    const responseRepos = await fetch(`${ENDPOINTRepos}?per_page=${perPage}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  const responseRepos = await fetch(`${ENDPOINTRepos}?per_page=${perPage}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
-    if (!responseRepos.ok) {
-      throw new Error("Network response was not ok");
-    }
-
-    const linkHeader = responseRepos.headers.get("Link");
-    const totalPages = calculateTotalPages(linkHeader);
-
-    // Aqui você pode fazer um loop para buscar todas as páginas, se necessário
-    const allRepos = await fetchAllPages(ENDPOINTRepos, totalPages, perPage);
-
-    const responseUser = await fetch(ENDPOINTUser, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    if (!responseUser.ok) {
-      throw new Error("Network response was not ok");
-    }
-
-    const dataUser = await responseUser.json();
-
-    return { repos: allRepos, user: dataUser };
-  } catch (error) {
-    throw error;
+  if (!responseRepos.ok) {
+    throw new Error("Network response was not ok");
   }
+
+  const linkHeader = responseRepos.headers.get("Link");
+  const totalPages = calculateTotalPages(linkHeader);
+
+  // Aqui você pode fazer um loop para buscar todas as páginas, se necessário
+  const allRepos = await fetchAllPages(ENDPOINTRepos, totalPages, perPage);
+
+  const responseUser = await fetch(ENDPOINTUser, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!responseUser.ok) {
+    throw new Error("Network response was not ok");
+  }
+
+  const dataUser = await responseUser.json();
+
+  return { repos: allRepos, user: dataUser };
 }
 
 async function fetchAllPages(endpoint, totalPages, perPage) {

@@ -1,5 +1,11 @@
 import * as React from "react";
+import PropTypes from "prop-types";
+
 import PortfolioContext from "./PortfolioContext";
+
+PortfolioProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default function PortfolioProvider(props) {
   const { children } = props;

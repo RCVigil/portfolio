@@ -1,3 +1,4 @@
+import * as React from "react";
 import RoutersApp from "./routers";
 
 import "./App.css";
