@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Index from "./Components/Index";
 import Error404 from "./Pages/Error404";
 import ProjetosFullGit from "./Pages/ProjetosFullGit/ProjetosFullGit";
+import Sitemap from "../sitemap.xml"
 
 function RoutersApp() {
   return (
@@ -12,6 +13,8 @@ function RoutersApp() {
       <Route exact path="/projetosFull" element={<ProjetosFullGit />} />
 
       <Route path="/404" element={<Error404 />} />
+
+      <Route path="/sitemap*.*" element={<Sitemap />} />
 
       <Route path="*" element={<Navigate to="/404" />} />
     </Routes>
