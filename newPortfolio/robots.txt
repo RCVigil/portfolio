@@ -2,4 +2,4 @@ User-Agent: *
 Allow: /public/
 Disallow: /private/
 
-Sitemap: https://portfolio-cuervo.vercel.app/sitemap.xml
+Sitemap: https://portfolio-cuervo.vercel.app/public/sitemap.xml
