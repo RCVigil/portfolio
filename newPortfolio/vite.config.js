@@ -1,14 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 
-import Sitemap from "vite-plugin-sitemap";
+// import Sitemap from "vite-plugin-sitemap";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   esbuild: { jsxFragment: 'Fragment' },
   plugins: [
     react(),
-    Sitemap()
+    // Sitemap()
   ],
   css: {
     sass: {
